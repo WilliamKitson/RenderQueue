@@ -19,77 +19,77 @@ void RenderQueue::Objects::push()
 
 void RenderQueue::Objects::pop()
 {
-	count = minimum(count - 9);
+	count = minimum(count - 13);
 }
 
 int RenderQueue::Objects::getCount()
 {
-	return count / 9;
+	return count / 13;
 }
 
 float RenderQueue::Objects::getXpos()
 {
-	return data[0 + (index * 9)];
+	return data[0 + (index * 13)];
 }
 
 float RenderQueue::Objects::getYpos()
 {
-	return data[1 + (index * 9)];
+	return data[1 + (index * 13)];
 }
 
 float RenderQueue::Objects::getZpos()
 {
-	return data[2 + (index * 9)];
+	return data[2 + (index * 13)];
 }
 
 float RenderQueue::Objects::getXrot()
 {
-	return data[3 + (index * 9)];
+	return data[3 + (index * 13)];
 }
 
 float RenderQueue::Objects::getYrot()
 {
-	return data[4 + (index * 9)];
+	return data[4 + (index * 13)];
 }
 
 float RenderQueue::Objects::getZrot()
 {
-	return data[5 + (index * 9)];
+	return data[5 + (index * 13)];
 }
 
 float RenderQueue::Objects::getXscale()
 {
-	return data[6 + (index * 9)];
+	return data[6 + (index * 13)];
 }
 
 float RenderQueue::Objects::getYscale()
 {
-	return data[7 + (index * 9)];
+	return data[7 + (index * 13)];
 }
 
 float RenderQueue::Objects::getZscale()
 {
-	return data[8 + (index * 9)];
+	return data[8 + (index * 13)];
 }
 
 float RenderQueue::Objects::getRed()
 {
-	return 1.0f;
+	return data[9 + (index * 13)];
 }
 
 float RenderQueue::Objects::getGreen()
 {
-	return 1.0f;
+	return data[10 + (index * 13)];
 }
 
 float RenderQueue::Objects::getBlue()
 {
-	return 1.0f;
+	return data[11 + (index * 13)];
 }
 
 float RenderQueue::Objects::getAlpha()
 {
-	return 1.0f;
+	return data[12 + (index * 13)];
 }
 
 void RenderQueue::Objects::setIndex(int input)
@@ -101,7 +101,15 @@ void RenderQueue::Objects::setTransform(float input[9])
 {
 	for (int i{ 0 }; i < 9; i++)
 	{
-		data[i + (index * 9)] = input[i];
+		data[i + (index * 13)] = input[i];
+	}
+}
+
+void RenderQueue::Objects::setColour(float input[4])
+{
+	for (int i{ 0 }; i < 4; i++)
+	{
+		data[i + 9 + (index * 13)] = input[i];
 	}
 }
 
@@ -113,7 +121,7 @@ void RenderQueue::Objects::cleanup()
 
 void RenderQueue::Objects::increment()
 {
-	count += 9;
+	count += 13;
 }
 
 void RenderQueue::Objects::swap(float* input)
@@ -126,7 +134,7 @@ float* RenderQueue::Objects::pushed()
 {
 	float* output = new float[count];
 
-	for (int i{ 0 }; i < count - 9; i++)
+	for (int i{ 0 }; i < count - 13; i++)
 	{
 		output[i] = data[i];
 	}
@@ -136,21 +144,25 @@ float* RenderQueue::Objects::pushed()
 
 void RenderQueue::Objects::initialise()
 {
-	float transform[] = {
+	float object[] = {
 		0.0f,
 		0.0f,
 		0.0f,
 		0.0f,
 		0.0f,
 		0.0f,
+		1.0f,
+		1.0f,
+		1.0f,
+		1.0f,
 		1.0f,
 		1.0f,
 		1.0f
 	};
 
-	for (int i{ 0 }; i < 9; i++)
+	for (int i{ 0 }; i < 13; i++)
 	{
-		data[i + (count - 9)] = transform[i];
+		data[i + (count - 13)] = object[i];
 	}
 }
 

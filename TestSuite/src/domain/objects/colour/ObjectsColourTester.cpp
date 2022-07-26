@@ -13,6 +13,7 @@ std::string ObjectsColourTester::test()
 	std::string output{ "" };
 
 	output += testDefault();
+	output += testPush();
 
 	return output;
 }
@@ -20,4 +21,9 @@ std::string ObjectsColourTester::test()
 std::string ObjectsColourTester::testDefault()
 {
 	return ObjectsColourDefaultTest().test();
+}
+
+std::string ObjectsColourTester::testPush()
+{
+	return ObjectsColourPushTest().test();
 }

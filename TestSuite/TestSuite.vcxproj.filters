@@ -60,6 +60,9 @@
     <ClCompile Include="src\domain\objects\colour\ObjectsColourTester.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="src\domain\objects\colour\ObjectsColourPushTest.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\MemoryTest.h">
@@ -102,6 +105,9 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="src\domain\objects\colour\ObjectsColourTester.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\domain\objects\colour\ObjectsColourPushTest.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

@@ -26,6 +26,7 @@ namespace RenderQueue
 		float getAlpha();
 		void setIndex(int);
 		void setTransform(float[9]);
+		void setColour(float[4]);
 
 	private:
 		void cleanup();
