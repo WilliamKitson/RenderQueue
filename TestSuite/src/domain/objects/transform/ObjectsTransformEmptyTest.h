@@ -10,4 +10,10 @@ public:
 	~ObjectsTransformEmptyTest();
 
 	std::string test();
+
+private:
+	bool success();
+
+private:
+	RenderQueue::Objects unit;
 };
