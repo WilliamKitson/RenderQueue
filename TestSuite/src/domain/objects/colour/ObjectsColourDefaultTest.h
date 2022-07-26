@@ -10,4 +10,10 @@ public:
 	~ObjectsColourDefaultTest();
 
 	std::string test();
+
+private:
+	bool success();
+
+private:
+	RenderQueue::Objects unit;
 };
