@@ -1,17 +1,8 @@
 #include "ObjectsTransformDefaultTest.h"
 
 ObjectsTransformDefaultTest::ObjectsTransformDefaultTest()
-	: unit(), transform()
+	: unit()
 {
-	transform[0] = 0.0f;
-	transform[1] = 0.0f;
-	transform[2] = 0.0f;
-	transform[3] = 0.0f;
-	transform[4] = 0.0f;
-	transform[5] = 0.0f;
-	transform[6] = 1.0f;
-	transform[7] = 1.0f;
-	transform[8] = 1.0f;
 }
 
 ObjectsTransformDefaultTest::~ObjectsTransformDefaultTest()
@@ -22,7 +13,7 @@ std::string ObjectsTransformDefaultTest::test()
 {
 	unit.push();
 
-	if (successes() == 9)
+	if (success())
 	{
 		return std::string();
 	}
@@ -30,14 +21,52 @@ std::string ObjectsTransformDefaultTest::test()
 	return "objects transform default test failed\n";
 }
 
-int ObjectsTransformDefaultTest::successes()
+bool ObjectsTransformDefaultTest::success()
 {
-	int output = 0;
-
-	for (int i{ 0 }; i < 9; i++)
+	if (unit.getXpos() != 0.0f)
 	{
-		output += unit.getTransform()[i] == transform[i];
+		return false;
 	}
 
-	return output;
+	if (unit.getYpos() != 0.0f)
+	{
+		return false;
+	}
+
+	if (unit.getZpos() != 0.0f)
+	{
+		return false;
+	}
+
+	if (unit.getXrot() != 0.0f)
+	{
+		return false;
+	}
+
+	if (unit.getYrot() != 0.0f)
+	{
+		return false;
+	}
+
+	if (unit.getZrot() != 0.0f)
+	{
+		return false;
+	}
+
+	if (unit.getXscale() != 1.0f)
+	{
+		return false;
+	}
+
+	if (unit.getYscale() != 1.0f)
+	{
+		return false;
+	}
+
+	if (unit.getZscale() != 1.0f)
+	{
+		return false;
+	}
+
+	return true;
 }

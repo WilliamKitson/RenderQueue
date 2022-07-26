@@ -12,9 +12,8 @@ public:
 	std::string test();
 
 private:
-	int successes();
+	bool success();
 
 private:
 	RenderQueue::Objects unit;
-	float transform[9];
 };

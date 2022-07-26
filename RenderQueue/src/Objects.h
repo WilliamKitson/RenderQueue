@@ -11,7 +11,15 @@ namespace RenderQueue
 		void push();
 		void pop();
 		int getCount();
-		float* getTransform();
+		float getXpos();
+		float getYpos();
+		float getZpos();
+		float getXrot();
+		float getYrot();
+		float getZrot();
+		float getXscale();
+		float getYscale();
+		float getZscale();
 
 	private:
 		int minimum(int);

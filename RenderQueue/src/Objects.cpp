@@ -24,21 +24,49 @@ int RenderQueue::Objects::getCount()
 	return count;
 }
 
-float* RenderQueue::Objects::getTransform()
+float RenderQueue::Objects::getXpos()
 {
-	float output[] = {
-		0.0f,
-		0.0f,
-		0.0f,
-		0.0f,
-		0.0f,
-		0.0f,
-		1.0f,
-		1.0f,
-		1.0f
-	};
+	return 0.0f;
+}
 
-	return output;
+float RenderQueue::Objects::getYpos()
+{
+	return 0.0f;
+}
+
+float RenderQueue::Objects::getZpos()
+{
+	return 0.0f;
+}
+
+float RenderQueue::Objects::getXrot()
+{
+	return 0.0f;
+}
+
+float RenderQueue::Objects::getYrot()
+{
+	return 0.0f;
+}
+
+float RenderQueue::Objects::getZrot()
+{
+	return 0.0f;
+}
+
+float RenderQueue::Objects::getXscale()
+{
+	return 1.0f;
+}
+
+float RenderQueue::Objects::getYscale()
+{
+	return 1.0f;
+}
+
+float RenderQueue::Objects::getZscale()
+{
+	return 1.0f;
 }
 
 int RenderQueue::Objects::minimum(int input)
