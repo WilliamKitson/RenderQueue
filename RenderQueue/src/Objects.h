@@ -26,6 +26,7 @@ namespace RenderQueue
 	private:
 		void cleanup();
 		void increment();
+		void swap(float*);
 		float* pushed();
 		int minimum(int);
 

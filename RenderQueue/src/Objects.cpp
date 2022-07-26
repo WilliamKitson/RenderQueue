@@ -13,10 +13,7 @@ RenderQueue::Objects::~Objects()
 void RenderQueue::Objects::push()
 {
 	increment();
-
-	float* temp = pushed();
-	cleanup();
-	data = temp;
+	swap(pushed());
 
 	float transform[] = {
 		0.0f,
@@ -113,6 +110,12 @@ void RenderQueue::Objects::cleanup()
 void RenderQueue::Objects::increment()
 {
 	count += 9;
+}
+
+void RenderQueue::Objects::swap(float* input)
+{
+	cleanup();
+	data = input;
 }
 
 float* RenderQueue::Objects::pushed()
