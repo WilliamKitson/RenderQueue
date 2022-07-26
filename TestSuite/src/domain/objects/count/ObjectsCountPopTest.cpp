@@ -11,10 +11,7 @@ ObjectsCountPopTest::~ObjectsCountPopTest()
 
 std::string ObjectsCountPopTest::test()
 {
-	for (int i{ 0 }; i < itterations; i++)
-	{
-		unit.push();
-	}
+	initialise();
 
 	if (successes() == itterations)
 	{
@@ -22,6 +19,14 @@ std::string ObjectsCountPopTest::test()
 	}
 
 	return "objects count pop test failed\n";
+}
+
+void ObjectsCountPopTest::initialise()
+{
+	for (int i{ 0 }; i < itterations; i++)
+	{
+		unit.push();
+	}
 }
 
 int ObjectsCountPopTest::successes()
