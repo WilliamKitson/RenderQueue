@@ -11,6 +11,7 @@ namespace RenderQueue
 		void push();
 		void pop();
 		int getCount();
+		float* getTransform();
 
 	private:
 		int minimum(int);

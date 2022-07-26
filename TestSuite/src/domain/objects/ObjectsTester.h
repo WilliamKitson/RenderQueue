@@ -1,7 +1,9 @@
 #pragma once
 
 #include <string>
+
 #include "count/ObjectsCountTester.h"
+#include "transform/ObjectsTransformTester.h"
 
 class ObjectsTester
 {
@@ -13,4 +15,5 @@ public:
 
 private:
 	std::string testCount();
+	std::string testTransform();
 };

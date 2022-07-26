@@ -24,6 +24,23 @@ int RenderQueue::Objects::getCount()
 	return count;
 }
 
+float* RenderQueue::Objects::getTransform()
+{
+	float output[] = {
+		0.0f,
+		0.0f,
+		0.0f,
+		0.0f,
+		0.0f,
+		0.0f,
+		1.0f,
+		1.0f,
+		1.0f
+	};
+
+	return output;
+}
+
 int RenderQueue::Objects::minimum(int input)
 {
 	int output = 0;

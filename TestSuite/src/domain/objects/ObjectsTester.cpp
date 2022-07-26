@@ -13,6 +13,7 @@ std::string ObjectsTester::test()
 	std::string output{ "" };
 
 	output += testCount();
+	output += testTransform();
 
 	return output;
 }
@@ -20,4 +21,9 @@ std::string ObjectsTester::test()
 std::string ObjectsTester::testCount()
 {
 	return ObjectsCountTester().test();
+}
+
+std::string ObjectsTester::testTransform()
+{
+	return ObjectsTransformTester().test();
 }
