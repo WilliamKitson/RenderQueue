@@ -12,5 +12,9 @@ public:
 	std::string test();
 
 private:
+	int successes();
+
+private:
+	RenderQueue::Objects unit;
 	int itterations;
 };
