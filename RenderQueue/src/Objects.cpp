@@ -74,22 +74,22 @@ float RenderQueue::Objects::getZscale()
 
 float RenderQueue::Objects::getRed()
 {
-	return data[9 + (index * 13)];
+	return element(9);
 }
 
 float RenderQueue::Objects::getGreen()
 {
-	return data[10 + (index * 13)];
+	return element(10);
 }
 
 float RenderQueue::Objects::getBlue()
 {
-	return data[11 + (index * 13)];
+	return element(11);
 }
 
 float RenderQueue::Objects::getAlpha()
 {
-	return data[12 + (index * 13)];
+	return element(12);
 }
 
 void RenderQueue::Objects::setIndex(int input)

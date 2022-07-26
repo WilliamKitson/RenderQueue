@@ -4,6 +4,7 @@
 
 #include "ObjectsColourDefaultTest.h"
 #include "ObjectsColourPushTest.h"
+#include "ObjectsColourEmptyTest.h"
 
 class ObjectsColourTester
 {
@@ -16,4 +17,5 @@ public:
 private:
 	std::string testDefault();
 	std::string testPush();
+	std::string testEmpty();
 };
