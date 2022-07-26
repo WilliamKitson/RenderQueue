@@ -13,26 +13,7 @@ std::string ObjectsTransformPushTest::test()
 {
 	initialise();
 
-	int successes = 0;
-
-	for (int i{ 0 }; i < itterations; i++)
-	{
-		unit.setIndex(i);
-
-		bool success = true;
-
-		for (int i2{ 0 }; i2 < 9; i2++)
-		{
-			if (unit.getXpos() != (float)i)
-			{
-				success = false;
-			}
-		}
-
-		successes += success;
-	}
-
-	if (successes == itterations)
+	if (successes() == itterations)
 	{
 		return std::string();
 	}
@@ -60,4 +41,28 @@ void ObjectsTransformPushTest::initialise()
 		unit.setIndex(i);
 		unit.setTransform(transform);
 	}
+}
+
+int ObjectsTransformPushTest::successes()
+{
+	int output = 0;
+
+	for (int i{ 0 }; i < itterations; i++)
+	{
+		unit.setIndex(i);
+
+		bool success = true;
+
+		for (int i2{ 0 }; i2 < 9; i2++)
+		{
+			if (unit.getXpos() != (float)i)
+			{
+				success = false;
+			}
+		}
+
+		output += success;
+	}
+
+	return output;
 }
