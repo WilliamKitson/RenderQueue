@@ -14,6 +14,7 @@ std::string ObjectsTester::test()
 
 	output += testCount();
 	output += testTransform();
+	output += testColour();
 
 	return output;
 }
@@ -26,4 +27,9 @@ std::string ObjectsTester::testCount()
 std::string ObjectsTester::testTransform()
 {
 	return ObjectsTransformTester().test();
+}
+
+std::string ObjectsTester::testColour()
+{
+	return ObjectsColourTester().test();
 }

@@ -72,6 +72,26 @@ float RenderQueue::Objects::getZscale()
 	return data[8 + (index * 9)];
 }
 
+float RenderQueue::Objects::getRed()
+{
+	return 1.0f;
+}
+
+float RenderQueue::Objects::getGreen()
+{
+	return 1.0f;
+}
+
+float RenderQueue::Objects::getBlue()
+{
+	return 1.0f;
+}
+
+float RenderQueue::Objects::getAlpha()
+{
+	return 1.0f;
+}
+
 void RenderQueue::Objects::setIndex(int input)
 {
 	index = input;

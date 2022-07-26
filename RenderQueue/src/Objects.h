@@ -20,6 +20,10 @@ namespace RenderQueue
 		float getXscale();
 		float getYscale();
 		float getZscale();
+		float getRed();
+		float getGreen();
+		float getBlue();
+		float getAlpha();
 		void setIndex(int);
 		void setTransform(float[9]);
 
