@@ -14,6 +14,7 @@ std::string ObjectsTransformTester::test()
 
 	output += testDefault();
 	output += testPush();
+	output += testEmpty();
 
 	return output;
 }
@@ -26,4 +27,9 @@ std::string ObjectsTransformTester::testDefault()
 std::string ObjectsTransformTester::testPush()
 {
 	return ObjectsTransformPushTest().test();
+}
+
+std::string ObjectsTransformTester::testEmpty()
+{
+	return ObjectsTransformEmptyTest().test();
 }

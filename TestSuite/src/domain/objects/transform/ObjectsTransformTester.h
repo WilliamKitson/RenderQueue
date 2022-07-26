@@ -4,6 +4,7 @@
 
 #include "ObjectsTransformDefaultTest.h"
 #include "ObjectsTransformPushTest.h"
+#include "ObjectsTransformEmptyTest.h"
 
 class ObjectsTransformTester
 {
@@ -16,4 +17,5 @@ public:
 private:
 	std::string testDefault();
 	std::string testPush();
+	std::string testEmpty();
 };
