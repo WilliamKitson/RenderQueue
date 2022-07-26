@@ -7,8 +7,7 @@ RenderQueue::Objects::Objects()
 
 RenderQueue::Objects::~Objects()
 {
-	delete[] data;
-	data = nullptr;
+	cleanup();
 }
 
 void RenderQueue::Objects::push()
@@ -22,9 +21,7 @@ void RenderQueue::Objects::push()
 		pushed[i] = data[i];
 	}
 
-	delete[] data;
-	data = nullptr;
-
+	cleanup();
 	data = pushed;
 
 	float transform[] = {
@@ -111,6 +108,12 @@ void RenderQueue::Objects::setTransform(float input[9])
 	{
 		data[i + (index * 9)] = input[i];
 	}
+}
+
+void RenderQueue::Objects::cleanup()
+{
+	delete[] data;
+	data = nullptr;
 }
 
 int RenderQueue::Objects::minimum(int input)

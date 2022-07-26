@@ -24,6 +24,7 @@ namespace RenderQueue
 		void setTransform(float[9]);
 
 	private:
+		void cleanup();
 		int minimum(int);
 
 	private:
