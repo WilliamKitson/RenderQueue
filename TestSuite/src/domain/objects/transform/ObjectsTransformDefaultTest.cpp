@@ -1,7 +1,17 @@
 #include "ObjectsTransformDefaultTest.h"
 
 ObjectsTransformDefaultTest::ObjectsTransformDefaultTest()
+	: unit(), transform()
 {
+	transform[0] = 0.0f;
+	transform[1] = 0.0f;
+	transform[2] = 0.0f;
+	transform[3] = 0.0f;
+	transform[4] = 0.0f;
+	transform[5] = 0.0f;
+	transform[6] = 1.0f;
+	transform[7] = 1.0f;
+	transform[8] = 1.0f;
 }
 
 ObjectsTransformDefaultTest::~ObjectsTransformDefaultTest()
@@ -10,32 +20,24 @@ ObjectsTransformDefaultTest::~ObjectsTransformDefaultTest()
 
 std::string ObjectsTransformDefaultTest::test()
 {
-	float transform[] = {
-		0.0f,
-		0.0f,
-		0.0f,
-		0.0f,
-		0.0f,
-		0.0f,
-		1.0f,
-		1.0f,
-		1.0f
-	};
-
-	RenderQueue::Objects unit;
 	unit.push();
 
-	int successes = 0;
-
-	for (int i{ 0 }; i < 9; i++)
-	{
-		successes += unit.getTransform()[i] == transform[i];
-	}
-
-	if (successes == 9)
+	if (successes() == 9)
 	{
 		return std::string();
 	}
 
 	return "objects transform default test failed\n";
+}
+
+int ObjectsTransformDefaultTest::successes()
+{
+	int output = 0;
+
+	for (int i{ 0 }; i < 9; i++)
+	{
+		output += unit.getTransform()[i] == transform[i];
+	}
+
+	return output;
 }
