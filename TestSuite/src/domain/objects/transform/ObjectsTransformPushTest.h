@@ -14,6 +14,7 @@ public:
 private:
 	void initialise();
 	int successes();
+	bool success(float);
 
 private:
 	RenderQueue::Objects unit;

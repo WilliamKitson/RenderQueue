@@ -50,19 +50,58 @@ int ObjectsTransformPushTest::successes()
 	for (int i{ 0 }; i < itterations; i++)
 	{
 		unit.setIndex(i);
-
-		bool success = true;
-
-		for (int i2{ 0 }; i2 < 9; i2++)
-		{
-			if (unit.getXpos() != (float)i)
-			{
-				success = false;
-			}
-		}
-
-		output += success;
+		output += success((float)i);
 	}
 
 	return output;
+}
+
+bool ObjectsTransformPushTest::success(float input)
+{
+	if (unit.getXpos() != input)
+	{
+		return false;
+	}
+
+	if (unit.getYpos() != input)
+	{
+		return false;
+	}
+
+	if (unit.getZpos() != input)
+	{
+		return false;
+	}
+
+	if (unit.getXrot() != input)
+	{
+		return false;
+	}
+
+	if (unit.getYrot() != input)
+	{
+		return false;
+	}
+
+	if (unit.getZrot() != input)
+	{
+		return false;
+	}
+
+	if (unit.getXscale() != input)
+	{
+		return false;
+	}
+
+	if (unit.getYscale() != input)
+	{
+		return false;
+	}
+
+	if (unit.getZscale() != input)
+	{
+		return false;
+	}
+
+	return true;
 }
