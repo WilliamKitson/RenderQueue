@@ -29,128 +29,47 @@ int RenderQueue::Objects::getCount()
 
 float RenderQueue::Objects::getXpos()
 {
-	try
-	{
-		validate();
-	}
-	catch (int)
-	{
-		return 0.0f;
-	}
-
-	return data[0 + (index * 13)];
+	return element(0);
 }
 
 float RenderQueue::Objects::getYpos()
 {
-	try
-	{
-		validate();
-	}
-	catch (int)
-	{
-		return 0.0f;
-	}
-
-	return data[1 + (index * 13)];
+	return element(1);
 }
 
 float RenderQueue::Objects::getZpos()
 {
-	try
-	{
-		validate();
-	}
-	catch (int)
-	{
-		return 0.0f;
-	}
-
-	return data[2 + (index * 13)];
+	return element(2);
 }
 
 float RenderQueue::Objects::getXrot()
 {
-	try
-	{
-		validate();
-	}
-	catch (int)
-	{
-		return 0.0f;
-	}
-
-	return data[3 + (index * 13)];
+	return element(3);
 }
 
 float RenderQueue::Objects::getYrot()
 {
-	try
-	{
-		validate();
-	}
-	catch (int)
-	{
-		return 0.0f;
-	}
-
-	return data[4 + (index * 13)];
+	return element(4);
 }
 
 float RenderQueue::Objects::getZrot()
 {
-	try
-	{
-		validate();
-	}
-	catch (int)
-	{
-		return 0.0f;
-	}
-
-	return data[5 + (index * 13)];
+	return element(5);
 }
 
 float RenderQueue::Objects::getXscale()
 {
-	try
-	{
-		validate();
-	}
-	catch (int)
-	{
-		return 0.0f;
-	}
-
-	return data[6 + (index * 13)];
+	return element(6);
 }
 
 float RenderQueue::Objects::getYscale()
 {
-	try
-	{
-		validate();
-	}
-	catch (int)
-	{
-		return 0.0f;
-	}
-
-	return data[7 + (index * 13)];
+	return element(7);
 }
 
 float RenderQueue::Objects::getZscale()
 {
-	try
-	{
-		validate();
-	}
-	catch (int)
-	{
-		return 0.0f;
-	}
-
-	return data[8 + (index * 13)];
+	return element(8);
 }
 
 float RenderQueue::Objects::getRed()
@@ -257,6 +176,20 @@ int RenderQueue::Objects::minimum(int input)
 	}
 
 	return input;
+}
+
+float RenderQueue::Objects::element(int input)
+{
+	try
+	{
+		validate();
+	}
+	catch (int)
+	{
+		return 0.0f;
+	}
+
+	return data[input + (index * 13)];
 }
 
 void RenderQueue::Objects::validate()

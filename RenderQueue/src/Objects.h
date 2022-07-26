@@ -35,6 +35,7 @@ namespace RenderQueue
 		float* pushed();
 		void initialise();
 		int minimum(int);
+		float element(int);
 		void validate();
 
 	private:
