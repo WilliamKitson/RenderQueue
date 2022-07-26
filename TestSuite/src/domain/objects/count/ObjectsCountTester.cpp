@@ -15,6 +15,7 @@ std::string ObjectsCountTester::test()
 	output += testDefault();
 	output += testPush();
 	output += testPop();
+	output += testMinimum();
 
 	return output;
 }
@@ -32,4 +33,9 @@ std::string ObjectsCountTester::testPush()
 std::string ObjectsCountTester::testPop()
 {
 	return ObjectsCountPopTest().test();
+}
+
+std::string ObjectsCountTester::testMinimum()
+{
+	return ObjectsCountMinimumTest().test();
 }

@@ -149,6 +149,7 @@
   <ItemGroup>
     <ClCompile Include="src\domain\DomainTester.cpp" />
     <ClCompile Include="src\domain\objects\count\ObjectsCountDefaultTest.cpp" />
+    <ClCompile Include="src\domain\objects\count\ObjectsCountMinimumTest.cpp" />
     <ClCompile Include="src\domain\objects\count\ObjectsCountPopTest.cpp" />
     <ClCompile Include="src\domain\objects\count\ObjectsCountPushTest.cpp" />
     <ClCompile Include="src\domain\objects\count\ObjectsCountTester.cpp" />
@@ -160,6 +161,7 @@
   <ItemGroup>
     <ClInclude Include="src\domain\DomainTester.h" />
     <ClInclude Include="src\domain\objects\count\ObjectsCountDefaultTest.h" />
+    <ClInclude Include="src\domain\objects\count\ObjectsCountMinimumTest.h" />
     <ClInclude Include="src\domain\objects\count\ObjectsCountPopTest.h" />
     <ClInclude Include="src\domain\objects\count\ObjectsCountPushTest.h" />
     <ClInclude Include="src\domain\objects\count\ObjectsCountTester.h" />
