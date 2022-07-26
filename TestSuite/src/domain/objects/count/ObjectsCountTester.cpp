@@ -14,6 +14,7 @@ std::string ObjectsCountTester::test()
 
 	output += testDefault();
 	output += testPush();
+	output += testPop();
 
 	return output;
 }
@@ -26,4 +27,9 @@ std::string ObjectsCountTester::testDefault()
 std::string ObjectsCountTester::testPush()
 {
 	return ObjectsCountPushTest().test();
+}
+
+std::string ObjectsCountTester::testPop()
+{
+	return ObjectsCountPopTest().test();
 }

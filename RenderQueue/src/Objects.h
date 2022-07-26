@@ -9,6 +9,7 @@ namespace RenderQueue
 		~Objects();
 
 		void push();
+		void pop();
 		int getCount();
 
 	private:

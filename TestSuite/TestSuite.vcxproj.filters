@@ -39,6 +39,9 @@
     <ClCompile Include="src\domain\objects\count\ObjectsCountPushTest.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="src\domain\objects\count\ObjectsCountPopTest.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\MemoryTest.h">
@@ -60,6 +63,9 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="src\domain\objects\count\ObjectsCountPushTest.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\domain\objects\count\ObjectsCountPopTest.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

@@ -4,6 +4,7 @@
 
 #include "ObjectsCountDefaultTest.h"
 #include "ObjectsCountPushTest.h"
+#include "ObjectsCountPopTest.h"
 
 class ObjectsCountTester
 {
@@ -16,4 +17,5 @@ public:
 private:
 	std::string testDefault();
 	std::string testPush();
+	std::string testPop();
 };

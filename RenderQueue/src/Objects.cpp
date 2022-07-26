@@ -14,6 +14,11 @@ void RenderQueue::Objects::push()
 	count++;
 }
 
+void RenderQueue::Objects::pop()
+{
+	count--;
+}
+
 int RenderQueue::Objects::getCount()
 {
 	return count;
