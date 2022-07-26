@@ -1,7 +1,7 @@
 #include "ObjectsTransformPushTest.h"
 
 ObjectsTransformPushTest::ObjectsTransformPushTest()
-	: itterations{ 4 }
+	: unit(), itterations{ 4 }
 {
 }
 
@@ -11,26 +11,7 @@ ObjectsTransformPushTest::~ObjectsTransformPushTest()
 
 std::string ObjectsTransformPushTest::test()
 {
-	RenderQueue::Objects unit;
-
-	for (int i{ 0 }; i < itterations; i++)
-	{
-		float transform[] = {
-			(float)i,
-			(float)i,
-			(float)i,
-			(float)i,
-			(float)i,
-			(float)i,
-			(float)i,
-			(float)i,
-			(float)i
-		};
-
-		unit.push();
-		unit.setIndex(i);
-		unit.setTransform(transform);
-	}
+	initialise();
 
 	int successes = 0;
 
@@ -57,4 +38,26 @@ std::string ObjectsTransformPushTest::test()
 	}
 
 	return "objects transform push test failed\n";
+}
+
+void ObjectsTransformPushTest::initialise()
+{
+	for (int i{ 0 }; i < itterations; i++)
+	{
+		float transform[] = {
+			(float)i,
+			(float)i,
+			(float)i,
+			(float)i,
+			(float)i,
+			(float)i,
+			(float)i,
+			(float)i,
+			(float)i
+		};
+
+		unit.push();
+		unit.setIndex(i);
+		unit.setTransform(transform);
+	}
 }
