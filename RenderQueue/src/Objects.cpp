@@ -12,7 +12,7 @@ RenderQueue::Objects::~Objects()
 
 void RenderQueue::Objects::push()
 {
-	count += 9;
+	increment();
 
 	float* pushed = new float[count];
 
@@ -114,6 +114,11 @@ void RenderQueue::Objects::cleanup()
 {
 	delete[] data;
 	data = nullptr;
+}
+
+void RenderQueue::Objects::increment()
+{
+	count += 9;
 }
 
 int RenderQueue::Objects::minimum(int input)
