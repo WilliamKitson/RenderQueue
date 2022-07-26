@@ -14,23 +14,7 @@ void RenderQueue::Objects::push()
 {
 	increment();
 	swap(pushed());
-
-	float transform[] = {
-		0.0f,
-		0.0f,
-		0.0f,
-		0.0f,
-		0.0f,
-		0.0f,
-		1.0f,
-		1.0f,
-		1.0f
-	};
-
-	for (int i{ 0 }; i < 9; i++)
-	{
-		data[i + (count - 9)] = transform[i];
-	}
+	initialise();
 }
 
 void RenderQueue::Objects::pop()
@@ -128,6 +112,26 @@ float* RenderQueue::Objects::pushed()
 	}
 
 	return output;
+}
+
+void RenderQueue::Objects::initialise()
+{
+	float transform[] = {
+		0.0f,
+		0.0f,
+		0.0f,
+		0.0f,
+		0.0f,
+		0.0f,
+		1.0f,
+		1.0f,
+		1.0f
+	};
+
+	for (int i{ 0 }; i < 9; i++)
+	{
+		data[i + (count - 9)] = transform[i];
+	}
 }
 
 int RenderQueue::Objects::minimum(int input)
