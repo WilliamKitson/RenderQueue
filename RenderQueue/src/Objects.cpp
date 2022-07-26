@@ -1,72 +1,116 @@
 #include "Objects.h"
 
 RenderQueue::Objects::Objects()
-	: count{ 0 }
+	: count{ 0 }, index{ 0 }, data{ nullptr }
 {
 }
 
 RenderQueue::Objects::~Objects()
 {
+	delete[] data;
+	data = nullptr;
 }
 
 void RenderQueue::Objects::push()
 {
-	count++;
+	count += 9;
+
+	float* pushed = new float[count];
+
+	for (int i{ 0 }; i < count - 9; i++)
+	{
+		pushed[i] = data[i];
+	}
+
+	delete[] data;
+	data = nullptr;
+
+	data = pushed;
+
+	float transform[] = {
+		0.0f,
+		0.0f,
+		0.0f,
+		0.0f,
+		0.0f,
+		0.0f,
+		1.0f,
+		1.0f,
+		1.0f
+	};
+
+	for (int i{ 0 }; i < 9; i++)
+	{
+		pushed[i + (count - 9)] = transform[i];
+	}
 }
 
 void RenderQueue::Objects::pop()
 {
-	count = minimum(count - 1);
+	count = minimum(count - 9);
 }
 
 int RenderQueue::Objects::getCount()
 {
-	return count;
+	return count / 9;
 }
 
 float RenderQueue::Objects::getXpos()
 {
-	return 0.0f;
+	return data[0 + (index * 9)];
 }
 
 float RenderQueue::Objects::getYpos()
 {
-	return 0.0f;
+	return data[1 + (index * 9)];
 }
 
 float RenderQueue::Objects::getZpos()
 {
-	return 0.0f;
+	return data[2 + (index * 9)];
 }
 
 float RenderQueue::Objects::getXrot()
 {
-	return 0.0f;
+	return data[3 + (index * 9)];
 }
 
 float RenderQueue::Objects::getYrot()
 {
-	return 0.0f;
+	return data[4 + (index * 9)];
 }
 
 float RenderQueue::Objects::getZrot()
 {
-	return 0.0f;
+	return data[5 + (index * 9)];
 }
 
 float RenderQueue::Objects::getXscale()
 {
-	return 1.0f;
+	return data[6 + (index * 9)];
 }
 
 float RenderQueue::Objects::getYscale()
 {
-	return 1.0f;
+	return data[7 + (index * 9)];
 }
 
 float RenderQueue::Objects::getZscale()
 {
-	return 1.0f;
+	return data[8 + (index * 9)];
+}
+
+void RenderQueue::Objects::setIndex(int input)
+{
+	index = input;
+}
+
+void RenderQueue::Objects::setTransform(float input[9])
+{
+	for (int i{ 0 }; i < 9; i++)
+	{
+		data[i + (index * 9)] = input[i];
+	}
 }
 
 int RenderQueue::Objects::minimum(int input)

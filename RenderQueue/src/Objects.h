@@ -20,11 +20,15 @@ namespace RenderQueue
 		float getXscale();
 		float getYscale();
 		float getZscale();
+		void setIndex(int);
+		void setTransform(float[9]);
 
 	private:
 		int minimum(int);
 
 	private:
 		int count;
+		int index;
+		float* data;
 	};
 }
