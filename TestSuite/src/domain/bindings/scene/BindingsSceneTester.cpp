@@ -14,6 +14,7 @@ std::string BindingsSceneTester::test()
 
 	output += testPush();
 	output += testMinimum();
+	output += testEmpty();
 
 	return output;
 }
@@ -26,4 +27,9 @@ std::string BindingsSceneTester::testPush()
 std::string BindingsSceneTester::testMinimum()
 {
 	return BindingsSceneMinimumTest().test();
+}
+
+std::string BindingsSceneTester::testEmpty()
+{
+	return BindingsSceneEmptyTest().test();
 }

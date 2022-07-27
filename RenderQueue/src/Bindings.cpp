@@ -42,6 +42,15 @@ int renderQueue::Bindings::getCount()
 
 int renderQueue::Bindings::getScene()
 {
+	try
+	{
+		validate();
+	}
+	catch (int)
+	{
+		return 0;
+	}
+
 	return data[index];
 }
 
@@ -60,4 +69,14 @@ int renderQueue::Bindings::minimum(int input)
 	}
 
 	return input;
+}
+
+void renderQueue::Bindings::validate()
+{
+	if (count)
+	{
+		return;
+	}
+
+	throw int();
 }

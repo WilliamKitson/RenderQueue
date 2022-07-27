@@ -4,6 +4,7 @@
 
 #include "BindingsScenePushTest.h"
 #include "BindingsSceneMinimumTest.h"
+#include "BindingsSceneEmptyTest.h"
 
 class BindingsSceneTester
 {
@@ -16,4 +17,5 @@ public:
 private:
 	std::string testPush();
 	std::string testMinimum();
+	std::string testEmpty();
 };

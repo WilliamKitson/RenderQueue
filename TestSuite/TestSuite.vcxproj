@@ -153,6 +153,7 @@
     <ClCompile Include="src\domain\bindings\count\BindingsCountPopTest.cpp" />
     <ClCompile Include="src\domain\bindings\count\BindingsCountPushTest.cpp" />
     <ClCompile Include="src\domain\bindings\count\BindingsCountTester.cpp" />
+    <ClCompile Include="src\domain\bindings\scene\BindingsSceneEmptyTest.cpp" />
     <ClCompile Include="src\domain\bindings\scene\BindingsSceneMinimumTest.cpp" />
     <ClCompile Include="src\domain\bindings\scene\BindingsScenePushTest.cpp" />
     <ClCompile Include="src\domain\bindings\scene\BindingsSceneTester.cpp" />
@@ -188,6 +189,7 @@
     <ClInclude Include="src\domain\bindings\count\BindingsCountPopTest.h" />
     <ClInclude Include="src\domain\bindings\count\BindingsCountPushTest.h" />
     <ClInclude Include="src\domain\bindings\count\BindingsCountTester.h" />
+    <ClInclude Include="src\domain\bindings\scene\BindingsSceneEmptyTest.h" />
     <ClInclude Include="src\domain\bindings\scene\BindingsSceneMinimumTest.h" />
     <ClInclude Include="src\domain\bindings\scene\BindingsScenePushTest.h" />
     <ClInclude Include="src\domain\bindings\scene\BindingsSceneTester.h" />
