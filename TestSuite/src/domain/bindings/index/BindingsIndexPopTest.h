@@ -10,4 +10,10 @@ public:
 	~BindingsIndexPopTest();
 
 	std::string test();
+
+private:
+	void initialise();
+
+private:
+	renderQueue::Bindings unit;
 };

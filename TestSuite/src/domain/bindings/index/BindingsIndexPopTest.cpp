@@ -1,6 +1,7 @@
 #include "BindingsIndexPopTest.h"
 
 BindingsIndexPopTest::BindingsIndexPopTest()
+	: unit()
 {
 }
 
@@ -10,12 +11,7 @@ BindingsIndexPopTest::~BindingsIndexPopTest()
 
 std::string BindingsIndexPopTest::test()
 {
-	renderQueue::Bindings unit;
-
-	for (int i{ 0 }; i < 4; i++)
-	{
-		unit.push(i);
-	}
+	initialise();
 
 	unit.setIndex(3);
 	unit.pop();
@@ -26,4 +22,12 @@ std::string BindingsIndexPopTest::test()
 	}
 
 	return "bindings index pop test failed\n";
+}
+
+void BindingsIndexPopTest::initialise()
+{
+	for (int i{ 0 }; i < 4; i++)
+	{
+		unit.push(i);
+	}
 }
