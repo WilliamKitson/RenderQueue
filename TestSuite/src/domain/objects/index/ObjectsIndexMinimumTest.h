@@ -10,4 +10,10 @@ public:
 	~ObjectsIndexMinimumTest();
 
 	std::string test();
+
+private:
+	bool success();
+
+private:
+	RenderQueue::Objects unit;
 };
