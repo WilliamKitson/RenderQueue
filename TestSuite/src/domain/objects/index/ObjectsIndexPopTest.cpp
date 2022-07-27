@@ -16,54 +16,7 @@ std::string ObjectsIndexPopTest::test()
 	unit.setIndex(3);
 	unit.pop();
 
-	bool success = true;
-
-	if (unit.getXpos() != 0.0f)
-	{
-		success = false;
-	}
-
-	if (unit.getYpos() != 0.0f)
-	{
-		success = false;
-	}
-
-	if (unit.getZpos() != 0.0f)
-	{
-		success = false;
-	}
-
-	if (unit.getXrot() != 0.0f)
-	{
-		success = false;
-	}
-
-	if (unit.getYrot() != 0.0f)
-	{
-		success = false;
-	}
-
-	if (unit.getZrot() != 0.0f)
-	{
-		success = false;
-	}
-
-	if (unit.getXscale() != 0.0f)
-	{
-		success = false;
-	}
-
-	if (unit.getYscale() != 0.0f)
-	{
-		success = false;
-	}
-
-	if (unit.getZscale() != 0.0f)
-	{
-		success = false;
-	}
-
-	if (success)
+	if (success())
 	{
 		return std::string();
 	}
@@ -92,4 +45,54 @@ void ObjectsIndexPopTest::initialise()
 		unit.setIndex(i);
 		unit.setTransform(transform);
 	}
+}
+
+bool ObjectsIndexPopTest::success()
+{
+	if (unit.getXpos() != 0.0f)
+	{
+		return false;
+	}
+
+	if (unit.getYpos() != 0.0f)
+	{
+		return false;
+	}
+
+	if (unit.getZpos() != 0.0f)
+	{
+		return false;
+	}
+
+	if (unit.getXrot() != 0.0f)
+	{
+		return false;
+	}
+
+	if (unit.getYrot() != 0.0f)
+	{
+		return false;
+	}
+
+	if (unit.getZrot() != 0.0f)
+	{
+		return false;
+	}
+
+	if (unit.getXscale() != 0.0f)
+	{
+		return false;
+	}
+
+	if (unit.getYscale() != 0.0f)
+	{
+		return false;
+	}
+
+	if (unit.getZscale() != 0.0f)
+	{
+		return false;
+	}
+
+	return true;
 }

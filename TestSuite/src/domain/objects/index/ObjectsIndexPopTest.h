@@ -13,6 +13,7 @@ public:
 
 private:
 	void initialise();
+	bool success();
 
 private:
 	RenderQueue::Objects unit;
