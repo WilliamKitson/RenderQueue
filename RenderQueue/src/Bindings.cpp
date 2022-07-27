@@ -27,7 +27,7 @@ void renderQueue::Bindings::push(int input)
 
 	data = pushed;
 
-	data[count - 1] = input;
+	data[count - 1] = minimum(input);
 }
 
 void renderQueue::Bindings::pop()
