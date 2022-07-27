@@ -96,7 +96,7 @@ float RenderQueue::Objects::getAlpha()
 
 void RenderQueue::Objects::setIndex(int input)
 {
-	index = input;
+	index = minimum(input);
 }
 
 void RenderQueue::Objects::setTransform(float input[9])

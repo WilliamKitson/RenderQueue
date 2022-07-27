@@ -158,6 +158,7 @@
     <ClCompile Include="src\domain\objects\count\ObjectsCountPopTest.cpp" />
     <ClCompile Include="src\domain\objects\count\ObjectsCountPushTest.cpp" />
     <ClCompile Include="src\domain\objects\count\ObjectsCountTester.cpp" />
+    <ClCompile Include="src\domain\objects\index\ObjectsIndexMinimumTest.cpp" />
     <ClCompile Include="src\domain\objects\index\ObjectsIndexPopTest.cpp" />
     <ClCompile Include="src\domain\objects\index\ObjectsIndexTester.cpp" />
     <ClCompile Include="src\domain\objects\ObjectsTester.cpp" />
@@ -182,6 +183,7 @@
     <ClInclude Include="src\domain\objects\count\ObjectsCountPopTest.h" />
     <ClInclude Include="src\domain\objects\count\ObjectsCountPushTest.h" />
     <ClInclude Include="src\domain\objects\count\ObjectsCountTester.h" />
+    <ClInclude Include="src\domain\objects\index\ObjectsIndexMinimumTest.h" />
     <ClInclude Include="src\domain\objects\index\ObjectsIndexPopTest.h" />
     <ClInclude Include="src\domain\objects\index\ObjectsIndexTester.h" />
     <ClInclude Include="src\domain\objects\ObjectsTester.h" />

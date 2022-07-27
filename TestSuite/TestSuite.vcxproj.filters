@@ -81,6 +81,9 @@
     <ClCompile Include="src\domain\objects\index\ObjectsIndexTester.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="src\domain\objects\index\ObjectsIndexMinimumTest.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\MemoryTest.h">
@@ -144,6 +147,9 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="src\domain\objects\index\ObjectsIndexTester.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\domain\objects\index\ObjectsIndexMinimumTest.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
