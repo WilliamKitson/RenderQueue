@@ -19,6 +19,7 @@ namespace renderQueue
 		void increment();
 		void swap(int*);
 		int* pushed();
+		void initialise(int);
 		int minimum(int);
 		void validate();
 
