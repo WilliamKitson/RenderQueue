@@ -17,6 +17,7 @@ namespace renderQueue
 	private:
 		void cleanup();
 		void increment();
+		void swap(int*);
 		int* pushed();
 		int minimum(int);
 		void validate();
