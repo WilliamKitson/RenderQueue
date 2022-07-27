@@ -179,11 +179,7 @@ float* RenderQueue::Objects::popped()
 
 	for (int i{ 0 }; i < count; i++)
 	{
-		if (i == index * 13)
-		{
-			unpopped += 13;
-		}
-
+		unpopped += (i == index * 13) * 13;
 		output[i] = data[unpopped];
 		unpopped++;
 	}
