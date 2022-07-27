@@ -13,6 +13,7 @@ std::string BindingsTester::test()
 	std::string output{ "" };
 
 	output += testCount();
+	output += testScene();
 
 	return output;
 }
@@ -20,4 +21,9 @@ std::string BindingsTester::test()
 std::string BindingsTester::testCount()
 {
 	return BindingsCountTester().test();
+}
+
+std::string BindingsTester::testScene()
+{
+	return BindingsSceneTester().test();
 }

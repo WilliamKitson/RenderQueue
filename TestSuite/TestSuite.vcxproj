@@ -153,6 +153,8 @@
     <ClCompile Include="src\domain\bindings\count\BindingsCountPopTest.cpp" />
     <ClCompile Include="src\domain\bindings\count\BindingsCountPushTest.cpp" />
     <ClCompile Include="src\domain\bindings\count\BindingsCountTester.cpp" />
+    <ClCompile Include="src\domain\bindings\scene\BindingsScenePushTest.cpp" />
+    <ClCompile Include="src\domain\bindings\scene\BindingsSceneTester.cpp" />
     <ClCompile Include="src\domain\DomainTester.cpp" />
     <ClCompile Include="src\domain\objects\colour\ObjectsColourDefaultTest.cpp" />
     <ClCompile Include="src\domain\objects\colour\ObjectsColourEmptyTest.cpp" />
@@ -185,6 +187,8 @@
     <ClInclude Include="src\domain\bindings\count\BindingsCountPopTest.h" />
     <ClInclude Include="src\domain\bindings\count\BindingsCountPushTest.h" />
     <ClInclude Include="src\domain\bindings\count\BindingsCountTester.h" />
+    <ClInclude Include="src\domain\bindings\scene\BindingsScenePushTest.h" />
+    <ClInclude Include="src\domain\bindings\scene\BindingsSceneTester.h" />
     <ClInclude Include="src\domain\DomainTester.h" />
     <ClInclude Include="src\domain\objects\colour\ObjectsColourDefaultTest.h" />
     <ClInclude Include="src\domain\objects\colour\ObjectsColourEmptyTest.h" />

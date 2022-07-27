@@ -105,6 +105,12 @@
     <ClCompile Include="src\domain\bindings\count\BindingsCountMinimumTest.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="src\domain\bindings\scene\BindingsScenePushTest.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\domain\bindings\scene\BindingsSceneTester.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\MemoryTest.h">
@@ -192,6 +198,12 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="src\domain\bindings\count\BindingsCountMinimumTest.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\domain\bindings\scene\BindingsScenePushTest.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\domain\bindings\scene\BindingsSceneTester.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
