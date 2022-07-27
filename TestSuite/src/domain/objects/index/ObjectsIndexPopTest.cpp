@@ -1,6 +1,7 @@
 #include "ObjectsIndexPopTest.h"
 
 ObjectsIndexPopTest::ObjectsIndexPopTest()
+	: unit()
 {
 }
 
@@ -10,27 +11,7 @@ ObjectsIndexPopTest::~ObjectsIndexPopTest()
 
 std::string ObjectsIndexPopTest::test()
 {
-	RenderQueue::Objects unit;
-
-	for (int i{ 0 }; i < 4; i++)
-	{
-		unit.push();
-
-		float transform[] = {
-			(float)i,
-			(float)i,
-			(float)i,
-			(float)i,
-			(float)i,
-			(float)i,
-			(float)i,
-			(float)i,
-			(float)i
-		};
-
-		unit.setIndex(i);
-		unit.setTransform(transform);
-	}
+	initialise();
 
 	unit.setIndex(3);
 	unit.pop();
@@ -88,4 +69,27 @@ std::string ObjectsIndexPopTest::test()
 	}
 
 	return "objects index pop test failed\n";
+}
+
+void ObjectsIndexPopTest::initialise()
+{
+	for (int i{ 0 }; i < 4; i++)
+	{
+		unit.push();
+
+		float transform[] = {
+			(float)i,
+			(float)i,
+			(float)i,
+			(float)i,
+			(float)i,
+			(float)i,
+			(float)i,
+			(float)i,
+			(float)i
+		};
+
+		unit.setIndex(i);
+		unit.setTransform(transform);
+	}
 }

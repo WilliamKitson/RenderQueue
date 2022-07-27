@@ -10,4 +10,10 @@ public:
 	~ObjectsIndexPopTest();
 
 	std::string test();
+
+private:
+	void initialise();
+
+private:
+	RenderQueue::Objects unit;
 };
