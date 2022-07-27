@@ -1,7 +1,7 @@
 #include "ObjectsTransformPopTest.h"
 
 ObjectsTransformPopTest::ObjectsTransformPopTest()
-	: itterations{ 4 }
+	: unit(), itterations{ 4 }
 {
 }
 
@@ -11,26 +11,7 @@ ObjectsTransformPopTest::~ObjectsTransformPopTest()
 
 std::string ObjectsTransformPopTest::test()
 {
-	RenderQueue::Objects unit;
-
-	for (int i{ 0 }; i < itterations; i++)
-	{
-		float transform[] = {
-			(float)i,
-			(float)i,
-			(float)i,
-			(float)i,
-			(float)i,
-			(float)i,
-			(float)i,
-			(float)i,
-			(float)i
-		};
-
-		unit.push();
-		unit.setIndex(i);
-		unit.setTransform(transform);
-	}
+	initialise();
 
 	int successes = 0;
 
@@ -95,4 +76,26 @@ std::string ObjectsTransformPopTest::test()
 	}
 
 	return "objects transform pop test failed\n";
+}
+
+void ObjectsTransformPopTest::initialise()
+{
+	for (int i{ 0 }; i < itterations; i++)
+	{
+		float transform[] = {
+			(float)i,
+			(float)i,
+			(float)i,
+			(float)i,
+			(float)i,
+			(float)i,
+			(float)i,
+			(float)i,
+			(float)i
+		};
+
+		unit.push();
+		unit.setIndex(i);
+		unit.setTransform(transform);
+	}
 }
