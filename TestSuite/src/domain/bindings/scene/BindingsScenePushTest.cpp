@@ -13,15 +13,7 @@ std::string BindingsScenePushTest::test()
 {
 	initialise();
 
-	int successes = 0;
-
-	for (int i{ 0 }; i < itterations; i++)
-	{
-		unit.setIndex(i);
-		successes += unit.getScene() == i;
-	}
-
-	if (successes == itterations)
+	if (successes() == itterations)
 	{
 		return std::string();
 	}
@@ -35,4 +27,17 @@ void BindingsScenePushTest::initialise()
 	{
 		unit.push(i);
 	}
+}
+
+int BindingsScenePushTest::successes()
+{
+	int output = 0;
+
+	for (int i{ 0 }; i < itterations; i++)
+	{
+		unit.setIndex(i);
+		output += unit.getScene() == i;
+	}
+
+	return output;
 }
