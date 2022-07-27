@@ -1,7 +1,9 @@
 #pragma once
 
 #include <string>
+
 #include "BindingsCountDefaultTest.h"
+#include "BindingsCountPushTest.h"
 
 class BindingsCountTester
 {
@@ -13,4 +15,5 @@ public:
 
 private:
 	std::string testDefault();
+	std::string testPush();
 };
