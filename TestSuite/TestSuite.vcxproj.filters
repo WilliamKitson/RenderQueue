@@ -99,6 +99,9 @@
     <ClCompile Include="src\domain\bindings\count\BindingsCountPushTest.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="src\domain\bindings\count\BindingsCountPopTest.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\MemoryTest.h">
@@ -180,6 +183,9 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="src\domain\bindings\count\BindingsCountPushTest.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\domain\bindings\count\BindingsCountPopTest.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

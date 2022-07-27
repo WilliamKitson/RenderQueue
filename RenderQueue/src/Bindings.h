@@ -9,6 +9,7 @@ namespace renderQueue
 		~Bindings();
 
 		void push(int);
+		void pop();
 		int getCount();
 
 	private:

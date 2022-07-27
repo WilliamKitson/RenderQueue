@@ -14,6 +14,7 @@ std::string BindingsCountTester::test()
 
 	output += testDefault();
 	output += testPush();
+	output += testPop();
 
 	return output;
 }
@@ -26,4 +27,9 @@ std::string BindingsCountTester::testDefault()
 std::string BindingsCountTester::testPush()
 {
 	return BindingsCountPushTest().test();
+}
+
+std::string BindingsCountTester::testPop()
+{
+	return BindingsCountPopTest().test();
 }

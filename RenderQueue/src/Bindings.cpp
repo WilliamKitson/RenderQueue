@@ -14,6 +14,11 @@ void renderQueue::Bindings::push(int)
 	count++;
 }
 
+void renderQueue::Bindings::pop()
+{
+	count--;
+}
+
 int renderQueue::Bindings::getCount()
 {
 	return count;

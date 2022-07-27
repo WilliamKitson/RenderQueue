@@ -4,6 +4,7 @@
 
 #include "BindingsCountDefaultTest.h"
 #include "BindingsCountPushTest.h"
+#include "BindingsCountPopTest.h"
 
 class BindingsCountTester
 {
@@ -16,4 +17,5 @@ public:
 private:
 	std::string testDefault();
 	std::string testPush();
+	std::string testPop();
 };
