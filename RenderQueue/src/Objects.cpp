@@ -20,6 +20,22 @@ void RenderQueue::Objects::push()
 void RenderQueue::Objects::pop()
 {
 	count = minimum(count - 13);
+
+	float* popped = new float[count];
+	int dataIndex = 0;
+
+	for (int i{ 0 }; i < count; i++)
+	{
+		if (i == index * 13)
+		{
+			dataIndex += 13;
+		}
+
+		popped[i] = data[dataIndex];
+		dataIndex++;
+	}
+
+	swap(popped);
 }
 
 int RenderQueue::Objects::getCount()

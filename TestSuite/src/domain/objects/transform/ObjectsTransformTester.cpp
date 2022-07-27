@@ -15,6 +15,7 @@ std::string ObjectsTransformTester::test()
 	output += testDefault();
 	output += testPush();
 	output += testEmpty();
+	output += testPop();
 
 	return output;
 }
@@ -32,4 +33,9 @@ std::string ObjectsTransformTester::testPush()
 std::string ObjectsTransformTester::testEmpty()
 {
 	return ObjectsTransformEmptyTest().test();
+}
+
+std::string ObjectsTransformTester::testPop()
+{
+	return ObjectsTransformPopTest().test();
 }

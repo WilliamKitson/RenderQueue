@@ -160,6 +160,7 @@
     <ClCompile Include="src\domain\objects\ObjectsTester.cpp" />
     <ClCompile Include="src\domain\objects\transform\ObjectsTransformDefaultTest.cpp" />
     <ClCompile Include="src\domain\objects\transform\ObjectsTransformEmptyTest.cpp" />
+    <ClCompile Include="src\domain\objects\transform\ObjectsTransformPopTest.cpp" />
     <ClCompile Include="src\domain\objects\transform\ObjectsTransformPushTest.cpp" />
     <ClCompile Include="src\domain\objects\transform\ObjectsTransformTester.cpp" />
     <ClCompile Include="src\Entrypoint.cpp" />
@@ -180,6 +181,7 @@
     <ClInclude Include="src\domain\objects\ObjectsTester.h" />
     <ClInclude Include="src\domain\objects\transform\ObjectsTransformDefaultTest.h" />
     <ClInclude Include="src\domain\objects\transform\ObjectsTransformEmptyTest.h" />
+    <ClInclude Include="src\domain\objects\transform\ObjectsTransformPopTest.h" />
     <ClInclude Include="src\domain\objects\transform\ObjectsTransformPushTest.h" />
     <ClInclude Include="src\domain\objects\transform\ObjectsTransformTester.h" />
     <ClInclude Include="src\MemoryTest.h" />
