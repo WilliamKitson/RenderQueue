@@ -21,6 +21,7 @@ namespace renderQueue
 		int* pushed();
 		void initialise(int);
 		void decrement();
+		int* popped();
 		int minimum(int);
 		void validate();
 

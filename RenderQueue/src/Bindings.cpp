@@ -20,18 +20,7 @@ void renderQueue::Bindings::push(int input)
 void renderQueue::Bindings::pop()
 {
 	decrement();
-
-	int* popped = new int[count];
-	int unpopped = 0;
-
-	for (int i{ 0 }; i < count; i++)
-	{
-		unpopped += (i == index);
-		popped[i] = data[unpopped];
-		unpopped++;
-	}
-
-	swap(popped);
+	swap(popped());
 }
 
 int renderQueue::Bindings::getCount()
@@ -95,6 +84,21 @@ void renderQueue::Bindings::initialise(int input)
 void renderQueue::Bindings::decrement()
 {
 	count = minimum(count - 1);
+}
+
+int* renderQueue::Bindings::popped()
+{
+	int* output = new int[count];
+	int unpopped = 0;
+
+	for (int i{ 0 }; i < count; i++)
+	{
+		unpopped += (i == index);
+		output[i] = data[unpopped];
+		unpopped++;
+	}
+
+	return output;
 }
 
 int renderQueue::Bindings::minimum(int input)
