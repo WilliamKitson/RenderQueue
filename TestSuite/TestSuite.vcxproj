@@ -150,6 +150,7 @@
     <ClCompile Include="src\domain\DomainTester.cpp" />
     <ClCompile Include="src\domain\objects\colour\ObjectsColourDefaultTest.cpp" />
     <ClCompile Include="src\domain\objects\colour\ObjectsColourEmptyTest.cpp" />
+    <ClCompile Include="src\domain\objects\colour\ObjectsColourPopTest.cpp" />
     <ClCompile Include="src\domain\objects\colour\ObjectsColourPushTest.cpp" />
     <ClCompile Include="src\domain\objects\colour\ObjectsColourTester.cpp" />
     <ClCompile Include="src\domain\objects\count\ObjectsCountDefaultTest.cpp" />
@@ -171,6 +172,7 @@
     <ClInclude Include="src\domain\DomainTester.h" />
     <ClInclude Include="src\domain\objects\colour\ObjectsColourDefaultTest.h" />
     <ClInclude Include="src\domain\objects\colour\ObjectsColourEmptyTest.h" />
+    <ClInclude Include="src\domain\objects\colour\ObjectsColourPopTest.h" />
     <ClInclude Include="src\domain\objects\colour\ObjectsColourPushTest.h" />
     <ClInclude Include="src\domain\objects\colour\ObjectsColourTester.h" />
     <ClInclude Include="src\domain\objects\count\ObjectsCountDefaultTest.h" />

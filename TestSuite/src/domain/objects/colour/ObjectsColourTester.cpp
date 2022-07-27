@@ -15,6 +15,7 @@ std::string ObjectsColourTester::test()
 	output += testDefault();
 	output += testPush();
 	output += testEmpty();
+	output += testPop();
 
 	return output;
 }
@@ -32,4 +33,9 @@ std::string ObjectsColourTester::testPush()
 std::string ObjectsColourTester::testEmpty()
 {
 	return ObjectsColourEmptyTest().test();
+}
+
+std::string ObjectsColourTester::testPop()
+{
+	return ObjectsColourPopTest().test();
 }
