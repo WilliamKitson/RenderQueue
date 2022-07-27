@@ -14,15 +14,10 @@ void renderQueue::Bindings::push(int input)
 {
 	increment();
 
-	int* pushed = new int[count];
-
-	for (int i{ 0 }; i < count - 1; i++)
-	{
-		pushed[i] = data[i];
-	}
+	int* temp = pushed();
 
 	cleanup();
-	data = pushed;
+	data = temp;
 
 	data[count - 1] = minimum(input);
 }
@@ -65,6 +60,18 @@ void renderQueue::Bindings::cleanup()
 void renderQueue::Bindings::increment()
 {
 	count++;
+}
+
+int* renderQueue::Bindings::pushed()
+{
+	int* output = new int[count];
+
+	for (int i{ 0 }; i < count - 1; i++)
+	{
+		output[i] = data[i];
+	}
+
+	return output;
 }
 
 int renderQueue::Bindings::minimum(int input)
