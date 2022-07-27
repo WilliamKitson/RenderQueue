@@ -16,10 +16,22 @@ void renderQueue::Bindings::push(int)
 
 void renderQueue::Bindings::pop()
 {
-	count--;
+	count = minimum(count - 1);
 }
 
 int renderQueue::Bindings::getCount()
 {
 	return count;
+}
+
+int renderQueue::Bindings::minimum(int input)
+{
+	int output = 0;
+
+	if (input < output)
+	{
+		return output;
+	}
+
+	return input;
 }

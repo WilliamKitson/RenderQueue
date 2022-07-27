@@ -149,6 +149,7 @@
   <ItemGroup>
     <ClCompile Include="src\domain\bindings\BindingsTester.cpp" />
     <ClCompile Include="src\domain\bindings\count\BindingsCountDefaultTest.cpp" />
+    <ClCompile Include="src\domain\bindings\count\BindingsCountMinimumTest.cpp" />
     <ClCompile Include="src\domain\bindings\count\BindingsCountPopTest.cpp" />
     <ClCompile Include="src\domain\bindings\count\BindingsCountPushTest.cpp" />
     <ClCompile Include="src\domain\bindings\count\BindingsCountTester.cpp" />
@@ -180,6 +181,7 @@
   <ItemGroup>
     <ClInclude Include="src\domain\bindings\BindingsTester.h" />
     <ClInclude Include="src\domain\bindings\count\BindingsCountDefaultTest.h" />
+    <ClInclude Include="src\domain\bindings\count\BindingsCountMinimumTest.h" />
     <ClInclude Include="src\domain\bindings\count\BindingsCountPopTest.h" />
     <ClInclude Include="src\domain\bindings\count\BindingsCountPushTest.h" />
     <ClInclude Include="src\domain\bindings\count\BindingsCountTester.h" />

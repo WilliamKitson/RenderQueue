@@ -13,6 +13,9 @@ namespace renderQueue
 		int getCount();
 
 	private:
+		int minimum(int);
+
+	private:
 		int count;
 	};
 }
