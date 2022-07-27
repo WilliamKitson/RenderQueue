@@ -1,7 +1,7 @@
 #include "BindingsScenePushTest.h"
 
 BindingsScenePushTest::BindingsScenePushTest()
-	: itterations{ 4 }
+	: unit(), itterations{ 4 }
 {
 }
 
@@ -11,12 +11,7 @@ BindingsScenePushTest::~BindingsScenePushTest()
 
 std::string BindingsScenePushTest::test()
 {
-	renderQueue::Bindings unit;
-
-	for (int i{ 0 }; i < itterations; i++)
-	{
-		unit.push(i);
-	}
+	initialise();
 
 	int successes = 0;
 
@@ -32,4 +27,12 @@ std::string BindingsScenePushTest::test()
 	}
 
 	return "bindings scene push test failed\n";
+}
+
+void BindingsScenePushTest::initialise()
+{
+	for (int i{ 0 }; i < itterations; i++)
+	{
+		unit.push(i);
+	}
 }
