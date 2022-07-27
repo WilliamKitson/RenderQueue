@@ -4,6 +4,7 @@
 
 #include "ObjectsIndexPopTest.h"
 #include "ObjectsIndexMinimumTest.h"
+#include "ObjectsIndexMaximumTest.h"
 
 class ObjectsIndexTester
 {
@@ -16,4 +17,5 @@ public:
 private:
 	std::string testPop();
 	std::string testMinimum();
+	std::string testMaximum();
 };

@@ -14,6 +14,7 @@ std::string ObjectsIndexTester::test()
 
 	output += testPop();
 	output += testMinimum();
+	output += testMaximum();
 
 	return output;
 }
@@ -26,4 +27,9 @@ std::string ObjectsIndexTester::testPop()
 std::string ObjectsIndexTester::testMinimum()
 {
 	return ObjectsIndexMinimumTest().test();
+}
+
+std::string ObjectsIndexTester::testMaximum()
+{
+	return ObjectsIndexMaximumTest().test();
 }

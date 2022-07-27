@@ -96,7 +96,7 @@ float RenderQueue::Objects::getAlpha()
 
 void RenderQueue::Objects::setIndex(int input)
 {
-	index = minimum(input);
+	index = minimum(maximum(input));
 }
 
 void RenderQueue::Objects::setTransform(float input[9])
@@ -198,6 +198,16 @@ int RenderQueue::Objects::minimum(int input)
 	}
 
 	return input;
+}
+
+int RenderQueue::Objects::maximum(int input)
+{
+	if (input < getCount())
+	{
+		return input;
+	}
+
+	return 0;
 }
 
 float RenderQueue::Objects::element(int input)
