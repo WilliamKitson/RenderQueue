@@ -1,7 +1,7 @@
 #include "BindingsCountPushTest.h"
 
 BindingsCountPushTest::BindingsCountPushTest()
-	: itterations{ 4 }
+	: unit(), itterations{ 4 }
 {
 }
 
@@ -11,12 +11,7 @@ BindingsCountPushTest::~BindingsCountPushTest()
 
 std::string BindingsCountPushTest::test()
 {
-	renderQueue::Bindings unit;
-
-	for (int i{ 0 }; i < itterations; i++)
-	{
-		unit.push(int());
-	}
+	initialise();
 
 	if (unit.getCount() == itterations)
 	{
@@ -24,4 +19,12 @@ std::string BindingsCountPushTest::test()
 	}
 
 	return "bindings count push test failed\n";
+}
+
+void BindingsCountPushTest::initialise()
+{
+	for (int i{ 0 }; i < itterations; i++)
+	{
+		unit.push(int());
+	}
 }
