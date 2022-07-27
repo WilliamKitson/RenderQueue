@@ -15,6 +15,7 @@ std::string ObjectsTester::test()
 	output += testCount();
 	output += testTransform();
 	output += testColour();
+	output += testIndex();
 
 	return output;
 }
@@ -32,4 +33,9 @@ std::string ObjectsTester::testTransform()
 std::string ObjectsTester::testColour()
 {
 	return ObjectsColourTester().test();
+}
+
+std::string ObjectsTester::testIndex()
+{
+	return ObjectsIndexTester().test();
 }

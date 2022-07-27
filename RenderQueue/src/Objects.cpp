@@ -21,6 +21,7 @@ void RenderQueue::Objects::pop()
 {
 	decrement();
 	swap(popped());
+	index = 0;
 }
 
 int RenderQueue::Objects::getCount()

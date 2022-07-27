@@ -5,6 +5,7 @@
 #include "count/ObjectsCountTester.h"
 #include "transform/ObjectsTransformTester.h"
 #include "colour/ObjectsColourTester.h"
+#include "index/ObjectsIndexTester.h"
 
 class ObjectsTester
 {
@@ -18,4 +19,5 @@ private:
 	std::string testCount();
 	std::string testTransform();
 	std::string testColour();
+	std::string testIndex();
 };
