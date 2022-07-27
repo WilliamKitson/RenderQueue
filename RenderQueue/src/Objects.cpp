@@ -118,6 +118,15 @@ void RenderQueue::Objects::setTransform(float input[9])
 
 void RenderQueue::Objects::setColour(float input[4])
 {
+	try
+	{
+		validate();
+	}
+	catch (int)
+	{
+		return;
+	}
+
 	for (int i{ 0 }; i < 4; i++)
 	{
 		data[i + 9 + (index * 13)] = input[i];

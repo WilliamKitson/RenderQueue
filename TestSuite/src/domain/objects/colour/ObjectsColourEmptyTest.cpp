@@ -11,6 +11,15 @@ ObjectsColourEmptyTest::~ObjectsColourEmptyTest()
 
 std::string ObjectsColourEmptyTest::test()
 {
+	float colour[] = {
+		1.0f,
+		1.0f,
+		1.0f,
+		1.0f
+	};
+
+	unit.setColour(colour);
+
 	if (success())
 	{
 		return std::string();
