@@ -1,105 +1,105 @@
 #include "Objects.h"
 
-RenderQueue::Objects::Objects()
+renderQueue::Objects::Objects()
 	: count{ 0 }, index{ 0 }, data{ nullptr }
 {
 }
 
-RenderQueue::Objects::~Objects()
+renderQueue::Objects::~Objects()
 {
 	cleanup();
 }
 
-void RenderQueue::Objects::push()
+void renderQueue::Objects::push()
 {
 	increment();
 	swap(pushed());
 	initialise();
 }
 
-void RenderQueue::Objects::pop()
+void renderQueue::Objects::pop()
 {
 	decrement();
 	swap(popped());
 	index = 0;
 }
 
-int RenderQueue::Objects::getCount()
+int renderQueue::Objects::getCount()
 {
 	return count / 13;
 }
 
-float RenderQueue::Objects::getXpos()
+float renderQueue::Objects::getXpos()
 {
 	return element(0);
 }
 
-float RenderQueue::Objects::getYpos()
+float renderQueue::Objects::getYpos()
 {
 	return element(1);
 }
 
-float RenderQueue::Objects::getZpos()
+float renderQueue::Objects::getZpos()
 {
 	return element(2);
 }
 
-float RenderQueue::Objects::getXrot()
+float renderQueue::Objects::getXrot()
 {
 	return element(3);
 }
 
-float RenderQueue::Objects::getYrot()
+float renderQueue::Objects::getYrot()
 {
 	return element(4);
 }
 
-float RenderQueue::Objects::getZrot()
+float renderQueue::Objects::getZrot()
 {
 	return element(5);
 }
 
-float RenderQueue::Objects::getXscale()
+float renderQueue::Objects::getXscale()
 {
 	return element(6);
 }
 
-float RenderQueue::Objects::getYscale()
+float renderQueue::Objects::getYscale()
 {
 	return element(7);
 }
 
-float RenderQueue::Objects::getZscale()
+float renderQueue::Objects::getZscale()
 {
 	return element(8);
 }
 
-float RenderQueue::Objects::getRed()
+float renderQueue::Objects::getRed()
 {
 	return element(9);
 }
 
-float RenderQueue::Objects::getGreen()
+float renderQueue::Objects::getGreen()
 {
 	return element(10);
 }
 
-float RenderQueue::Objects::getBlue()
+float renderQueue::Objects::getBlue()
 {
 	return element(11);
 }
 
-float RenderQueue::Objects::getAlpha()
+float renderQueue::Objects::getAlpha()
 {
 	return element(12);
 }
 
-void RenderQueue::Objects::setIndex(int input)
+void renderQueue::Objects::setIndex(int input)
 {
 	index = minimum(maximum(input));
 }
 
-void RenderQueue::Objects::setTransform(float input[9])
+void renderQueue::Objects::setTransform(float input[9])
 {
 	try
 	{
@@ -116,7 +116,7 @@ void RenderQueue::Objects::setTransform(float input[9])
 	}
 }
 
-void RenderQueue::Objects::setColour(float input[4])
+void renderQueue::Objects::setColour(float input[4])
 {
 	try
 	{
@@ -133,24 +133,24 @@ void RenderQueue::Objects::setColour(float input[4])
 	}
 }
 
-void RenderQueue::Objects::cleanup()
+void renderQueue::Objects::cleanup()
 {
 	delete[] data;
 	data = nullptr;
 }
 
-void RenderQueue::Objects::increment()
+void renderQueue::Objects::increment()
 {
 	count += 13;
 }
 
-void RenderQueue::Objects::swap(float* input)
+void renderQueue::Objects::swap(float* input)
 {
 	cleanup();
 	data = input;
 }
 
-float* RenderQueue::Objects::pushed()
+float* renderQueue::Objects::pushed()
 {
 	float* output = new float[count];
 
@@ -162,7 +162,7 @@ float* RenderQueue::Objects::pushed()
 	return output;
 }
 
-void RenderQueue::Objects::initialise()
+void renderQueue::Objects::initialise()
 {
 	float object[] = {
 		0.0f,
@@ -186,12 +186,12 @@ void RenderQueue::Objects::initialise()
 	}
 }
 
-void RenderQueue::Objects::decrement()
+void renderQueue::Objects::decrement()
 {
 	count = minimum(count - 13);
 }
 
-float* RenderQueue::Objects::popped()
+float* renderQueue::Objects::popped()
 {
 	float* output = new float[count];
 	int unpopped = 0;
@@ -206,7 +206,7 @@ float* RenderQueue::Objects::popped()
 	return output;
 }
 
-int RenderQueue::Objects::minimum(int input)
+int renderQueue::Objects::minimum(int input)
 {
 	int output = 0;
 
@@ -218,7 +218,7 @@ int RenderQueue::Objects::minimum(int input)
 	return input;
 }
 
-int RenderQueue::Objects::maximum(int input)
+int renderQueue::Objects::maximum(int input)
 {
 	if (input < getCount())
 	{
@@ -228,7 +228,7 @@ int RenderQueue::Objects::maximum(int input)
 	return 0;
 }
 
-float RenderQueue::Objects::element(int input)
+float renderQueue::Objects::element(int input)
 {
 	try
 	{
@@ -242,7 +242,7 @@ float RenderQueue::Objects::element(int input)
 	return data[input + (index * 13)];
 }
 
-void RenderQueue::Objects::validate()
+void renderQueue::Objects::validate()
 {
 	if (count)
 	{

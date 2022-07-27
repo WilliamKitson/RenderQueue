@@ -1,6 +1,6 @@
 #pragma once
 
-namespace RenderQueue
+namespace renderQueue
 {
 	class Objects
 	{

@@ -10,7 +10,7 @@ ObjectsCountDefaultTest::~ObjectsCountDefaultTest()
 
 std::string ObjectsCountDefaultTest::test()
 {
-	if (!RenderQueue::Objects().getCount())
+	if (!renderQueue::Objects().getCount())
 	{
 		return std::string();
 	}

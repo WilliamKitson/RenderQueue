@@ -16,5 +16,5 @@ private:
 	bool success();
 
 private:
-	RenderQueue::Objects unit;
+	renderQueue::Objects unit;
 };

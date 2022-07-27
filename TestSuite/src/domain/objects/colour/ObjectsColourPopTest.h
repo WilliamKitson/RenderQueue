@@ -17,6 +17,6 @@ private:
 	bool success(float);
 
 private:
-	RenderQueue::Objects unit;
+	renderQueue::Objects unit;
 	int itterations;
 };

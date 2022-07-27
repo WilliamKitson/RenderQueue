@@ -15,6 +15,6 @@ private:
 	int successes();
 
 private:
-	RenderQueue::Objects unit;
+	renderQueue::Objects unit;
 	int itterations;
 };

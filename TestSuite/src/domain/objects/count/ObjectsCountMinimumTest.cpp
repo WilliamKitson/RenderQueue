@@ -10,7 +10,7 @@ ObjectsCountMinimumTest::~ObjectsCountMinimumTest()
 
 std::string ObjectsCountMinimumTest::test()
 {
-	RenderQueue::Objects unit;
+	renderQueue::Objects unit;
 	unit.pop();
 
 	if (!unit.getCount())

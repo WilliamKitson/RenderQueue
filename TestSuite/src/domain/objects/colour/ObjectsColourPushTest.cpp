@@ -11,7 +11,7 @@ ObjectsColourPushTest::~ObjectsColourPushTest()
 
 std::string ObjectsColourPushTest::test()
 {
-	RenderQueue::Objects unit;
+	renderQueue::Objects unit;
 
 	for (int i{ 0 }; i < itterations; i++)
 	{
