@@ -51,56 +51,58 @@ int ObjectsTransformPopTest::successes()
 	{
 		unit.setIndex(0);
 		unit.pop();
-
-		bool success = true;
-
-		if (unit.getXpos() != (float)i)
-		{
-			success = false;
-		}
-
-		if (unit.getYpos() != (float)i)
-		{
-			success = false;
-		}
-
-		if (unit.getZpos() != (float)i)
-		{
-			success = false;
-		}
-
-		if (unit.getXrot() != (float)i)
-		{
-			success = false;
-		}
-
-		if (unit.getYrot() != (float)i)
-		{
-			success = false;
-		}
-
-		if (unit.getZrot() != (float)i)
-		{
-			success = false;
-		}
-
-		if (unit.getXscale() != (float)i)
-		{
-			success = false;
-		}
-
-		if (unit.getYscale() != (float)i)
-		{
-			success = false;
-		}
-
-		if (unit.getZscale() != (float)i)
-		{
-			success = false;
-		}
-
-		output += success;
+		output += success((float)i);
 	}
 
 	return output;
+}
+
+bool ObjectsTransformPopTest::success(float input)
+{
+	if (unit.getXpos() != input)
+	{
+		return false;
+	}
+
+	if (unit.getYpos() != input)
+	{
+		return false;
+	}
+
+	if (unit.getZpos() != input)
+	{
+		return false;
+	}
+
+	if (unit.getXrot() != input)
+	{
+		return false;
+	}
+
+	if (unit.getYrot() != input)
+	{
+		return false;
+	}
+
+	if (unit.getZrot() != input)
+	{
+		return false;
+	}
+
+	if (unit.getXscale() != input)
+	{
+		return false;
+	}
+
+	if (unit.getYscale() != input)
+	{
+		return false;
+	}
+
+	if (unit.getZscale() != input)
+	{
+		return false;
+	}
+
+	return true;
 }
