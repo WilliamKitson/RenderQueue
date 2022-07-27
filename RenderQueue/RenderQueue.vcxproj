@@ -143,9 +143,11 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="src\Bindings.h" />
     <ClInclude Include="src\Objects.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="src\Bindings.cpp" />
     <ClCompile Include="src\Objects.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
