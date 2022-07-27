@@ -45,7 +45,7 @@ int renderQueue::Bindings::getScene()
 
 void renderQueue::Bindings::setIndex(int input)
 {
-	index = minimum(input);
+	index = minimum(maximum(input));
 }
 
 void renderQueue::Bindings::cleanup()
@@ -112,6 +112,16 @@ int renderQueue::Bindings::minimum(int input)
 	}
 
 	return input;
+}
+
+int renderQueue::Bindings::maximum(int input)
+{
+	if (input < count)
+	{
+		return input;
+	}
+
+	return 0;
 }
 
 void renderQueue::Bindings::validate()

@@ -23,6 +23,7 @@ namespace renderQueue
 		void decrement();
 		int* popped();
 		int minimum(int);
+		int maximum(int);
 		void validate();
 
 	private:

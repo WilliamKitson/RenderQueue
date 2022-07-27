@@ -4,6 +4,7 @@
 
 #include "BindingsIndexPopTest.h"
 #include "BindingsIndexMinimumTest.h"
+#include "BindingsIndexMaximumTest.h"
 
 class BindingsIndexTester
 {
@@ -16,4 +17,5 @@ public:
 private:
 	std::string testPop();
 	std::string testMinimum();
+	std::string testMaximum();
 };

@@ -14,6 +14,7 @@ std::string BindingsIndexTester::test()
 
 	output += testPop();
 	output += testMinimum();
+	output += testMaximum();
 
 	return output;
 }
@@ -26,4 +27,9 @@ std::string BindingsIndexTester::testPop()
 std::string BindingsIndexTester::testMinimum()
 {
 	return BindingsIndexMinimumTest().test();
+}
+
+std::string BindingsIndexTester::testMaximum()
+{
+	return BindingsIndexMaximumTest().test();
 }
