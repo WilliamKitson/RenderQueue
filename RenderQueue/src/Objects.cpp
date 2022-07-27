@@ -19,7 +19,7 @@ void RenderQueue::Objects::push()
 
 void RenderQueue::Objects::pop()
 {
-	count = minimum(count - 13);
+	decrement();
 
 	float* popped = new float[count];
 	int dataIndex = 0;
@@ -180,6 +180,11 @@ void RenderQueue::Objects::initialise()
 	{
 		data[i + (count - 13)] = object[i];
 	}
+}
+
+void RenderQueue::Objects::decrement()
+{
+	count = minimum(count - 13);
 }
 
 int RenderQueue::Objects::minimum(int input)

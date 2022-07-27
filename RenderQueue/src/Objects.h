@@ -34,6 +34,7 @@ namespace RenderQueue
 		void swap(float*);
 		float* pushed();
 		void initialise();
+		void decrement();
 		int minimum(int);
 		float element(int);
 		void validate();
