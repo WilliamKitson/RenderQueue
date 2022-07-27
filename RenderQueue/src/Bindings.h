@@ -15,6 +15,7 @@ namespace renderQueue
 		void setIndex(int);
 
 	private:
+		void cleanup();
 		int minimum(int);
 		void validate();
 

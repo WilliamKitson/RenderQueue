@@ -7,8 +7,7 @@ renderQueue::Bindings::Bindings()
 
 renderQueue::Bindings::~Bindings()
 {
-	delete[] data;
-	data = nullptr;
+	cleanup();
 }
 
 void renderQueue::Bindings::push(int input)
@@ -22,9 +21,7 @@ void renderQueue::Bindings::push(int input)
 		pushed[i] = data[i];
 	}
 
-	delete[] data;
-	data = nullptr;
-
+	cleanup();
 	data = pushed;
 
 	data[count - 1] = minimum(input);
@@ -57,6 +54,12 @@ int renderQueue::Bindings::getScene()
 void renderQueue::Bindings::setIndex(int input)
 {
 	index = input;
+}
+
+void renderQueue::Bindings::cleanup()
+{
+	delete[] data;
+	data = nullptr;
 }
 
 int renderQueue::Bindings::minimum(int input)
