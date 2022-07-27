@@ -19,7 +19,7 @@ void renderQueue::Bindings::push(int input)
 
 void renderQueue::Bindings::pop()
 {
-	count = minimum(count - 1);
+	decrement();
 
 	int* popped = new int[count];
 	int unpopped = 0;
@@ -90,6 +90,11 @@ int* renderQueue::Bindings::pushed()
 void renderQueue::Bindings::initialise(int input)
 {
 	data[count - 1] = minimum(input);
+}
+
+void renderQueue::Bindings::decrement()
+{
+	count = minimum(count - 1);
 }
 
 int renderQueue::Bindings::minimum(int input)
