@@ -20,22 +20,7 @@ void RenderQueue::Objects::push()
 void RenderQueue::Objects::pop()
 {
 	decrement();
-
-	float* popped = new float[count];
-	int dataIndex = 0;
-
-	for (int i{ 0 }; i < count; i++)
-	{
-		if (i == index * 13)
-		{
-			dataIndex += 13;
-		}
-
-		popped[i] = data[dataIndex];
-		dataIndex++;
-	}
-
-	swap(popped);
+	swap(popped());
 }
 
 int RenderQueue::Objects::getCount()
@@ -185,6 +170,25 @@ void RenderQueue::Objects::initialise()
 void RenderQueue::Objects::decrement()
 {
 	count = minimum(count - 13);
+}
+
+float* RenderQueue::Objects::popped()
+{
+	float* output = new float[count];
+	int unpopped = 0;
+
+	for (int i{ 0 }; i < count; i++)
+	{
+		if (i == index * 13)
+		{
+			unpopped += 13;
+		}
+
+		output[i] = data[unpopped];
+		unpopped++;
+	}
+
+	return output;
 }
 
 int RenderQueue::Objects::minimum(int input)
