@@ -1,7 +1,9 @@
 #pragma once
 
 #include <string>
+
 #include "BindingsIndexPopTest.h"
+#include "BindingsIndexMinimumTest.h"
 
 class BindingsIndexTester
 {
@@ -13,4 +15,5 @@ public:
 
 private:
 	std::string testPop();
+	std::string testMinimum();
 };

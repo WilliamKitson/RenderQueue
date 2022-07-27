@@ -126,6 +126,9 @@
     <ClCompile Include="src\domain\bindings\index\BindingsIndexTester.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="src\domain\bindings\index\BindingsIndexMinimumTest.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\MemoryTest.h">
@@ -234,6 +237,9 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="src\domain\bindings\index\BindingsIndexTester.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\domain\bindings\index\BindingsIndexMinimumTest.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

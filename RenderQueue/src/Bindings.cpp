@@ -45,7 +45,7 @@ int renderQueue::Bindings::getScene()
 
 void renderQueue::Bindings::setIndex(int input)
 {
-	index = input;
+	index = minimum(input);
 }
 
 void renderQueue::Bindings::cleanup()
