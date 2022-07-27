@@ -14,6 +14,7 @@ std::string BindingsTester::test()
 
 	output += testCount();
 	output += testScene();
+	output += testPop();
 
 	return output;
 }
@@ -26,4 +27,9 @@ std::string BindingsTester::testCount()
 std::string BindingsTester::testScene()
 {
 	return BindingsSceneTester().test();
+}
+
+std::string BindingsTester::testPop()
+{
+	return BindingsIndexTester().test();
 }

@@ -4,6 +4,7 @@
 
 #include "count/BindingsCountTester.h"
 #include "scene/BindingsSceneTester.h"
+#include "index/BindingsIndexTester.h"
 
 class BindingsTester
 {
@@ -16,4 +17,5 @@ public:
 private:
 	std::string testCount();
 	std::string testScene();
+	std::string testPop();
 };
