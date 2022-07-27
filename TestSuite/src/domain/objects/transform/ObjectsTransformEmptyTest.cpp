@@ -11,6 +11,20 @@ ObjectsTransformEmptyTest::~ObjectsTransformEmptyTest()
 
 std::string ObjectsTransformEmptyTest::test()
 {
+	float transform[] = {
+		1.0f,
+		1.0f,
+		1.0f,
+		1.0f,
+		1.0f,
+		1.0f,
+		1.0f,
+		1.0f,
+		1.0f
+	};
+
+	unit.setTransform(transform);
+
 	if (success())
 	{
 		return std::string();

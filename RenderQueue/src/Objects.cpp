@@ -101,6 +101,15 @@ void RenderQueue::Objects::setIndex(int input)
 
 void RenderQueue::Objects::setTransform(float input[9])
 {
+	try
+	{
+		validate();
+	}
+	catch (int)
+	{
+		return;
+	}
+
 	for (int i{ 0 }; i < 9; i++)
 	{
 		data[i + (index * 13)] = input[i];
