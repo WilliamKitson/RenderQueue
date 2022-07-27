@@ -15,6 +15,7 @@ std::string BindingsSceneTester::test()
 	output += testPush();
 	output += testMinimum();
 	output += testEmpty();
+	output += testPop();
 
 	return output;
 }
@@ -32,4 +33,9 @@ std::string BindingsSceneTester::testMinimum()
 std::string BindingsSceneTester::testEmpty()
 {
 	return BindingsSceneEmptyTest().test();
+}
+
+std::string BindingsSceneTester::testPop()
+{
+	return BindingsScenePopTest().test();
 }

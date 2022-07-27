@@ -20,6 +20,18 @@ void renderQueue::Bindings::push(int input)
 void renderQueue::Bindings::pop()
 {
 	count = minimum(count - 1);
+
+	int* popped = new int[count];
+	int unpopped = 0;
+
+	for (int i{ 0 }; i < count; i++)
+	{
+		unpopped += (i == index);
+		popped[i] = data[unpopped];
+		unpopped++;
+	}
+
+	swap(popped);
 }
 
 int renderQueue::Bindings::getCount()

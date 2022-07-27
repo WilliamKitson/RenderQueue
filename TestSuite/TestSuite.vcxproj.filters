@@ -117,6 +117,9 @@
     <ClCompile Include="src\domain\bindings\scene\BindingsSceneEmptyTest.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="src\domain\bindings\scene\BindingsScenePopTest.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\MemoryTest.h">
@@ -216,6 +219,9 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="src\domain\bindings\scene\BindingsSceneEmptyTest.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\domain\bindings\scene\BindingsScenePopTest.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
