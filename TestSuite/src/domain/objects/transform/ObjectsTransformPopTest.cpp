@@ -13,7 +13,39 @@ std::string ObjectsTransformPopTest::test()
 {
 	initialise();
 
-	int successes = 0;
+	if (successes() == itterations - 1)
+	{
+		return std::string();
+	}
+
+	return "objects transform pop test failed\n";
+}
+
+void ObjectsTransformPopTest::initialise()
+{
+	for (int i{ 0 }; i < itterations; i++)
+	{
+		float transform[] = {
+			(float)i,
+			(float)i,
+			(float)i,
+			(float)i,
+			(float)i,
+			(float)i,
+			(float)i,
+			(float)i,
+			(float)i
+		};
+
+		unit.push();
+		unit.setIndex(i);
+		unit.setTransform(transform);
+	}
+}
+
+int ObjectsTransformPopTest::successes()
+{
+	int output = 0;
 
 	for (int i{ 1 }; i < itterations; i++)
 	{
@@ -67,35 +99,8 @@ std::string ObjectsTransformPopTest::test()
 			success = false;
 		}
 
-		successes += success;
+		output += success;
 	}
 
-	if (successes == itterations - 1)
-	{
-		return std::string();
-	}
-
-	return "objects transform pop test failed\n";
-}
-
-void ObjectsTransformPopTest::initialise()
-{
-	for (int i{ 0 }; i < itterations; i++)
-	{
-		float transform[] = {
-			(float)i,
-			(float)i,
-			(float)i,
-			(float)i,
-			(float)i,
-			(float)i,
-			(float)i,
-			(float)i,
-			(float)i
-		};
-
-		unit.push();
-		unit.setIndex(i);
-		unit.setTransform(transform);
-	}
+	return output;
 }
