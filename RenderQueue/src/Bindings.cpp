@@ -12,7 +12,7 @@ renderQueue::Bindings::~Bindings()
 
 void renderQueue::Bindings::push(int input)
 {
-	count++;
+	increment();
 
 	int* pushed = new int[count];
 
@@ -60,6 +60,11 @@ void renderQueue::Bindings::cleanup()
 {
 	delete[] data;
 	data = nullptr;
+}
+
+void renderQueue::Bindings::increment()
+{
+	count++;
 }
 
 int renderQueue::Bindings::minimum(int input)
