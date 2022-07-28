@@ -114,10 +114,7 @@ void renderQueue::Scenes::setAmbience(float input[4])
 		return;
 	}
 
-	for (int i{ 0 }; i < 4; i++)
-	{
-		data[i + 7 + (index * 11)] = input[i];
-	}
+	ambience(input);
 }
 
 void renderQueue::Scenes::cleanup()
@@ -218,6 +215,14 @@ void renderQueue::Scenes::camera(float input[7])
 	for (int i{ 0 }; i < 7; i++)
 	{
 		data[i + (index * 11)] = input[i];
+	}
+}
+
+void renderQueue::Scenes::ambience(float input[4])
+{
+	for (int i{ 0 }; i < 4; i++)
+	{
+		data[i + 7 + (index * 11)] = input[i];
 	}
 }
 

@@ -37,6 +37,7 @@ namespace renderQueue
 		int minimum(int);
 		int maximum(int);
 		void camera(float[7]);
+		void ambience(float[4]);
 		float element(int);
 		void validate();
 
