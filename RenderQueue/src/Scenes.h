@@ -22,6 +22,7 @@ namespace renderQueue
 		void setCamera(float[7]);
 
 	private:
+		void cleanup();
 		int minimum(int);
 		void validate();
 

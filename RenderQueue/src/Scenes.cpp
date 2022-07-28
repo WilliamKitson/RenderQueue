@@ -7,8 +7,7 @@ renderQueue::Scenes::Scenes()
 
 renderQueue::Scenes::~Scenes()
 {
-	delete[] data;
-	data = nullptr;
+	cleanup();
 }
 
 void renderQueue::Scenes::push()
@@ -22,9 +21,7 @@ void renderQueue::Scenes::push()
 		pushed[i] = data[i];
 	}
 
-	delete[] data;
-	data = nullptr;
-
+	cleanup();
 	data = pushed;
 
 	float scene[] = {
@@ -171,6 +168,12 @@ void renderQueue::Scenes::setCamera(float input[7])
 	{
 		data[i + (index * 7)] = input[i];
 	}
+}
+
+void renderQueue::Scenes::cleanup()
+{
+	delete[] data;
+	data = nullptr;
 }
 
 int renderQueue::Scenes::minimum(int input)
