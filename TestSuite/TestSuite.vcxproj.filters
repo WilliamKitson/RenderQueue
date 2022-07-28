@@ -156,6 +156,9 @@
     <ClCompile Include="src\domain\scenes\camera\ScenesCameraTester.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="src\domain\scenes\camera\ScenesCameraPushTest.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\MemoryTest.h">
@@ -294,6 +297,9 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="src\domain\scenes\camera\ScenesCameraTester.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\domain\scenes\camera\ScenesCameraPushTest.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

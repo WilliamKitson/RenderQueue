@@ -18,11 +18,15 @@ namespace renderQueue
 		float getYrot();
 		float getZrot();
 		float getFrustum();
+		void setIndex(int);
+		void setCamera(float[7]);
 
 	private:
 		int minimum(int);
 
 	private:
 		int count;
+		int index;
+		float* data;
 	};
 }

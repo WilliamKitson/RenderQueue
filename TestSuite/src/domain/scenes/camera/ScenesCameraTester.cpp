@@ -13,6 +13,7 @@ std::string ScenesCameraTester::test()
 	std::string output{ "" };
 
 	output += testDefault();
+	output += testPush();
 
 	return output;
 }
@@ -20,4 +21,9 @@ std::string ScenesCameraTester::test()
 std::string ScenesCameraTester::testDefault()
 {
 	return ScenesCameraDefaultTest().test();
+}
+
+std::string ScenesCameraTester::testPush()
+{
+	return ScenesCameraPushTest().test();
 }
