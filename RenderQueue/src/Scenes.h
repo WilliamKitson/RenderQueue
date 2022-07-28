@@ -23,6 +23,7 @@ namespace renderQueue
 
 	private:
 		int minimum(int);
+		void validate();
 
 	private:
 		int count;

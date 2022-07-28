@@ -55,36 +55,99 @@ int renderQueue::Scenes::getCount()
 
 float renderQueue::Scenes::getXpos()
 {
+	try
+	{
+		validate();
+	}
+	catch (int)
+	{
+		return 0.0f;
+	}
+
 	return data[0 + (index * 7)];
 }
 
 float renderQueue::Scenes::getYpos()
 {
+	try
+	{
+		validate();
+	}
+	catch (int)
+	{
+		return 0.0f;
+	}
+
 	return data[1 + (index * 7)];
 }
 
 float renderQueue::Scenes::getZpos()
 {
+	try
+	{
+		validate();
+	}
+	catch (int)
+	{
+		return 0.0f;
+	}
+
 	return data[2 + (index * 7)];
 }
 
 float renderQueue::Scenes::getXrot()
 {
+	try
+	{
+		validate();
+	}
+	catch (int)
+	{
+		return 0.0f;
+	}
+
 	return data[3 + (index * 7)];
 }
 
 float renderQueue::Scenes::getYrot()
 {
+	try
+	{
+		validate();
+	}
+	catch (int)
+	{
+		return 0.0f;
+	}
+
 	return data[4 + (index * 7)];
 }
 
 float renderQueue::Scenes::getZrot()
 {
+	try
+	{
+		validate();
+	}
+	catch (int)
+	{
+		return 0.0f;
+	}
+
 	return data[5 + (index * 7)];
 }
 
 float renderQueue::Scenes::getFrustum()
 {
+	try
+	{
+		validate();
+	}
+	catch (int)
+	{
+		return 0.0f;
+	}
+
 	return data[6 + (index * 7)];
 }
 
@@ -95,6 +158,15 @@ void renderQueue::Scenes::setIndex(int input)
 
 void renderQueue::Scenes::setCamera(float input[7])
 {
+	try
+	{
+		validate();
+	}
+	catch (int)
+	{
+		return;
+	}
+
 	for (int i{ 0 }; i < 7; i++)
 	{
 		data[i + (index * 7)] = input[i];
@@ -111,4 +183,14 @@ int renderQueue::Scenes::minimum(int input)
 	}
 
 	return input;
+}
+
+void renderQueue::Scenes::validate()
+{
+	if (count)
+	{
+		return;
+	}
+
+	throw int();
 }

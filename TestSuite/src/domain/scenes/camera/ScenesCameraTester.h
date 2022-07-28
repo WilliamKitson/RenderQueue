@@ -4,6 +4,7 @@
 
 #include "ScenesCameraDefaultTest.h"
 #include "ScenesCameraPushTest.h"
+#include "ScenesCameraEmptyTest.h"
 
 class ScenesCameraTester
 {
@@ -16,4 +17,5 @@ public:
 private:
 	std::string testDefault();
 	std::string testPush();
+	std::string testEmpty();
 };

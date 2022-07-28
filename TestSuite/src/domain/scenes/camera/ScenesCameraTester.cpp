@@ -14,6 +14,7 @@ std::string ScenesCameraTester::test()
 
 	output += testDefault();
 	output += testPush();
+	output += testEmpty();
 
 	return output;
 }
@@ -26,4 +27,9 @@ std::string ScenesCameraTester::testDefault()
 std::string ScenesCameraTester::testPush()
 {
 	return ScenesCameraPushTest().test();
+}
+
+std::string ScenesCameraTester::testEmpty()
+{
+	return ScenesCameraEmptyTest().test();
 }
