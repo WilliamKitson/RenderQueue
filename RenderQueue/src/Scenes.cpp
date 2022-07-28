@@ -14,21 +14,7 @@ void renderQueue::Scenes::push()
 {
 	increment();
 	swap(pushed());
-
-	float scene[] = {
-		0.0f,
-		0.0f,
-		0.0f,
-		0.0f,
-		0.0f,
-		0.0f,
-		90.0f
-	};
-
-	for (int i{ 0 }; i < 7; i++)
-	{
-		data[i + (count - 7)] = scene[i];
-	}
+	initialise();
 }
 
 void renderQueue::Scenes::pop()
@@ -188,6 +174,24 @@ float* renderQueue::Scenes::pushed()
 	}
 
 	return output;
+}
+
+void renderQueue::Scenes::initialise()
+{
+	float scene[] = {
+		0.0f,
+		0.0f,
+		0.0f,
+		0.0f,
+		0.0f,
+		0.0f,
+		90.0f
+	};
+
+	for (int i{ 0 }; i < 7; i++)
+	{
+		data[i + (count - 7)] = scene[i];
+	}
 }
 
 int renderQueue::Scenes::minimum(int input)
