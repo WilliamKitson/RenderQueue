@@ -24,6 +24,7 @@ namespace renderQueue
 		float getAlpha();
 		void setIndex(int);
 		void setCamera(float[7]);
+		void setAmbience(float[4]);
 
 	private:
 		void cleanup();
