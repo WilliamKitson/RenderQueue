@@ -206,28 +206,6 @@ float* renderQueue::Objects::popped()
 	return output;
 }
 
-int renderQueue::Objects::minimum(int input)
-{
-	int output = 0;
-
-	if (input < output)
-	{
-		return output;
-	}
-
-	return input;
-}
-
-int renderQueue::Objects::maximum(int input)
-{
-	if (input < getCount())
-	{
-		return input;
-	}
-
-	return 0;
-}
-
 float renderQueue::Objects::element(int input)
 {
 	try
@@ -250,4 +228,26 @@ void renderQueue::Objects::validate()
 	}
 
 	throw int();
+}
+
+int renderQueue::Objects::minimum(int input)
+{
+	int output = 0;
+
+	if (input < output)
+	{
+		return output;
+	}
+
+	return input;
+}
+
+int renderQueue::Objects::maximum(int input)
+{
+	if (input < getCount())
+	{
+		return input;
+	}
+
+	return 0;
 }
