@@ -14,6 +14,11 @@ void renderQueue::Scenes::push()
 	count++;
 }
 
+void renderQueue::Scenes::pop()
+{
+	count--;
+}
+
 int renderQueue::Scenes::getCount()
 {
 	return count;

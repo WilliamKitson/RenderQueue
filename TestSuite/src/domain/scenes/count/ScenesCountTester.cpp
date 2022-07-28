@@ -14,6 +14,7 @@ std::string ScenesCountTester::test()
 
 	output += testDefault();
 	output += testPush();
+	output += testPop();
 
 	return output;
 }
@@ -26,4 +27,9 @@ std::string ScenesCountTester::testDefault()
 std::string ScenesCountTester::testPush()
 {
 	return ScenesCountPushTest().test();
+}
+
+std::string ScenesCountTester::testPop()
+{
+	return ScenesCountPopTest().test();
 }

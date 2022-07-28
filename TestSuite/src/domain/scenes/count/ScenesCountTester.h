@@ -4,6 +4,7 @@
 
 #include "ScenesCountDefaultTest.h"
 #include "ScenesCountPushTest.h"
+#include "ScenesCountPopTest.h"
 
 class ScenesCountTester
 {
@@ -16,4 +17,5 @@ public:
 private:
 	std::string testDefault();
 	std::string testPush();
+	std::string testPop();
 };
