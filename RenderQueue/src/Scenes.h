@@ -18,6 +18,10 @@ namespace renderQueue
 		float getYrot();
 		float getZrot();
 		float getFrustum();
+		float getRed();
+		float getGreen();
+		float getBlue();
+		float getAlpha();
 		void setIndex(int);
 		void setCamera(float[7]);
 

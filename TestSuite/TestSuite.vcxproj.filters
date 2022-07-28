@@ -165,6 +165,12 @@
     <ClCompile Include="src\domain\scenes\camera\ScenesCameraPopTest.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="src\domain\scenes\ambience\ScenesAmbienceDefaultTest.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\domain\scenes\ambience\ScenesAmbienceTester.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\MemoryTest.h">
@@ -312,6 +318,12 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="src\domain\scenes\camera\ScenesCameraPopTest.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\domain\scenes\ambience\ScenesAmbienceDefaultTest.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\domain\scenes\ambience\ScenesAmbienceTester.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

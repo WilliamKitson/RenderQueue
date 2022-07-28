@@ -183,6 +183,8 @@
     <ClCompile Include="src\domain\objects\transform\ObjectsTransformPopTest.cpp" />
     <ClCompile Include="src\domain\objects\transform\ObjectsTransformPushTest.cpp" />
     <ClCompile Include="src\domain\objects\transform\ObjectsTransformTester.cpp" />
+    <ClCompile Include="src\domain\scenes\ambience\ScenesAmbienceDefaultTest.cpp" />
+    <ClCompile Include="src\domain\scenes\ambience\ScenesAmbienceTester.cpp" />
     <ClCompile Include="src\domain\scenes\camera\ScenesCameraDefaultTest.cpp" />
     <ClCompile Include="src\domain\scenes\camera\ScenesCameraEmptyTest.cpp" />
     <ClCompile Include="src\domain\scenes\camera\ScenesCameraPopTest.cpp" />
@@ -235,6 +237,8 @@
     <ClInclude Include="src\domain\objects\transform\ObjectsTransformPopTest.h" />
     <ClInclude Include="src\domain\objects\transform\ObjectsTransformPushTest.h" />
     <ClInclude Include="src\domain\objects\transform\ObjectsTransformTester.h" />
+    <ClInclude Include="src\domain\scenes\ambience\ScenesAmbienceDefaultTest.h" />
+    <ClInclude Include="src\domain\scenes\ambience\ScenesAmbienceTester.h" />
     <ClInclude Include="src\domain\scenes\camera\ScenesCameraDefaultTest.h" />
     <ClInclude Include="src\domain\scenes\camera\ScenesCameraEmptyTest.h" />
     <ClInclude Include="src\domain\scenes\camera\ScenesCameraPopTest.h" />

@@ -4,6 +4,7 @@
 
 #include "count/ScenesCountTester.h"
 #include "camera/ScenesCameraTester.h"
+#include "ambience/ScenesAmbienceTester.h"
 
 class ScenesTester
 {
@@ -16,4 +17,5 @@ public:
 private:
 	std::string testCount();
 	std::string testCamera();
+	std::string testAmbience();
 };

@@ -14,6 +14,7 @@ std::string ScenesTester::test()
 
 	output += testCount();
 	output += testCamera();
+	output += testAmbience();
 
 	return output;
 }
@@ -26,4 +27,9 @@ std::string ScenesTester::testCount()
 std::string ScenesTester::testCamera()
 {
 	return ScenesCameraTester().test();
+}
+
+std::string ScenesTester::testAmbience()
+{
+	return ScenesAmbienceTester().test();
 }

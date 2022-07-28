@@ -63,6 +63,26 @@ float renderQueue::Scenes::getFrustum()
 	return element(6);
 }
 
+float renderQueue::Scenes::getRed()
+{
+	return 1.0f;
+}
+
+float renderQueue::Scenes::getGreen()
+{
+	return 1.0f;
+}
+
+float renderQueue::Scenes::getBlue()
+{
+	return 1.0f;
+}
+
+float renderQueue::Scenes::getAlpha()
+{
+	return 1.0f;
+}
+
 void renderQueue::Scenes::setIndex(int input)
 {
 	index = input;
