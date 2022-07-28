@@ -1,7 +1,9 @@
 #pragma once
 
 #include <string>
+
 #include "ScenesIndexPopTest.h"
+#include "ScenesIndexMinimumTest.h"
 
 class ScenesIndexTester
 {
@@ -13,4 +15,5 @@ public:
 
 private:
 	std::string testPop();
+	std::string testMinimum();
 };

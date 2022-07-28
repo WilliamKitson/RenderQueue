@@ -86,7 +86,7 @@ float renderQueue::Scenes::getAlpha()
 
 void renderQueue::Scenes::setIndex(int input)
 {
-	index = input;
+	index = minimum(input);
 }
 
 void renderQueue::Scenes::setCamera(float input[7])

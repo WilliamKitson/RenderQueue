@@ -177,6 +177,9 @@
     <ClCompile Include="src\domain\scenes\index\ScenesIndexTester.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="src\domain\scenes\index\ScenesIndexMinimumTest.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\MemoryTest.h">
@@ -336,6 +339,9 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="src\domain\scenes\index\ScenesIndexTester.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\domain\scenes\index\ScenesIndexMinimumTest.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
