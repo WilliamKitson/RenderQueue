@@ -14,15 +14,10 @@ void renderQueue::Scenes::push()
 {
 	increment();
 
-	float* pushed = new float[count];
-
-	for (int i{ 0 }; i < count - 7; i++)
-	{
-		pushed[i] = data[i];
-	}
+	float* temp = pushed();
 
 	cleanup();
-	data = pushed;
+	data = temp;
 
 	float scene[] = {
 		0.0f,
@@ -179,6 +174,18 @@ void renderQueue::Scenes::cleanup()
 void renderQueue::Scenes::increment()
 {
 	count += 7;
+}
+
+float* renderQueue::Scenes::pushed()
+{
+	float* output = new float[count];
+
+	for (int i{ 0 }; i < count - 7; i++)
+	{
+		output[i] = data[i];
+	}
+
+	return output;
 }
 
 int renderQueue::Scenes::minimum(int input)

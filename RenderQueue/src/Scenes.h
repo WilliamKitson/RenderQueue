@@ -24,6 +24,7 @@ namespace renderQueue
 	private:
 		void cleanup();
 		void increment();
+		float* pushed();
 		int minimum(int);
 		void validate();
 
