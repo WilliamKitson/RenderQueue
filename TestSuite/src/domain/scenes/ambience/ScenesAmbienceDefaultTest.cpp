@@ -11,7 +11,6 @@ ScenesAmbienceDefaultTest::~ScenesAmbienceDefaultTest()
 
 std::string ScenesAmbienceDefaultTest::test()
 {
-	renderQueue::Scenes unit;
 	unit.push();
 
 	if (success())
