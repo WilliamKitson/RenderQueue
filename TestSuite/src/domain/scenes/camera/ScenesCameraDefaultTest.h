@@ -10,4 +10,10 @@ public:
 	~ScenesCameraDefaultTest();
 
 	std::string test();
+
+private:
+	bool success();
+
+private:
+	renderQueue::Scenes unit;
 };
