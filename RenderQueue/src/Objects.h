@@ -41,6 +41,7 @@ namespace renderQueue
 		int minimum(int);
 		int maximum(int);
 		void transform(float[9]);
+		void colour(float[4]);
 
 	private:
 		int count;

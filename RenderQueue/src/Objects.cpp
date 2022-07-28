@@ -124,10 +124,7 @@ void renderQueue::Objects::setColour(float input[4])
 		return;
 	}
 
-	for (int i{ 0 }; i < 4; i++)
-	{
-		data[i + 9 + (index * 13)] = input[i];
-	}
+	colour(input);
 }
 
 void renderQueue::Objects::cleanup()
@@ -254,5 +251,13 @@ void renderQueue::Objects::transform(float input[9])
 	for (int i{ 0 }; i < 9; i++)
 	{
 		data[i + (index * 13)] = input[i];
+	}
+}
+
+void renderQueue::Objects::colour(float input[4])
+{
+	for (int i{ 0 }; i < 4; i++)
+	{
+		data[i + 9 + (index * 13)] = input[i];
 	}
 }
