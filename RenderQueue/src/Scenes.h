@@ -8,6 +8,10 @@ namespace renderQueue
 		Scenes();
 		~Scenes();
 
+		void push();
 		int getCount();
+
+	private:
+		int count;
 	};
 }

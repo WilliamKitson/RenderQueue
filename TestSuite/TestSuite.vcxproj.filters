@@ -141,6 +141,9 @@
     <ClCompile Include="src\domain\scenes\ScenesTester.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="src\domain\scenes\count\ScenesCountPushTest.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\MemoryTest.h">
@@ -264,6 +267,9 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="src\domain\scenes\ScenesTester.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\domain\scenes\count\ScenesCountPushTest.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

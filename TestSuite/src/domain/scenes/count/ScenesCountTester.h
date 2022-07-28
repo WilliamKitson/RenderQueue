@@ -1,7 +1,9 @@
 #pragma once
 
 #include <string>
+
 #include "ScenesCountDefaultTest.h"
+#include "ScenesCountPushTest.h"
 
 class ScenesCountTester
 {
@@ -13,4 +15,5 @@ public:
 
 private:
 	std::string testDefault();
+	std::string testPush();
 };
