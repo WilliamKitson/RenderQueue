@@ -13,11 +13,7 @@ renderQueue::Scenes::~Scenes()
 void renderQueue::Scenes::push()
 {
 	increment();
-
-	float* temp = pushed();
-
-	cleanup();
-	data = temp;
+	swap(pushed());
 
 	float scene[] = {
 		0.0f,
@@ -174,6 +170,12 @@ void renderQueue::Scenes::cleanup()
 void renderQueue::Scenes::increment()
 {
 	count += 7;
+}
+
+void renderQueue::Scenes::swap(float* input)
+{
+	cleanup();
+	data = input;
 }
 
 float* renderQueue::Scenes::pushed()
