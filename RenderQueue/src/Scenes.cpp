@@ -21,6 +21,7 @@ void renderQueue::Scenes::pop()
 {
 	decrement();
 	swap(popped());
+	index = 0;
 }
 
 int renderQueue::Scenes::getCount()

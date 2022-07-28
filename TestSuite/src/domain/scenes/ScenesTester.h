@@ -5,6 +5,7 @@
 #include "count/ScenesCountTester.h"
 #include "camera/ScenesCameraTester.h"
 #include "ambience/ScenesAmbienceTester.h"
+#include "index/ScenesIndexTester.h"
 
 class ScenesTester
 {
@@ -18,4 +19,5 @@ private:
 	std::string testCount();
 	std::string testCamera();
 	std::string testAmbience();
+	std::string testIndex();
 };

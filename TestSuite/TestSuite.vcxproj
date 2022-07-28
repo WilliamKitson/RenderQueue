@@ -195,6 +195,8 @@
     <ClCompile Include="src\domain\scenes\count\ScenesCountPopTest.cpp" />
     <ClCompile Include="src\domain\scenes\count\ScenesCountPushTest.cpp" />
     <ClCompile Include="src\domain\scenes\count\ScenesCountTester.cpp" />
+    <ClCompile Include="src\domain\scenes\index\ScenesIndexPopTest.cpp" />
+    <ClCompile Include="src\domain\scenes\index\ScenesIndexTester.cpp" />
     <ClCompile Include="src\domain\scenes\ScenesTester.cpp" />
     <ClCompile Include="src\Entrypoint.cpp" />
     <ClCompile Include="src\MemoryTest.cpp" />
@@ -249,6 +251,8 @@
     <ClInclude Include="src\domain\scenes\count\ScenesCountPopTest.h" />
     <ClInclude Include="src\domain\scenes\count\ScenesCountPushTest.h" />
     <ClInclude Include="src\domain\scenes\count\ScenesCountTester.h" />
+    <ClInclude Include="src\domain\scenes\index\ScenesIndexPopTest.h" />
+    <ClInclude Include="src\domain\scenes\index\ScenesIndexTester.h" />
     <ClInclude Include="src\domain\scenes\ScenesTester.h" />
     <ClInclude Include="src\MemoryTest.h" />
     <ClInclude Include="src\SubordinateTester.h" />
