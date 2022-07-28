@@ -188,6 +188,30 @@ float* renderQueue::Scenes::popped()
 	return output;
 }
 
+float renderQueue::Scenes::element(int input)
+{
+	try
+	{
+		validate();
+	}
+	catch (int)
+	{
+		return 0.0f;
+	}
+
+	return data[input + (index * 11)];
+}
+
+void renderQueue::Scenes::validate()
+{
+	if (count)
+	{
+		return;
+	}
+
+	throw int();
+}
+
 int renderQueue::Scenes::minimum(int input)
 {
 	int output = 0;
@@ -224,28 +248,4 @@ void renderQueue::Scenes::ambience(float input[4])
 	{
 		data[i + 7 + (index * 11)] = input[i];
 	}
-}
-
-float renderQueue::Scenes::element(int input)
-{
-	try
-	{
-		validate();
-	}
-	catch (int)
-	{
-		return 0.0f;
-	}
-
-	return data[input + (index * 11)];
-}
-
-void renderQueue::Scenes::validate()
-{
-	if (count)
-	{
-		return;
-	}
-
-	throw int();
 }

@@ -34,12 +34,12 @@ namespace renderQueue
 		void initialise();
 		void decrement();
 		float* popped();
+		float element(int);
+		void validate();
 		int minimum(int);
 		int maximum(int);
 		void camera(float[7]);
 		void ambience(float[4]);
-		float element(int);
-		void validate();
 
 	private:
 		int count;
