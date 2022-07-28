@@ -5,6 +5,7 @@
 #include "ScenesAmbienceDefaultTest.h"
 #include "ScenesAmbiencePushTest.h"
 #include "ScenesAmbienceEmptyTest.h"
+#include "ScenesAmbiencePopTest.h"
 
 class ScenesAmbienceTester
 {
@@ -18,4 +19,5 @@ private:
 	std::string testDefault();
 	std::string testPush();
 	std::string testEmpty();
+	std::string testPop();
 };
