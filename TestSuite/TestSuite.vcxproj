@@ -185,6 +185,7 @@
     <ClCompile Include="src\domain\objects\transform\ObjectsTransformTester.cpp" />
     <ClCompile Include="src\domain\scenes\camera\ScenesCameraDefaultTest.cpp" />
     <ClCompile Include="src\domain\scenes\camera\ScenesCameraEmptyTest.cpp" />
+    <ClCompile Include="src\domain\scenes\camera\ScenesCameraPopTest.cpp" />
     <ClCompile Include="src\domain\scenes\camera\ScenesCameraPushTest.cpp" />
     <ClCompile Include="src\domain\scenes\camera\ScenesCameraTester.cpp" />
     <ClCompile Include="src\domain\scenes\count\ScenesCountDefaultTest.cpp" />
@@ -236,6 +237,7 @@
     <ClInclude Include="src\domain\objects\transform\ObjectsTransformTester.h" />
     <ClInclude Include="src\domain\scenes\camera\ScenesCameraDefaultTest.h" />
     <ClInclude Include="src\domain\scenes\camera\ScenesCameraEmptyTest.h" />
+    <ClInclude Include="src\domain\scenes\camera\ScenesCameraPopTest.h" />
     <ClInclude Include="src\domain\scenes\camera\ScenesCameraPushTest.h" />
     <ClInclude Include="src\domain\scenes\camera\ScenesCameraTester.h" />
     <ClInclude Include="src\domain\scenes\count\ScenesCountDefaultTest.h" />

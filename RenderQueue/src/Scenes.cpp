@@ -20,6 +20,18 @@ void renderQueue::Scenes::push()
 void renderQueue::Scenes::pop()
 {
 	decrement();
+
+	float* popped = new float[count];
+	int unpopped = 0;
+
+	for (int i{ 0 }; i < count; i++)
+	{
+		unpopped += (i == index * 7) * 7;
+		popped[i] = data[unpopped];
+		unpopped++;
+	}
+
+	swap(popped);
 }
 
 int renderQueue::Scenes::getCount()
