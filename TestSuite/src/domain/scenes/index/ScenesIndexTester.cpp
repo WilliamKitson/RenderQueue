@@ -14,6 +14,7 @@ std::string ScenesIndexTester::test()
 
 	output += testPop();
 	output += testMinimum();
+	output += testMaximum();
 
 	return output;
 }
@@ -26,4 +27,9 @@ std::string ScenesIndexTester::testPop()
 std::string ScenesIndexTester::testMinimum()
 {
 	return ScenesIndexMinimumTest().test();
+}
+
+std::string ScenesIndexTester::testMaximum()
+{
+	return ScenesIndexMaximumTest().test();
 }

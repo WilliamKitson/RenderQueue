@@ -4,6 +4,7 @@
 
 #include "ScenesIndexPopTest.h"
 #include "ScenesIndexMinimumTest.h"
+#include "ScenesIndexMaximumTest.h"
 
 class ScenesIndexTester
 {
@@ -16,4 +17,5 @@ public:
 private:
 	std::string testPop();
 	std::string testMinimum();
+	std::string testMaximum();
 };

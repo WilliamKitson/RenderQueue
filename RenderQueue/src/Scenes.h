@@ -34,6 +34,7 @@ namespace renderQueue
 		void decrement();
 		float* popped();
 		int minimum(int);
+		int maximum(int);
 		float element(int);
 		void validate();
 

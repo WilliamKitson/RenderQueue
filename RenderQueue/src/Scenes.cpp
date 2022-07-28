@@ -86,7 +86,7 @@ float renderQueue::Scenes::getAlpha()
 
 void renderQueue::Scenes::setIndex(int input)
 {
-	index = minimum(input);
+	index = minimum(maximum(input));
 }
 
 void renderQueue::Scenes::setCamera(float input[7])
@@ -183,6 +183,16 @@ int renderQueue::Scenes::minimum(int input)
 	}
 
 	return input;
+}
+
+int renderQueue::Scenes::maximum(int input)
+{
+	if (input < getCount())
+	{
+		return input;
+	}
+
+	return 0;
 }
 
 float renderQueue::Scenes::element(int input)
