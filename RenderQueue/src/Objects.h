@@ -40,6 +40,7 @@ namespace renderQueue
 		void validate();
 		int minimum(int);
 		int maximum(int);
+		void transform(float[9]);
 
 	private:
 		int count;

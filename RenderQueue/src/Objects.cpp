@@ -110,10 +110,7 @@ void renderQueue::Objects::setTransform(float input[9])
 		return;
 	}
 
-	for (int i{ 0 }; i < 9; i++)
-	{
-		data[i + (index * 13)] = input[i];
-	}
+	transform(input);
 }
 
 void renderQueue::Objects::setColour(float input[4])
@@ -250,4 +247,12 @@ int renderQueue::Objects::maximum(int input)
 	}
 
 	return 0;
+}
+
+void renderQueue::Objects::transform(float input[9])
+{
+	for (int i{ 0 }; i < 9; i++)
+	{
+		data[i + (index * 13)] = input[i];
+	}
 }
