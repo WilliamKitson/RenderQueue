@@ -16,10 +16,22 @@ void renderQueue::Scenes::push()
 
 void renderQueue::Scenes::pop()
 {
-	count--;
+	count = minimum(count - 1);
 }
 
 int renderQueue::Scenes::getCount()
 {
 	return count;
+}
+
+int renderQueue::Scenes::minimum(int input)
+{
+	int output = 0;
+
+	if (input < output)
+	{
+		return output;
+	}
+
+	return input;
 }

@@ -5,6 +5,7 @@
 #include "ScenesCountDefaultTest.h"
 #include "ScenesCountPushTest.h"
 #include "ScenesCountPopTest.h"
+#include "ScenesCountMinimumTest.h"
 
 class ScenesCountTester
 {
@@ -18,4 +19,5 @@ private:
 	std::string testDefault();
 	std::string testPush();
 	std::string testPop();
+	std::string testMinimum();
 };

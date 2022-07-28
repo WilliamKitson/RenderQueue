@@ -184,6 +184,7 @@
     <ClCompile Include="src\domain\objects\transform\ObjectsTransformPushTest.cpp" />
     <ClCompile Include="src\domain\objects\transform\ObjectsTransformTester.cpp" />
     <ClCompile Include="src\domain\scenes\count\ScenesCountDefaultTest.cpp" />
+    <ClCompile Include="src\domain\scenes\count\ScenesCountMinimumTest.cpp" />
     <ClCompile Include="src\domain\scenes\count\ScenesCountPopTest.cpp" />
     <ClCompile Include="src\domain\scenes\count\ScenesCountPushTest.cpp" />
     <ClCompile Include="src\domain\scenes\count\ScenesCountTester.cpp" />
@@ -230,6 +231,7 @@
     <ClInclude Include="src\domain\objects\transform\ObjectsTransformPushTest.h" />
     <ClInclude Include="src\domain\objects\transform\ObjectsTransformTester.h" />
     <ClInclude Include="src\domain\scenes\count\ScenesCountDefaultTest.h" />
+    <ClInclude Include="src\domain\scenes\count\ScenesCountMinimumTest.h" />
     <ClInclude Include="src\domain\scenes\count\ScenesCountPopTest.h" />
     <ClInclude Include="src\domain\scenes\count\ScenesCountPushTest.h" />
     <ClInclude Include="src\domain\scenes\count\ScenesCountTester.h" />
