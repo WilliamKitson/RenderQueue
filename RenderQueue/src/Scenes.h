@@ -23,6 +23,7 @@ namespace renderQueue
 
 	private:
 		void cleanup();
+		void increment();
 		int minimum(int);
 		void validate();
 

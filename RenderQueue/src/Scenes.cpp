@@ -12,7 +12,7 @@ renderQueue::Scenes::~Scenes()
 
 void renderQueue::Scenes::push()
 {
-	count += 7;
+	increment();
 
 	float* pushed = new float[count];
 
@@ -174,6 +174,11 @@ void renderQueue::Scenes::cleanup()
 {
 	delete[] data;
 	data = nullptr;
+}
+
+void renderQueue::Scenes::increment()
+{
+	count += 7;
 }
 
 int renderQueue::Scenes::minimum(int input)
