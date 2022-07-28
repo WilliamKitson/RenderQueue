@@ -14,6 +14,7 @@ std::string ScenesAmbienceTester::test()
 
 	output += testDefault();
 	output += testPush();
+	output += testEmpty();
 
 	return output;
 }
@@ -26,4 +27,9 @@ std::string ScenesAmbienceTester::testDefault()
 std::string ScenesAmbienceTester::testPush()
 {
 	return ScenesAmbiencePushTest().test();
+}
+
+std::string ScenesAmbienceTester::testEmpty()
+{
+	return ScenesAmbienceEmptyTest().test();
 }

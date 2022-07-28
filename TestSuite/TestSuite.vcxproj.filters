@@ -186,6 +186,9 @@
     <ClCompile Include="src\domain\scenes\ambience\ScenesAmbiencePushTest.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="src\domain\scenes\ambience\ScenesAmbienceEmptyTest.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\MemoryTest.h">
@@ -354,6 +357,9 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="src\domain\scenes\ambience\ScenesAmbiencePushTest.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\domain\scenes\ambience\ScenesAmbienceEmptyTest.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

@@ -66,22 +66,22 @@ float renderQueue::Scenes::getFrustum()
 
 float renderQueue::Scenes::getRed()
 {
-	return data[7 + (index * 11)];
+	return element(7);
 }
 
 float renderQueue::Scenes::getGreen()
 {
-	return data[8 + (index * 11)];
+	return element(8);
 }
 
 float renderQueue::Scenes::getBlue()
 {
-	return data[9 + (index * 11)];
+	return element(9);
 }
 
 float renderQueue::Scenes::getAlpha()
 {
-	return data[10 + (index * 11)];
+	return element(10);
 }
 
 void renderQueue::Scenes::setIndex(int input)
@@ -108,6 +108,15 @@ void renderQueue::Scenes::setCamera(float input[7])
 
 void renderQueue::Scenes::setAmbience(float input[4])
 {
+	try
+	{
+		validate();
+	}
+	catch (int)
+	{
+		return;
+	}
+
 	for (int i{ 0 }; i < 4; i++)
 	{
 		data[i + 7 + (index * 11)] = input[i];
