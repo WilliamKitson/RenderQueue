@@ -19,7 +19,7 @@ void renderQueue::Scenes::push()
 
 void renderQueue::Scenes::pop()
 {
-	count = minimum(count - 7);
+	decrement();
 }
 
 int renderQueue::Scenes::getCount()
@@ -129,6 +129,11 @@ void renderQueue::Scenes::initialise()
 	{
 		data[i + (count - 7)] = scene[i];
 	}
+}
+
+void renderQueue::Scenes::decrement()
+{
+	count = minimum(count - 7);
 }
 
 int renderQueue::Scenes::minimum(int input)
