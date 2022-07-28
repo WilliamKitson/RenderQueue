@@ -1,6 +1,7 @@
 #include "ScenesAmbienceDefaultTest.h"
 
 ScenesAmbienceDefaultTest::ScenesAmbienceDefaultTest()
+	: unit()
 {
 }
 
@@ -13,32 +14,35 @@ std::string ScenesAmbienceDefaultTest::test()
 	renderQueue::Scenes unit;
 	unit.push();
 
-	bool success = true;
-
-	if (unit.getRed() != 1.0f)
-	{
-		success = false;
-	}
-
-	if (unit.getGreen() != 1.0f)
-	{
-		success = false;
-	}
-
-	if (unit.getBlue() != 1.0f)
-	{
-		success = false;
-	}
-
-	if (unit.getAlpha() != 1.0f)
-	{
-		success = false;
-	}
-
-	if (success)
+	if (success())
 	{
 		return std::string();
 	}
 
 	return "scenes ambience default test failed\n";
+}
+
+bool ScenesAmbienceDefaultTest::success()
+{
+	if (unit.getRed() != 1.0f)
+	{
+		return false;
+	}
+
+	if (unit.getGreen() != 1.0f)
+	{
+		return false;
+	}
+
+	if (unit.getBlue() != 1.0f)
+	{
+		return false;
+	}
+
+	if (unit.getAlpha() != 1.0f)
+	{
+		return false;
+	}
+
+	return true;
 }
