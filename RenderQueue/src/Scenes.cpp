@@ -29,100 +29,37 @@ int renderQueue::Scenes::getCount()
 
 float renderQueue::Scenes::getXpos()
 {
-	try
-	{
-		validate();
-	}
-	catch (int)
-	{
-		return 0.0f;
-	}
-
-	return data[0 + (index * 7)];
+	return element(0);
 }
 
 float renderQueue::Scenes::getYpos()
 {
-	try
-	{
-		validate();
-	}
-	catch (int)
-	{
-		return 0.0f;
-	}
-
-	return data[1 + (index * 7)];
+	return element(1);
 }
 
 float renderQueue::Scenes::getZpos()
 {
-	try
-	{
-		validate();
-	}
-	catch (int)
-	{
-		return 0.0f;
-	}
-
-	return data[2 + (index * 7)];
+	return element(2);
 }
 
 float renderQueue::Scenes::getXrot()
 {
-	try
-	{
-		validate();
-	}
-	catch (int)
-	{
-		return 0.0f;
-	}
-
-	return data[3 + (index * 7)];
+	return element(3);
 }
 
 float renderQueue::Scenes::getYrot()
 {
-	try
-	{
-		validate();
-	}
-	catch (int)
-	{
-		return 0.0f;
-	}
-
-	return data[4 + (index * 7)];
+	return element(4);
 }
 
 float renderQueue::Scenes::getZrot()
 {
-	try
-	{
-		validate();
-	}
-	catch (int)
-	{
-		return 0.0f;
-	}
-
-	return data[5 + (index * 7)];
+	return element(5);
 }
 
 float renderQueue::Scenes::getFrustum()
 {
-	try
-	{
-		validate();
-	}
-	catch (int)
-	{
-		return 0.0f;
-	}
-
-	return data[6 + (index * 7)];
+	return element(6);
 }
 
 void renderQueue::Scenes::setIndex(int input)
@@ -204,6 +141,20 @@ int renderQueue::Scenes::minimum(int input)
 	}
 
 	return input;
+}
+
+float renderQueue::Scenes::element(int input)
+{
+	try
+	{
+		validate();
+	}
+	catch (int)
+	{
+		return 0.0f;
+	}
+
+	return data[input + (index * 7)];
 }
 
 void renderQueue::Scenes::validate()
