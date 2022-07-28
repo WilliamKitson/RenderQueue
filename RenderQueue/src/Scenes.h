@@ -36,6 +36,7 @@ namespace renderQueue
 		float* popped();
 		int minimum(int);
 		int maximum(int);
+		void camera(float[7]);
 		float element(int);
 		void validate();
 

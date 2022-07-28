@@ -100,10 +100,7 @@ void renderQueue::Scenes::setCamera(float input[7])
 		return;
 	}
 
-	for (int i{ 0 }; i < 7; i++)
-	{
-		data[i + (index * 11)] = input[i];
-	}
+	camera(input);
 }
 
 void renderQueue::Scenes::setAmbience(float input[4])
@@ -214,6 +211,14 @@ int renderQueue::Scenes::maximum(int input)
 	}
 
 	return 0;
+}
+
+void renderQueue::Scenes::camera(float input[7])
+{
+	for (int i{ 0 }; i < 7; i++)
+	{
+		data[i + (index * 11)] = input[i];
+	}
 }
 
 float renderQueue::Scenes::element(int input)
