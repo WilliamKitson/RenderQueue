@@ -12,10 +12,16 @@ std::string DomainTester::test()
 {
 	std::string output{ "" };
 
+	output += testScenes();
 	output += testObjects();
 	output += testBindings();
 
 	return output;
+}
+
+std::string DomainTester::testScenes()
+{
+	return ScenesTester().test();
 }
 
 std::string DomainTester::testObjects()

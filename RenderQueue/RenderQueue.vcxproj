@@ -145,10 +145,12 @@
   <ItemGroup>
     <ClInclude Include="src\Bindings.h" />
     <ClInclude Include="src\Objects.h" />
+    <ClInclude Include="src\Scenes.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\Bindings.cpp" />
     <ClCompile Include="src\Objects.cpp" />
+    <ClCompile Include="src\Scenes.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
