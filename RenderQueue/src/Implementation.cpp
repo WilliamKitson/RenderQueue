@@ -1,7 +1,7 @@
 #include "Implementation.h"
 
 renderQueue::Implementation::Implementation()
-	: Facade(), scenes()
+	: Facade(), scenes(), objects(), bindings()
 {
 }
 
@@ -12,6 +12,12 @@ renderQueue::Implementation::~Implementation()
 void renderQueue::Implementation::pushScene()
 {
 	scenes.push();
+}
+
+void renderQueue::Implementation::pushObject()
+{
+	objects.push();
+	bindings.push(scenes.getIndex());
 }
 
 void renderQueue::Implementation::popScene()
@@ -51,6 +57,36 @@ renderQueue::Colour renderQueue::Implementation::getAmbience()
 	return output;
 }
 
+int renderQueue::Implementation::getObjects()
+{
+	int output = 0;
+
+	for (int i{ 0 }; i < objects.getCount(); i++)
+	{
+		bindings.setIndex(i);
+		output += bindings.getScene() == scenes.getIndex();
+	}
+
+	return output;
+}
+
+renderQueue::Transform renderQueue::Implementation::getTransform()
+{
+	Transform output{
+		objects.getXpos(),
+		objects.getYpos(),
+		objects.getZpos(),
+		objects.getXrot(),
+		objects.getYrot(),
+		objects.getZrot(),
+		objects.getXscale(),
+		objects.getYscale(),
+		objects.getZscale(),
+	};
+
+	return output;
+}
+
 void renderQueue::Implementation::setScene(int input)
 {
 	scenes.setIndex(input);
@@ -81,4 +117,40 @@ void renderQueue::Implementation::setAmbience(Colour input)
 	};
 
 	scenes.setAmbience(ambience);
+}
+
+void renderQueue::Implementation::setObject(int input)
+{
+	int index = 0;
+	int temp = 0;
+
+	for (int i{ 0 }; i < objects.getCount(); i++)
+	{
+		if (temp == input)
+		{
+			objects.setIndex(index);
+			return;
+		}
+
+		bindings.setIndex(i);
+		temp += bindings.getScene() == scenes.getIndex();
+		index++;
+	}
+}
+
+void renderQueue::Implementation::setTransform(Transform input)
+{
+	float transform[] = {
+		input.xpos,
+		input.ypos,
+		input.zpos,
+		input.xrot,
+		input.yrot,
+		input.zrot,
+		input.xscale,
+		input.yscale,
+		input.zscale
+	};
+
+	objects.setTransform(transform);
 }

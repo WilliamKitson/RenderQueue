@@ -162,6 +162,7 @@
     <ClInclude Include="src\Implementation.h" />
     <ClInclude Include="src\Objects.h" />
     <ClInclude Include="src\Scenes.h" />
+    <ClInclude Include="src\Transform.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\Bindings.cpp" />

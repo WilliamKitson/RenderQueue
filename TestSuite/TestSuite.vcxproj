@@ -155,6 +155,7 @@
     <ClCompile Include="src\application\implementation\push\ImplementationPushAmbienceTest.cpp" />
     <ClCompile Include="src\application\implementation\push\ImplementationPushCameraTest.cpp" />
     <ClCompile Include="src\application\implementation\push\ImplementationPushTester.cpp" />
+    <ClCompile Include="src\application\implementation\push\ImplementationPushTransformTest.cpp" />
     <ClCompile Include="src\domain\bindings\BindingsTester.cpp" />
     <ClCompile Include="src\domain\bindings\count\BindingsCountDefaultTest.cpp" />
     <ClCompile Include="src\domain\bindings\count\BindingsCountMinimumTest.cpp" />
@@ -225,6 +226,7 @@
     <ClInclude Include="src\application\implementation\push\ImplementationPushAmbienceTest.h" />
     <ClInclude Include="src\application\implementation\push\ImplementationPushCameraTest.h" />
     <ClInclude Include="src\application\implementation\push\ImplementationPushTester.h" />
+    <ClInclude Include="src\application\implementation\push\ImplementationPushTransformTest.h" />
     <ClInclude Include="src\domain\bindings\BindingsTester.h" />
     <ClInclude Include="src\domain\bindings\count\BindingsCountDefaultTest.h" />
     <ClInclude Include="src\domain\bindings\count\BindingsCountMinimumTest.h" />

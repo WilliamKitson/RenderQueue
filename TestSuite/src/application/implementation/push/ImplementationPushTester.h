@@ -4,6 +4,7 @@
 
 #include "ImplementationPushCameraTest.h"
 #include "ImplementationPushAmbienceTest.h"
+#include "ImplementationPushTransformTest.h"
 
 class ImplementationPushTester
 {
@@ -16,4 +17,5 @@ public:
 private:
 	std::string testCamera();
 	std::string testAmbience();
+	std::string testTransform();
 };
