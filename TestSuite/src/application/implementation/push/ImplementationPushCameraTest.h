@@ -16,6 +16,7 @@ public:
 private:
 	void initialise();
 	int successes();
+	bool success(renderQueue::Camera, float);
 
 private:
 	renderQueue::Facade* unit;

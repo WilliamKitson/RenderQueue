@@ -50,47 +50,52 @@ int ImplementationPushCameraTest::successes()
 	for (int i{ 0 }; i < unit->getScenes(); i++)
 	{
 		unit->setScene(i);
-		renderQueue::Camera camera = unit->getCamera();
 
-		bool success = true;
-
-		if (camera.xpos != (float)i)
-		{
-			success = false;
-		}
-
-		if (camera.ypos != (float)i)
-		{
-			success = false;
-		}
-
-		if (camera.zpos != (float)i)
-		{
-			success = false;
-		}
-
-		if (camera.xrot != (float)i)
-		{
-			success = false;
-		}
-
-		if (camera.yrot != (float)i)
-		{
-			success = false;
-		}
-
-		if (camera.zrot != (float)i)
-		{
-			success = false;
-		}
-
-		if (camera.frustum != (float)i)
-		{
-			success = false;
-		}
-
-		output += success;
+		output += success(
+			unit->getCamera(),
+			(float)i
+		);
 	}
 
 	return output;
+}
+
+bool ImplementationPushCameraTest::success(renderQueue::Camera camera, float index)
+{
+	if (camera.xpos != index)
+	{
+		return false;
+	}
+
+	if (camera.ypos != index)
+	{
+		return false;
+	}
+
+	if (camera.zpos != index)
+	{
+		return false;
+	}
+
+	if (camera.xrot != index)
+	{
+		return false;
+	}
+
+	if (camera.yrot != index)
+	{
+		return false;
+	}
+
+	if (camera.zrot != index)
+	{
+		return false;
+	}
+
+	if (camera.frustum != index)
+	{
+		return false;
+	}
+
+	return true;
 }
