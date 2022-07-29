@@ -15,7 +15,37 @@ std::string ImplementationPushCameraTest::test()
 {
 	initialise();
 
-	int successes = 0;
+	if (successes() == itterations)
+	{
+		return std::string();
+	}
+
+	return "implementation push camera test failed\n";
+}
+
+void ImplementationPushCameraTest::initialise()
+{
+	for (int i{ 0 }; i < itterations; i++)
+	{
+		renderQueue::Camera camera{
+			(float)i,
+			(float)i,
+			(float)i,
+			(float)i,
+			(float)i,
+			(float)i,
+			(float)i
+		};
+
+		unit->pushScene();
+		unit->setScene(i);
+		unit->setCamera(camera);
+	}
+}
+
+int ImplementationPushCameraTest::successes()
+{
+	int output = 0;
 
 	for (int i{ 0 }; i < unit->getScenes(); i++)
 	{
@@ -59,33 +89,8 @@ std::string ImplementationPushCameraTest::test()
 			success = false;
 		}
 
-		successes += success;
+		output += success;
 	}
 
-	if (successes == itterations)
-	{
-		return std::string();
-	}
-
-	return "implementation push camera test failed\n";
-}
-
-void ImplementationPushCameraTest::initialise()
-{
-	for (int i{ 0 }; i < itterations; i++)
-	{
-		renderQueue::Camera camera{
-			(float)i,
-			(float)i,
-			(float)i,
-			(float)i,
-			(float)i,
-			(float)i,
-			(float)i
-		};
-
-		unit->pushScene();
-		unit->setScene(i);
-		unit->setCamera(camera);
-	}
+	return output;
 }

@@ -15,6 +15,7 @@ public:
 
 private:
 	void initialise();
+	int successes();
 
 private:
 	renderQueue::Facade* unit;
