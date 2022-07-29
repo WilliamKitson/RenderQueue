@@ -1,7 +1,7 @@
 #include "ImplementationPushTransformTest.h"
 
 ImplementationPushTransformTest::ImplementationPushTransformTest()
-	: unit{ new renderQueue::Implementation }
+	: unit{ new renderQueue::Implementation }, itterations{ 4 }
 {
 }
 
@@ -13,32 +13,7 @@ ImplementationPushTransformTest::~ImplementationPushTransformTest()
 
 std::string ImplementationPushTransformTest::test()
 {
-	int itterations = 4;
-
-	for (int i{ 0 }; i < itterations; i++)
-	{
-		unit->pushScene();
-		unit->setScene(i);
-
-		for (int i2{ 0 }; i2 < itterations; i2++)
-		{
-			renderQueue::Transform transform{
-				(float)i2,
-				(float)i2,
-				(float)i2,
-				(float)i2,
-				(float)i2,
-				(float)i2,
-				(float)i2,
-				(float)i2,
-				(float)i2
-			};
-
-			unit->pushObject();
-			unit->setObject(i2);
-			unit->setTransform(transform);
-		}
-	}
+	scenes();
 
 	int successes = 0;
 
@@ -109,4 +84,32 @@ std::string ImplementationPushTransformTest::test()
 	}
 
 	return "implementation push transform test failed\n";
+}
+
+void ImplementationPushTransformTest::scenes()
+{
+	for (int i{ 0 }; i < itterations; i++)
+	{
+		unit->pushScene();
+		unit->setScene(i);
+
+		for (int i2{ 0 }; i2 < itterations; i2++)
+		{
+			renderQueue::Transform transform{
+				(float)i2,
+				(float)i2,
+				(float)i2,
+				(float)i2,
+				(float)i2,
+				(float)i2,
+				(float)i2,
+				(float)i2,
+				(float)i2
+			};
+
+			unit->pushObject();
+			unit->setObject(i2);
+			unit->setTransform(transform);
+		}
+	}
 }

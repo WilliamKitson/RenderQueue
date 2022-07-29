@@ -14,5 +14,9 @@ public:
 	std::string test();
 
 private:
+	void scenes();
+
+private:
 	renderQueue::Facade* unit;
+	int itterations;
 };
