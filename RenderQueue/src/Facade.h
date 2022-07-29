@@ -12,6 +12,7 @@ namespace renderQueue
 		virtual ~Facade();
 
 		virtual void pushScene();
+		virtual void popScene();
 		virtual int getScenes();
 		virtual Camera getCamera();
 		virtual Colour getAmbience();

@@ -14,6 +14,11 @@ void renderQueue::Implementation::pushScene()
 	scenes.push();
 }
 
+void renderQueue::Implementation::popScene()
+{
+	scenes.pop();
+}
+
 int renderQueue::Implementation::getScenes()
 {
 	return scenes.getCount();

@@ -210,6 +210,12 @@
     <ClCompile Include="src\domain\scenes\index\ScenesIndexGetTest.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="src\application\implementation\pop\ImplementationPopCameraTest.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\application\implementation\pop\ImplementationPopTester.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\MemoryTest.h">
@@ -402,6 +408,12 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="src\domain\scenes\index\ScenesIndexGetTest.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\application\implementation\pop\ImplementationPopCameraTest.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\application\implementation\pop\ImplementationPopTester.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
