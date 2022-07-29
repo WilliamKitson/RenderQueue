@@ -22,11 +22,13 @@ namespace renderQueue
 		virtual Colour getAmbience();
 		virtual int getObjects();
 		virtual Transform getTransform();
+		virtual Colour getColour();
 		virtual void setScene(int);
 		virtual void setCamera(Camera);
 		virtual void setAmbience(Colour);
 		virtual void setObject(int);
 		virtual void setTransform(Transform);
+		virtual void setColour(Colour);
 
 	private:
 		Scenes scenes;

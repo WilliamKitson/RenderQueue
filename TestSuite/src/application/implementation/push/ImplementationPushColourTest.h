@@ -1,0 +1,26 @@
+#pragma once
+
+#include <string>
+
+#include "Facade.h"
+#include "Implementation.h"
+
+class ImplementationPushColourTest
+{
+public:
+	ImplementationPushColourTest();
+	~ImplementationPushColourTest();
+
+	std::string test();
+
+private:
+	void scenes();
+	void objects();
+	int sSuccesses();
+	int oSuccesses();
+	bool success(renderQueue::Colour, float);
+
+private:
+	renderQueue::Facade* unit;
+	int itterations;
+};

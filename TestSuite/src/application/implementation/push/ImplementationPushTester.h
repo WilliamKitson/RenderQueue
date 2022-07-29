@@ -5,6 +5,7 @@
 #include "ImplementationPushCameraTest.h"
 #include "ImplementationPushAmbienceTest.h"
 #include "ImplementationPushTransformTest.h"
+#include "ImplementationPushColourTest.h"
 
 class ImplementationPushTester
 {
@@ -18,4 +19,5 @@ private:
 	std::string testCamera();
 	std::string testAmbience();
 	std::string testTransform();
+	std::string testColour();
 };

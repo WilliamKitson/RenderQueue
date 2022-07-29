@@ -87,6 +87,18 @@ renderQueue::Transform renderQueue::Implementation::getTransform()
 	return output;
 }
 
+renderQueue::Colour renderQueue::Implementation::getColour()
+{
+	Colour output{
+		objects.getRed(),
+		objects.getGreen(),
+		objects.getBlue(),
+		objects.getAlpha()
+	};
+
+	return output;
+}
+
 void renderQueue::Implementation::setScene(int input)
 {
 	scenes.setIndex(input);
@@ -153,4 +165,16 @@ void renderQueue::Implementation::setTransform(Transform input)
 	};
 
 	objects.setTransform(transform);
+}
+
+void renderQueue::Implementation::setColour(Colour input)
+{
+	float colour[] = {
+		input.red,
+		input.green,
+		input.blue,
+		input.alpha
+	};
+
+	objects.setColour(colour);
 }

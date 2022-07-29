@@ -45,6 +45,11 @@ renderQueue::Transform renderQueue::Facade::getTransform()
     return Transform();
 }
 
+renderQueue::Colour renderQueue::Facade::getColour()
+{
+    return Colour();
+}
+
 void renderQueue::Facade::setScene(int)
 {
 }
@@ -62,5 +67,9 @@ void renderQueue::Facade::setObject(int)
 }
 
 void renderQueue::Facade::setTransform(Transform)
+{
+}
+
+void renderQueue::Facade::setColour(Colour)
 {
 }
