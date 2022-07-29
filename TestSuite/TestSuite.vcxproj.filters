@@ -192,6 +192,18 @@
     <ClCompile Include="src\domain\scenes\ambience\ScenesAmbiencePopTest.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="src\application\implementation\push\ImplementationPushCameraTest.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\application\implementation\push\ImplementationPushTester.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\application\implementation\ImplementationTester.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\application\ApplicationTester.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\MemoryTest.h">
@@ -366,6 +378,18 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="src\domain\scenes\ambience\ScenesAmbiencePopTest.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\application\implementation\push\ImplementationPushCameraTest.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\application\implementation\push\ImplementationPushTester.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\application\implementation\ImplementationTester.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\application\ApplicationTester.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

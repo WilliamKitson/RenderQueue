@@ -156,11 +156,16 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClInclude Include="src\Bindings.h" />
+    <ClInclude Include="src\Camera.h" />
+    <ClInclude Include="src\Facade.h" />
+    <ClInclude Include="src\Implementation.h" />
     <ClInclude Include="src\Objects.h" />
     <ClInclude Include="src\Scenes.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\Bindings.cpp" />
+    <ClCompile Include="src\Facade.cpp" />
+    <ClCompile Include="src\Implementation.cpp" />
     <ClCompile Include="src\Objects.cpp" />
     <ClCompile Include="src\Scenes.cpp" />
   </ItemGroup>
