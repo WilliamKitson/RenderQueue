@@ -76,57 +76,61 @@ int ImplementationPushTransformTest::oSuccesses()
 	{
 		unit->setObject(i);
 
-		renderQueue::Transform transform = unit->getTransform();
-
-		bool success = true;
-
-		if (transform.xpos != (float)i)
-		{
-			success = false;
-		}
-
-		if (transform.ypos != (float)i)
-		{
-			success = false;
-		}
-
-		if (transform.xpos != (float)i)
-		{
-			success = false;
-		}
-
-		if (transform.xrot != (float)i)
-		{
-			success = false;
-		}
-
-		if (transform.yrot != (float)i)
-		{
-			success = false;
-		}
-
-		if (transform.zrot != (float)i)
-		{
-			success = false;
-		}
-
-		if (transform.xscale != (float)i)
-		{
-			success = false;
-		}
-
-		if (transform.yscale != (float)i)
-		{
-			success = false;
-		}
-
-		if (transform.zscale != (float)i)
-		{
-			success = false;
-		}
-
-		output += success;
+		output += success(
+			unit->getTransform(),
+			(float)i
+		);
 	}
 
 	return output;
+}
+
+bool ImplementationPushTransformTest::success(renderQueue::Transform transform, float index)
+{
+	if (transform.xpos != index)
+	{
+		return false;
+	}
+
+	if (transform.ypos != index)
+	{
+		return false;
+	}
+
+	if (transform.xpos != index)
+	{
+		return false;
+	}
+
+	if (transform.xrot != index)
+	{
+		return false;
+	}
+
+	if (transform.yrot != index)
+	{
+		return false;
+	}
+
+	if (transform.zrot != index)
+	{
+		return false;
+	}
+
+	if (transform.xscale != index)
+	{
+		return false;
+	}
+
+	if (transform.yscale != index)
+	{
+		return false;
+	}
+
+	if (transform.zscale != index)
+	{
+		return false;
+	}
+
+	return true;
 }

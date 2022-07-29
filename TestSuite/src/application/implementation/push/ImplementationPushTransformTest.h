@@ -18,6 +18,7 @@ private:
 	void objects();
 	int sSuccesses();
 	int oSuccesses();
+	bool success(renderQueue::Transform, float);
 
 private:
 	renderQueue::Facade* unit;
