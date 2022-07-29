@@ -1,7 +1,7 @@
 #include "ImplementationPushCameraTest.h"
 
 ImplementationPushCameraTest::ImplementationPushCameraTest()
-	: unit{ new renderQueue::Implementation }
+	: unit{ new renderQueue::Implementation }, itterations{ 4 }
 {
 }
 
@@ -13,24 +13,7 @@ ImplementationPushCameraTest::~ImplementationPushCameraTest()
 
 std::string ImplementationPushCameraTest::test()
 {
-	int itterations = 4;
-
-	for (int i{ 0 }; i < itterations; i++)
-	{
-		renderQueue::Camera camera{
-			(float)i,
-			(float)i,
-			(float)i,
-			(float)i,
-			(float)i,
-			(float)i,
-			(float)i
-		};
-
-		unit->pushScene();
-		unit->setScene(i);
-		unit->setCamera(camera);
-	}
+	initialise();
 
 	int successes = 0;
 
@@ -85,4 +68,24 @@ std::string ImplementationPushCameraTest::test()
 	}
 
 	return "implementation push camera test failed\n";
+}
+
+void ImplementationPushCameraTest::initialise()
+{
+	for (int i{ 0 }; i < itterations; i++)
+	{
+		renderQueue::Camera camera{
+			(float)i,
+			(float)i,
+			(float)i,
+			(float)i,
+			(float)i,
+			(float)i,
+			(float)i
+		};
+
+		unit->pushScene();
+		unit->setScene(i);
+		unit->setCamera(camera);
+	}
 }
