@@ -15,7 +15,49 @@ std::string ImplementationPushTransformTest::test()
 {
 	scenes();
 
-	int successes = 0;
+	if (successes() == itterations * itterations)
+	{
+		return std::string();
+	}
+
+	return "implementation push transform test failed\n";
+}
+
+void ImplementationPushTransformTest::scenes()
+{
+	for (int i{ 0 }; i < itterations; i++)
+	{
+		unit->pushScene();
+		unit->setScene(i);
+		objects();
+	}
+}
+
+void ImplementationPushTransformTest::objects()
+{
+	for (int i{ 0 }; i < itterations; i++)
+	{
+		renderQueue::Transform transform{
+			(float)i,
+			(float)i,
+			(float)i,
+			(float)i,
+			(float)i,
+			(float)i,
+			(float)i,
+			(float)i,
+			(float)i
+		};
+
+		unit->pushObject();
+		unit->setObject(i);
+		unit->setTransform(transform);
+	}
+}
+
+int ImplementationPushTransformTest::successes()
+{
+	int output = 0;
 
 	for (int i{ 0 }; i < unit->getScenes(); i++)
 	{
@@ -74,42 +116,9 @@ std::string ImplementationPushTransformTest::test()
 				success = false;
 			}
 
-			successes += success;
+			output += success;
 		}
 	}
 
-	if (successes == itterations * itterations)
-	{
-		return std::string();
-	}
-
-	return "implementation push transform test failed\n";
-}
-
-void ImplementationPushTransformTest::scenes()
-{
-	for (int i{ 0 }; i < itterations; i++)
-	{
-		unit->pushScene();
-		unit->setScene(i);
-
-		for (int i2{ 0 }; i2 < itterations; i2++)
-		{
-			renderQueue::Transform transform{
-				(float)i2,
-				(float)i2,
-				(float)i2,
-				(float)i2,
-				(float)i2,
-				(float)i2,
-				(float)i2,
-				(float)i2,
-				(float)i2
-			};
-
-			unit->pushObject();
-			unit->setObject(i2);
-			unit->setTransform(transform);
-		}
-	}
+	return output;
 }

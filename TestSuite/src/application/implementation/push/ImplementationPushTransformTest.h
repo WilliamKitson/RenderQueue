@@ -15,6 +15,8 @@ public:
 
 private:
 	void scenes();
+	void objects();
+	int successes();
 
 private:
 	renderQueue::Facade* unit;
