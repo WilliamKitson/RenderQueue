@@ -157,6 +157,7 @@
   <ItemGroup>
     <ClInclude Include="src\Bindings.h" />
     <ClInclude Include="src\Camera.h" />
+    <ClInclude Include="src\Colour.h" />
     <ClInclude Include="src\Facade.h" />
     <ClInclude Include="src\Implementation.h" />
     <ClInclude Include="src\Objects.h" />

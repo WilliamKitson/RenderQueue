@@ -204,6 +204,9 @@
     <ClCompile Include="src\application\ApplicationTester.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="src\application\implementation\push\ImplementationPushAmbienceTest.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\MemoryTest.h">
@@ -390,6 +393,9 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="src\application\ApplicationTester.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\application\implementation\push\ImplementationPushAmbienceTest.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

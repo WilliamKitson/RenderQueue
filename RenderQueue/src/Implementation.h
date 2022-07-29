@@ -15,8 +15,10 @@ namespace renderQueue
 		virtual void pushScene();
 		virtual int getScenes();
 		virtual Camera getCamera();
+		virtual Colour getAmbience();
 		virtual void setScene(int);
 		virtual void setCamera(Camera);
+		virtual void setAmbience(Colour);
 
 	private:
 		Scenes scenes;
