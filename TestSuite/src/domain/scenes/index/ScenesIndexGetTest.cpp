@@ -1,6 +1,7 @@
 #include "ScenesIndexGetTest.h"
 
 ScenesIndexGetTest::ScenesIndexGetTest()
+	: unit(), itterations{ 4 }
 {
 }
 
@@ -10,13 +11,7 @@ ScenesIndexGetTest::~ScenesIndexGetTest()
 
 std::string ScenesIndexGetTest::test()
 {
-	renderQueue::Scenes unit;
-	int itterations = 4;
-
-	for (int i{ 0 }; i < itterations; i++)
-	{
-		unit.push();
-	}
+	initialise();
 
 	int successes = 0;
 
@@ -32,4 +27,12 @@ std::string ScenesIndexGetTest::test()
 	}
 
 	return "scenes index get test failed\n";
+}
+
+void ScenesIndexGetTest::initialise()
+{
+	for (int i{ 0 }; i < itterations; i++)
+	{
+		unit.push();
+	}
 }

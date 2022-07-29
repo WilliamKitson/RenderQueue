@@ -10,4 +10,11 @@ public:
 	~ScenesIndexGetTest();
 
 	std::string test();
+
+private:
+	void initialise();
+
+private:
+	renderQueue::Scenes unit;
+	int itterations;
 };
