@@ -13,15 +13,7 @@ std::string ScenesIndexGetTest::test()
 {
 	initialise();
 
-	int successes = 0;
-
-	for (int i{ 0 }; i < itterations; i++)
-	{
-		unit.setIndex(i);
-		successes += unit.getIndex() == i;
-	}
-
-	if (successes == itterations)
+	if (successes() == itterations)
 	{
 		return std::string();
 	}
@@ -35,4 +27,17 @@ void ScenesIndexGetTest::initialise()
 	{
 		unit.push();
 	}
+}
+
+int ScenesIndexGetTest::successes()
+{
+	int output = 0;
+
+	for (int i{ 0 }; i < itterations; i++)
+	{
+		unit.setIndex(i);
+		output += unit.getIndex() == i;
+	}
+
+	return output;
 }
