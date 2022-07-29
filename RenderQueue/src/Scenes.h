@@ -11,6 +11,7 @@ namespace renderQueue
 		void push();
 		void pop();
 		int getCount();
+		int getIndex();
 		float getXpos();
 		float getYpos();
 		float getZpos();

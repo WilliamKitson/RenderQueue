@@ -29,6 +29,11 @@ int renderQueue::Scenes::getCount()
 	return count / 11;
 }
 
+int renderQueue::Scenes::getIndex()
+{
+	return index;
+}
+
 float renderQueue::Scenes::getXpos()
 {
 	return element(0);

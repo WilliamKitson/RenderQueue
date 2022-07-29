@@ -2,6 +2,7 @@
 
 #include <string>
 
+#include "ScenesIndexGetTest.h"
 #include "ScenesIndexPopTest.h"
 #include "ScenesIndexMinimumTest.h"
 #include "ScenesIndexMaximumTest.h"
@@ -15,6 +16,7 @@ public:
 	std::string test();
 
 private:
+	std::string testGet();
 	std::string testPop();
 	std::string testMinimum();
 	std::string testMaximum();
