@@ -30,9 +30,9 @@ renderQueue::Camera renderQueue::Facade::getCamera()
     return Camera();
 }
 
-renderQueue::Colour renderQueue::Facade::getAmbience()
+renderQueue::RGBA renderQueue::Facade::getAmbience()
 {
-    return Colour();
+    return RGBA();
 }
 
 int renderQueue::Facade::getObjects()
@@ -45,9 +45,9 @@ renderQueue::Transform renderQueue::Facade::getTransform()
     return Transform();
 }
 
-renderQueue::Colour renderQueue::Facade::getColour()
+renderQueue::RGBA renderQueue::Facade::getColour()
 {
-    return Colour();
+    return RGBA();
 }
 
 void renderQueue::Facade::setScene(int)
@@ -58,7 +58,7 @@ void renderQueue::Facade::setCamera(Camera)
 {
 }
 
-void renderQueue::Facade::setAmbience(Colour)
+void renderQueue::Facade::setAmbience(RGBA)
 {
 }
 
@@ -70,6 +70,6 @@ void renderQueue::Facade::setTransform(Transform)
 {
 }
 
-void renderQueue::Facade::setColour(Colour)
+void renderQueue::Facade::setColour(RGBA)
 {
 }

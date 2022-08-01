@@ -45,9 +45,9 @@ renderQueue::Camera renderQueue::Implementation::getCamera()
 	return output;
 }
 
-renderQueue::Colour renderQueue::Implementation::getAmbience()
+renderQueue::RGBA renderQueue::Implementation::getAmbience()
 {
-	Colour output{
+	RGBA output{
 		scenes.getRed(),
 		scenes.getGreen(),
 		scenes.getBlue(),
@@ -79,9 +79,9 @@ renderQueue::Transform renderQueue::Implementation::getTransform()
 	return output;
 }
 
-renderQueue::Colour renderQueue::Implementation::getColour()
+renderQueue::RGBA renderQueue::Implementation::getColour()
 {
-	Colour output{
+	RGBA output{
 		objects.getRed(),
 		objects.getGreen(),
 		objects.getBlue(),
@@ -111,7 +111,7 @@ void renderQueue::Implementation::setCamera(Camera input)
 	scenes.setCamera(camera);
 }
 
-void renderQueue::Implementation::setAmbience(Colour input)
+void renderQueue::Implementation::setAmbience(RGBA input)
 {
 	float ambience[] = {
 		input.red,
@@ -145,7 +145,7 @@ void renderQueue::Implementation::setTransform(Transform input)
 	objects.setTransform(transform);
 }
 
-void renderQueue::Implementation::setColour(Colour input)
+void renderQueue::Implementation::setColour(RGBA input)
 {
 	float colour[] = {
 		input.red,

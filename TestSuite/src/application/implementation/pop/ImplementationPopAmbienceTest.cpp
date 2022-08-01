@@ -27,7 +27,7 @@ void ImplementationPopAmbienceTest::initialise()
 {
 	for (int i{ 0 }; i < itterations; i++)
 	{
-		renderQueue::Colour colour{
+		renderQueue::RGBA colour{
 			(float)i,
 			(float)i,
 			(float)i,
@@ -58,7 +58,7 @@ int ImplementationPopAmbienceTest::successes()
 	return output;
 }
 
-bool ImplementationPopAmbienceTest::success(renderQueue::Colour camera, float index)
+bool ImplementationPopAmbienceTest::success(renderQueue::RGBA camera, float index)
 {
 	if (camera.red != index)
 	{

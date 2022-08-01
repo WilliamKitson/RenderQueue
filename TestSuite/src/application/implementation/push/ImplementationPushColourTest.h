@@ -18,7 +18,7 @@ private:
 	void objects();
 	int sSuccesses();
 	int oSuccesses();
-	bool success(renderQueue::Colour, float);
+	bool success(renderQueue::RGBA, float);
 
 private:
 	renderQueue::Facade* unit;

@@ -37,7 +37,7 @@ void ImplementationPushColourTest::objects()
 {
 	for (int i{ 0 }; i < itterations; i++)
 	{
-		renderQueue::Colour colour{
+		renderQueue::RGBA colour{
 			(float)i,
 			(float)i,
 			(float)i,
@@ -80,7 +80,7 @@ int ImplementationPushColourTest::oSuccesses()
 	return output;
 }
 
-bool ImplementationPushColourTest::success(renderQueue::Colour colour, float index)
+bool ImplementationPushColourTest::success(renderQueue::RGBA colour, float index)
 {
 	if (colour.red != index)
 	{

@@ -27,7 +27,7 @@ void ImplementationPushAmbienceTest::initialise()
 {
 	for (int i{ 0 }; i < itterations; i++)
 	{
-		renderQueue::Colour ambience{
+		renderQueue::RGBA ambience{
 			(float)i,
 			(float)i,
 			(float)i,
@@ -57,7 +57,7 @@ int ImplementationPushAmbienceTest::successes()
 	return output;
 }
 
-bool ImplementationPushAmbienceTest::success(renderQueue::Colour ambience, float index)
+bool ImplementationPushAmbienceTest::success(renderQueue::RGBA ambience, float index)
 {
 	if (ambience.red != index)
 	{

@@ -33,10 +33,10 @@
     <ClInclude Include="src\Camera.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="src\Colour.h">
+    <ClInclude Include="src\Transform.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="src\Transform.h">
+    <ClInclude Include="src\RGBA.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

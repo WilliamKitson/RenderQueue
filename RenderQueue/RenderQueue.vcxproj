@@ -157,10 +157,10 @@
   <ItemGroup>
     <ClInclude Include="src\Bindings.h" />
     <ClInclude Include="src\Camera.h" />
-    <ClInclude Include="src\Colour.h" />
     <ClInclude Include="src\Facade.h" />
     <ClInclude Include="src\Implementation.h" />
     <ClInclude Include="src\Objects.h" />
+    <ClInclude Include="src\RGBA.h" />
     <ClInclude Include="src\Scenes.h" />
     <ClInclude Include="src\Transform.h" />
   </ItemGroup>

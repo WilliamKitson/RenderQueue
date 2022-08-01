@@ -2,7 +2,7 @@
 
 namespace renderQueue
 {
-	struct Colour
+	struct RGBA
 	{
 	public:
 		const float red{ 0.0f };
