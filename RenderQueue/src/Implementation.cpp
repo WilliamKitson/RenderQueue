@@ -173,12 +173,12 @@ int renderQueue::Implementation::count()
 int renderQueue::Implementation::index(int input)
 {
 	int output = 0;
-	int temp = 0;
+	int count = 0;
 
-	for (output; temp != input; output++)
+	for (output; count != input; output++)
 	{
 		bindings.setIndex(output);
-		temp += bindings.getScene() == scenes.getIndex();
+		count += bindings.getScene() == scenes.getIndex();
 	}
 
 	return output;
