@@ -175,11 +175,10 @@ int renderQueue::Implementation::index(int input)
 	int output = 0;
 	int temp = 0;
 
-	for (int i{ 0 }; temp != input; i++)
+	for (output; temp != input; output++)
 	{
-		bindings.setIndex(i);
+		bindings.setIndex(output);
 		temp += bindings.getScene() == scenes.getIndex();
-		output++;
 	}
 
 	return output;
