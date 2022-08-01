@@ -125,21 +125,7 @@ void renderQueue::Implementation::setAmbience(Colour input)
 
 void renderQueue::Implementation::setObject(int input)
 {
-	int index = 0;
-	int temp = 0;
-
-	for (int i{ 0 }; i < objects.getCount(); i++)
-	{
-		if (temp == input)
-		{
-			objects.setIndex(index);
-			return;
-		}
-
-		bindings.setIndex(i);
-		temp += bindings.getScene() == scenes.getIndex();
-		index++;
-	}
+	objects.setIndex(index(input));
 }
 
 void renderQueue::Implementation::setTransform(Transform input)
@@ -179,6 +165,26 @@ int renderQueue::Implementation::count()
 	{
 		bindings.setIndex(i);
 		output += bindings.getScene() == scenes.getIndex();
+	}
+
+	return output;
+}
+
+int renderQueue::Implementation::index(int input)
+{
+	int output = 0;
+	int temp = 0;
+
+	for (int i{ 0 }; i < objects.getCount(); i++)
+	{
+		if (temp == input)
+		{
+			break;
+		}
+
+		bindings.setIndex(i);
+		temp += bindings.getScene() == scenes.getIndex();
+		output++;
 	}
 
 	return output;

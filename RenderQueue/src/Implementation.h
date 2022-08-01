@@ -32,6 +32,7 @@ namespace renderQueue
 
 	private:
 		int count();
+		int index(int);
 
 	private:
 		Scenes scenes;
