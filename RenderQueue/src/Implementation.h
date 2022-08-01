@@ -31,6 +31,9 @@ namespace renderQueue
 		virtual void setColour(Colour);
 
 	private:
+		int count();
+
+	private:
 		Scenes scenes;
 		Objects objects;
 		Bindings bindings;

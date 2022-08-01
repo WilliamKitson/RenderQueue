@@ -59,15 +59,7 @@ renderQueue::Colour renderQueue::Implementation::getAmbience()
 
 int renderQueue::Implementation::getObjects()
 {
-	int output = 0;
-
-	for (int i{ 0 }; i < objects.getCount(); i++)
-	{
-		bindings.setIndex(i);
-		output += bindings.getScene() == scenes.getIndex();
-	}
-
-	return output;
+	return count();
 }
 
 renderQueue::Transform renderQueue::Implementation::getTransform()
@@ -177,4 +169,17 @@ void renderQueue::Implementation::setColour(Colour input)
 	};
 
 	objects.setColour(colour);
+}
+
+int renderQueue::Implementation::count()
+{
+	int output = 0;
+
+	for (int i{ 0 }; i < objects.getCount(); i++)
+	{
+		bindings.setIndex(i);
+		output += bindings.getScene() == scenes.getIndex();
+	}
+
+	return output;
 }
