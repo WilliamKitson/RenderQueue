@@ -14,6 +14,7 @@ std::string ScenesOverlapTester::test()
 
 	output += testDefault();
 	output += testPush();
+	output += testEmpty();
 
 	return output;
 }
@@ -26,4 +27,9 @@ std::string ScenesOverlapTester::testDefault()
 std::string ScenesOverlapTester::testPush()
 {
 	return ScenesOverlapPushTest().test();
+}
+
+std::string ScenesOverlapTester::testEmpty()
+{
+	return ScenesOverlapEmptyTest().test();
 }

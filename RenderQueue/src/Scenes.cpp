@@ -96,7 +96,7 @@ float renderQueue::Scenes::getAlpha()
 
 bool renderQueue::Scenes::getOverlap()
 {
-	return data[12 + (index * 13)];
+	return element(12);
 }
 
 void renderQueue::Scenes::setIndex(int input)
@@ -134,11 +134,29 @@ void renderQueue::Scenes::setAmbience(float input[4])
 
 void renderQueue::Scenes::setNoneoverlap()
 {
+	try
+	{
+		validate();
+	}
+	catch (int)
+	{
+		return;
+	}
+
 	data[12 + (index * 13)] = 0.0f;
 }
 
 void renderQueue::Scenes::setOverlap()
 {
+	try
+	{
+		validate();
+	}
+	catch (int)
+	{
+		return;
+	}
+
 	data[12 + (index * 13)] = 1.0f;
 }
 

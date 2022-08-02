@@ -4,6 +4,7 @@
 
 #include "ScenesOverlapDefaultTest.h"
 #include "ScenesOverlapPushTest.h"
+#include "ScenesOverlapEmptyTest.h"
 
 class ScenesOverlapTester
 {
@@ -16,4 +17,5 @@ public:
 private:
 	std::string testDefault();
 	std::string testPush();
+	std::string testEmpty();
 };
