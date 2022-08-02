@@ -10,4 +10,11 @@ public:
 	~DistanceCameraTest();
 
 	std::string test();
+
+private:
+	float calculate(float[3]);
+
+private:
+	int itterations;
+	int successes;
 };
