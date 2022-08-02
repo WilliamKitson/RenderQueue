@@ -12,7 +12,7 @@ renderQueue::Distance::~Distance()
 
 void renderQueue::Distance::calculate()
 {
-	distance = square(unsquared());
+	distance = root(unsquared());
 }
 
 float renderQueue::Distance::getDistance()
@@ -44,7 +44,7 @@ void renderQueue::Distance::initialise()
 	}
 }
 
-float renderQueue::Distance::square(float input)
+float renderQueue::Distance::root(float input)
 {
 	float output = input;
 
