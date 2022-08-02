@@ -157,6 +157,7 @@
     <ClCompile Include="src\application\implementation\push\ImplementationPushColourTest.cpp" />
     <ClCompile Include="src\application\implementation\push\ImplementationPushTester.cpp" />
     <ClCompile Include="src\application\implementation\push\ImplementationPushTransformTest.cpp" />
+    <ClCompile Include="src\application\implementation\render\ImplementationRenderOutsideTest.cpp" />
     <ClCompile Include="src\application\implementation\render\ImplementationRenderTester.cpp" />
     <ClCompile Include="src\application\implementation\render\ImplementationRenderWithinTest.cpp" />
     <ClCompile Include="src\domain\bindings\BindingsTester.cpp" />
@@ -240,6 +241,7 @@
     <ClInclude Include="src\application\implementation\push\ImplementationPushColourTest.h" />
     <ClInclude Include="src\application\implementation\push\ImplementationPushTester.h" />
     <ClInclude Include="src\application\implementation\push\ImplementationPushTransformTest.h" />
+    <ClInclude Include="src\application\implementation\render\ImplementationRenderOutsideTest.h" />
     <ClInclude Include="src\application\implementation\render\ImplementationRenderTester.h" />
     <ClInclude Include="src\application\implementation\render\ImplementationRenderWithinTest.h" />
     <ClInclude Include="src\domain\bindings\BindingsTester.h" />

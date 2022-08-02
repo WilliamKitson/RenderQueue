@@ -4,6 +4,7 @@
 #include "Scenes.h"
 #include "Objects.h"
 #include "Bindings.h"
+#include "Distance.h"
 
 namespace renderQueue
 {
@@ -39,5 +40,6 @@ namespace renderQueue
 		Scenes scenes;
 		Objects objects;
 		Bindings bindings;
+		Distance distance;
 	};
 }

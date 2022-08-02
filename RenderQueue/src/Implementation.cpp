@@ -1,7 +1,7 @@
 #include "Implementation.h"
 
 renderQueue::Implementation::Implementation()
-	: Facade(), scenes(), objects(), bindings()
+	: Facade(), scenes(), objects(), bindings(), distance()
 {
 }
 
@@ -65,6 +65,27 @@ int renderQueue::Implementation::getObjects()
 
 bool renderQueue::Implementation::getRender()
 {
+	float camera[] = {
+		scenes.getXpos(),
+		scenes.getYpos(),
+		scenes.getZpos()
+	};
+
+	float object[] = {
+		objects.getXpos(),
+		objects.getYpos(),
+		objects.getZpos()
+	};
+
+	distance.setCamera(camera);
+	distance.setObject(object);
+	distance.calculate();
+
+	if (distance.getDistance() > scenes.getDrawDistance())
+	{
+		return false;
+	}
+
 	return true;
 }
 

@@ -1,7 +1,9 @@
 #pragma once
 
 #include <string>
+
 #include "ImplementationRenderWithinTest.h"
+#include "ImplementationRenderOutsideTest.h"
 
 class ImplementationRenderTester
 {
@@ -13,4 +15,5 @@ public:
 
 private:
 	std::string testWithin();
+	std::string testOutside();
 };
