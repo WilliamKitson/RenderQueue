@@ -53,12 +53,16 @@ float DistanceCameraTest::calculate(float input[3])
 	float distanceZ = input[2] - 0.0f;
 	distanceZ *= distanceZ;
 
-	float distance = distanceX + distanceY + distanceZ;
-	float output = distance;
+	return root(distanceX + distanceY + distanceZ);
+}
 
-	while ((output - distance / output) > 0.000001f)
+float DistanceCameraTest::root(float input)
+{
+	float output = input;
+
+	while ((output - input / output) > 0.000001f)
 	{
-		output = (output + distance / output) / 2;
+		output = (output + input / output) / 2;
 	}
 
 	return output;
