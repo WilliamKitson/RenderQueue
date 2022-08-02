@@ -4,6 +4,7 @@
 
 #include "DistanceDefaultTest.h"
 #include "DistanceCameraTest.h"
+#include "DistanceObjectTest.h"
 
 class DistanceTester
 {
@@ -16,4 +17,5 @@ public:
 private:
 	std::string testDefault();
 	std::string testCamera();
+	std::string testObject();
 };

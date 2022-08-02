@@ -11,6 +11,7 @@ namespace renderQueue
 		void calculate();
 		float getDistance();
 		void setCamera(float[3]);
+		void setObject(float[3]);
 
 	private:
 		float distance;

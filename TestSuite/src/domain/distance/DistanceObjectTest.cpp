@@ -1,31 +1,31 @@
-#include "DistanceCameraTest.h"
+#include "DistanceObjectTest.h"
 
-DistanceCameraTest::DistanceCameraTest()
+DistanceObjectTest::DistanceObjectTest()
 	: itterations{ 4 }
 {
 }
 
-DistanceCameraTest::~DistanceCameraTest()
+DistanceObjectTest::~DistanceObjectTest()
 {
 }
 
-std::string DistanceCameraTest::test()
+std::string DistanceObjectTest::test()
 {
 	if (successes() == itterations)
 	{
 		return std::string();
 	}
 
-	return "distance camera test failed\n";
+	return "distance object test failed\n";
 }
 
-int DistanceCameraTest::successes()
+int DistanceObjectTest::successes()
 {
 	int output = 0;
 
 	for (int i{ 0 }; i < itterations; i++)
 	{
-		float camera[] = {
+		float object[] = {
 			(float)i,
 			(float)i,
 			(float)i
@@ -33,24 +33,24 @@ int DistanceCameraTest::successes()
 
 		renderQueue::Distance unit;
 
-		unit.setCamera(camera);
+		unit.setObject(object);
 		unit.calculate();
 
-		output += unit.getDistance() == calculate(camera);
+		output += unit.getDistance() == calculate(object);
 	}
 
 	return output;
 }
 
-float DistanceCameraTest::calculate(float input[3])
+float DistanceObjectTest::calculate(float input[3])
 {
-	float distanceX = input[0] - 0.0f;
+	float distanceX = 0.0f - input[0];
 	distanceX *= distanceX;
 
-	float distanceY = input[1] - 0.0f;
+	float distanceY = 0.0f - input[1];
 	distanceY *= distanceY;
 
-	float distanceZ = input[2] - 0.0f;
+	float distanceZ = 0.0f - input[2];
 	distanceZ *= distanceZ;
 
 	float distance = distanceX + distanceY + distanceZ;

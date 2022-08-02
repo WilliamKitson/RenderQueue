@@ -15,7 +15,16 @@ renderQueue::Distance::~Distance()
 
 void renderQueue::Distance::calculate()
 {
-	float input = data[0] + data[1] + data[2];
+	float distanceX = data[0] - data[3];
+	distanceX *= distanceX;
+
+	float distanceY = data[1] - data[4];
+	distanceY *= distanceY;
+
+	float distanceZ = data[2] - data[5];
+	distanceZ *= distanceZ;
+
+	float input = distanceX + distanceY + distanceZ;
 	float output = input;
 
 	while ((output - input / output) > 0.000001f)
@@ -36,5 +45,13 @@ void renderQueue::Distance::setCamera(float input[3])
 	for (int i{ 0 }; i < 3; i++)
 	{
 		data[i] = input[i];
+	}
+}
+
+void renderQueue::Distance::setObject(float input[3])
+{
+	for (int i{ 0 }; i < 3; i++)
+	{
+		data[3 + i] = input[i];
 	}
 }
