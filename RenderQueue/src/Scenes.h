@@ -45,6 +45,7 @@ namespace renderQueue
 		int maximum(int);
 		void camera(float[8]);
 		void ambience(float[4]);
+		void overlap(float);
 
 	private:
 		int count;

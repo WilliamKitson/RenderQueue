@@ -143,7 +143,7 @@ void renderQueue::Scenes::setNoneoverlap()
 		return;
 	}
 
-	data[12 + (index * 13)] = 0.0f;
+	overlap(0.0f);
 }
 
 void renderQueue::Scenes::setOverlap()
@@ -157,7 +157,7 @@ void renderQueue::Scenes::setOverlap()
 		return;
 	}
 
-	data[12 + (index * 13)] = 1.0f;
+	overlap(1.0f);
 }
 
 void renderQueue::Scenes::cleanup()
@@ -293,4 +293,9 @@ void renderQueue::Scenes::ambience(float input[4])
 	{
 		data[i + 8 + (index * 13)] = input[i];
 	}
+}
+
+void renderQueue::Scenes::overlap(float input)
+{
+	data[12 + (index * 13)] = input;
 }
