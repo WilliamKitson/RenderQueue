@@ -16,6 +16,7 @@ std::string ImplementationPushTester::test()
 	output += testAmbience();
 	output += testTransform();
 	output += testColour();
+	output += testInvalid();
 
 	return output;
 }
@@ -38,4 +39,9 @@ std::string ImplementationPushTester::testTransform()
 std::string ImplementationPushTester::testColour()
 {
 	return ImplementationPushColourTest().test();
+}
+
+std::string ImplementationPushTester::testInvalid()
+{
+	return ImplementationPushInvalidTest().test();
 }

@@ -6,6 +6,7 @@
 #include "ImplementationPushAmbienceTest.h"
 #include "ImplementationPushTransformTest.h"
 #include "ImplementationPushColourTest.h"
+#include "ImplementationPushInvalidTest.h"
 
 class ImplementationPushTester
 {
@@ -20,4 +21,5 @@ private:
 	std::string testAmbience();
 	std::string testTransform();
 	std::string testColour();
+	std::string testInvalid();
 };

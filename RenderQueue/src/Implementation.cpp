@@ -16,6 +16,11 @@ void renderQueue::Implementation::pushScene()
 
 void renderQueue::Implementation::pushObject()
 {
+	if (!scenes.getCount())
+	{
+		return;
+	}
+
 	objects.push();
 	bindings.push(scenes.getIndex());
 }
