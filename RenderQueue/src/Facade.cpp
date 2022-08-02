@@ -40,6 +40,11 @@ int renderQueue::Facade::getObjects()
     return 0;
 }
 
+bool renderQueue::Facade::getRender()
+{
+    return false;
+}
+
 renderQueue::Transform renderQueue::Facade::getTransform()
 {
     return Transform();

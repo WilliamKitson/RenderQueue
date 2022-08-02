@@ -14,6 +14,7 @@ std::string ImplementationTester::test()
 
 	output += testPush();
 	output += testPop();
+	output += testRender();
 
 	return output;
 }
@@ -26,4 +27,9 @@ std::string ImplementationTester::testPush()
 std::string ImplementationTester::testPop()
 {
 	return ImplementationPopTester().test();
+}
+
+std::string ImplementationTester::testRender()
+{
+	return ImplementationRenderTester().test();
 }

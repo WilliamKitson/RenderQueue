@@ -4,6 +4,7 @@
 
 #include "push/ImplementationPushTester.h"
 #include "pop/ImplementationPopTester.h"
+#include "render/ImplementationRenderTester.h"
 
 class ImplementationTester
 {
@@ -16,4 +17,5 @@ public:
 private:
 	std::string testPush();
 	std::string testPop();
+	std::string testRender();
 };

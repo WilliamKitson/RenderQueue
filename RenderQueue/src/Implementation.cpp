@@ -63,6 +63,11 @@ int renderQueue::Implementation::getObjects()
 	return count();
 }
 
+bool renderQueue::Implementation::getRender()
+{
+	return true;
+}
+
 renderQueue::Transform renderQueue::Implementation::getTransform()
 {
 	Transform output{

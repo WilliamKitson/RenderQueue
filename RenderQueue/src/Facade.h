@@ -19,6 +19,7 @@ namespace renderQueue
 		virtual Camera getCamera();
 		virtual RGBA getAmbience();
 		virtual int getObjects();
+		virtual bool getRender();
 		virtual Transform getTransform();
 		virtual RGBA getColour();
 		virtual void setScene(int);
