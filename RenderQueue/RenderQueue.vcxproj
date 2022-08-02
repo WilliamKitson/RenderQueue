@@ -157,6 +157,7 @@
   <ItemGroup>
     <ClInclude Include="src\Bindings.h" />
     <ClInclude Include="src\Camera.h" />
+    <ClInclude Include="src\Distance.h" />
     <ClInclude Include="src\Facade.h" />
     <ClInclude Include="src\Implementation.h" />
     <ClInclude Include="src\Objects.h" />
@@ -166,6 +167,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\Bindings.cpp" />
+    <ClCompile Include="src\Distance.cpp" />
     <ClCompile Include="src\Facade.cpp" />
     <ClCompile Include="src\Implementation.cpp" />
     <ClCompile Include="src\Objects.cpp" />

@@ -15,6 +15,7 @@ std::string DomainTester::test()
 	output += testScenes();
 	output += testObjects();
 	output += testBindings();
+	output += testDistance();
 
 	return output;
 }
@@ -32,4 +33,9 @@ std::string DomainTester::testObjects()
 std::string DomainTester::testBindings()
 {
 	return BindingsTester().test();
+}
+
+std::string DomainTester::testDistance()
+{
+	return DistanceTester().test();
 }

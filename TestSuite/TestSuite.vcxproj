@@ -172,6 +172,8 @@
     <ClCompile Include="src\domain\bindings\scene\BindingsScenePopTest.cpp" />
     <ClCompile Include="src\domain\bindings\scene\BindingsScenePushTest.cpp" />
     <ClCompile Include="src\domain\bindings\scene\BindingsSceneTester.cpp" />
+    <ClCompile Include="src\domain\distance\DistanceDefaultTest.cpp" />
+    <ClCompile Include="src\domain\distance\DistanceTester.cpp" />
     <ClCompile Include="src\domain\DomainTester.cpp" />
     <ClCompile Include="src\domain\objects\colour\ObjectsColourDefaultTest.cpp" />
     <ClCompile Include="src\domain\objects\colour\ObjectsColourEmptyTest.cpp" />
@@ -244,6 +246,8 @@
     <ClInclude Include="src\domain\bindings\scene\BindingsScenePopTest.h" />
     <ClInclude Include="src\domain\bindings\scene\BindingsScenePushTest.h" />
     <ClInclude Include="src\domain\bindings\scene\BindingsSceneTester.h" />
+    <ClInclude Include="src\domain\distance\DistanceDefaultTest.h" />
+    <ClInclude Include="src\domain\distance\DistanceTester.h" />
     <ClInclude Include="src\domain\DomainTester.h" />
     <ClInclude Include="src\domain\objects\colour\ObjectsColourDefaultTest.h" />
     <ClInclude Include="src\domain\objects\colour\ObjectsColourEmptyTest.h" />
