@@ -12,9 +12,9 @@ public:
 	std::string test();
 
 private:
+	int successes();
 	float calculate(float[3]);
 
 private:
 	int itterations;
-	int successes;
 };

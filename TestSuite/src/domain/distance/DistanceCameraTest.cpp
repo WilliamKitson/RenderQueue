@@ -1,7 +1,7 @@
 #include "DistanceCameraTest.h"
 
 DistanceCameraTest::DistanceCameraTest()
-	: itterations{ 4 }, successes{ 0 }
+	: itterations{ 4 }
 {
 }
 
@@ -11,6 +11,18 @@ DistanceCameraTest::~DistanceCameraTest()
 
 std::string DistanceCameraTest::test()
 {
+	if (successes() == itterations)
+	{
+		return std::string();
+	}
+
+	return "distance camera test failed\n";
+}
+
+int DistanceCameraTest::successes()
+{
+	int output = 0;
+
 	for (int i{ 0 }; i < itterations; i++)
 	{
 		float camera[] = {
@@ -24,15 +36,10 @@ std::string DistanceCameraTest::test()
 		unit.setCamera(camera);
 		unit.calculate();
 
-		successes += unit.getDistance() == calculate(camera);
+		output += unit.getDistance() == calculate(camera);
 	}
 
-	if (successes == itterations)
-	{
-		return std::string();
-	}
-
-	return "distance camera test failed\n";
+	return output;
 }
 
 float DistanceCameraTest::calculate(float input[3])
