@@ -16,7 +16,7 @@ namespace renderQueue
 	private:
 		void initialise();
 		float root(float);
-		float unsquared();
+		float unrooted();
 		float element(int);
 
 	private:
