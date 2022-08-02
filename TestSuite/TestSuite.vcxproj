@@ -219,6 +219,7 @@
     <ClCompile Include="src\domain\scenes\index\ScenesIndexTester.cpp" />
     <ClCompile Include="src\domain\scenes\overlap\ScenesOverlapDefaultTest.cpp" />
     <ClCompile Include="src\domain\scenes\overlap\ScenesOverlapEmptyTest.cpp" />
+    <ClCompile Include="src\domain\scenes\overlap\ScenesOverlapPopTest.cpp" />
     <ClCompile Include="src\domain\scenes\overlap\ScenesOverlapPushTest.cpp" />
     <ClCompile Include="src\domain\scenes\overlap\ScenesOverlapTester.cpp" />
     <ClCompile Include="src\domain\scenes\ScenesTester.cpp" />
@@ -299,6 +300,7 @@
     <ClInclude Include="src\domain\scenes\index\ScenesIndexTester.h" />
     <ClInclude Include="src\domain\scenes\overlap\ScenesOverlapDefaultTest.h" />
     <ClInclude Include="src\domain\scenes\overlap\ScenesOverlapEmptyTest.h" />
+    <ClInclude Include="src\domain\scenes\overlap\ScenesOverlapPopTest.h" />
     <ClInclude Include="src\domain\scenes\overlap\ScenesOverlapPushTest.h" />
     <ClInclude Include="src\domain\scenes\overlap\ScenesOverlapTester.h" />
     <ClInclude Include="src\domain\scenes\ScenesTester.h" />
