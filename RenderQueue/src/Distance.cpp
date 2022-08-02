@@ -3,10 +3,7 @@
 renderQueue::Distance::Distance()
 	: distance{ 0.0f }, data()
 {
-	for (int i{ 0 }; i < 6; i++)
-	{
-		data[i] = 0.0f;
-	}
+	initialise();
 }
 
 renderQueue::Distance::~Distance()
@@ -53,5 +50,13 @@ void renderQueue::Distance::setObject(float input[3])
 	for (int i{ 0 }; i < 3; i++)
 	{
 		data[3 + i] = input[i];
+	}
+}
+
+void renderQueue::Distance::initialise()
+{
+	for (int i{ 0 }; i < 6; i++)
+	{
+		data[i] = 0.0f;
 	}
 }

@@ -14,6 +14,9 @@ namespace renderQueue
 		void setObject(float[3]);
 
 	private:
+		void initialise();
+
+	private:
 		float distance;
 		float data[6];
 	};
