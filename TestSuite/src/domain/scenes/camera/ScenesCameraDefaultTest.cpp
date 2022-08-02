@@ -58,5 +58,10 @@ bool ScenesCameraDefaultTest::success()
 		return false;
 	}
 
+	if (unit.getDrawDistance() != 1000.0f)
+	{
+		return false;
+	}
+
 	return true;
 }

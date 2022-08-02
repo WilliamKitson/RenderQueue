@@ -19,12 +19,13 @@ namespace renderQueue
 		float getYrot();
 		float getZrot();
 		float getFrustum();
+		float getDrawDistance();
 		float getRed();
 		float getGreen();
 		float getBlue();
 		float getAlpha();
 		void setIndex(int);
-		void setCamera(float[7]);
+		void setCamera(float[8]);
 		void setAmbience(float[4]);
 
 	private:
@@ -39,7 +40,7 @@ namespace renderQueue
 		void validate();
 		int minimum(int);
 		int maximum(int);
-		void camera(float[7]);
+		void camera(float[8]);
 		void ambience(float[4]);
 
 	private:

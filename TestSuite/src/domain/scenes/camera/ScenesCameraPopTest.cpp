@@ -32,6 +32,7 @@ void ScenesCameraPopTest::initialise()
 			(float)i,
 			(float)i,
 			(float)i,
+			(float)i,
 			(float)i
 		};
 
@@ -88,6 +89,11 @@ bool ScenesCameraPopTest::success(float input)
 	}
 
 	if (unit.getFrustum() != input)
+	{
+		return false;
+	}
+
+	if (unit.getDrawDistance() != input)
 	{
 		return false;
 	}

@@ -32,6 +32,7 @@ void ScenesCameraPushTest::initialise()
 			(float)i,
 			(float)i,
 			(float)i,
+			(float)i,
 			(float)i
 		};
 
@@ -87,6 +88,11 @@ bool ScenesCameraPushTest::success(float input)
 	}
 
 	if (unit.getFrustum() != input)
+	{
+		return false;
+	}
+
+	if (unit.getDrawDistance() != input)
 	{
 		return false;
 	}

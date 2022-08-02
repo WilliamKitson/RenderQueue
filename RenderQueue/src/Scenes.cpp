@@ -26,7 +26,7 @@ void renderQueue::Scenes::pop()
 
 int renderQueue::Scenes::getCount()
 {
-	return count / 11;
+	return count / 12;
 }
 
 int renderQueue::Scenes::getIndex()
@@ -69,24 +69,29 @@ float renderQueue::Scenes::getFrustum()
 	return element(6);
 }
 
-float renderQueue::Scenes::getRed()
+float renderQueue::Scenes::getDrawDistance()
 {
 	return element(7);
 }
 
-float renderQueue::Scenes::getGreen()
+float renderQueue::Scenes::getRed()
 {
 	return element(8);
 }
 
-float renderQueue::Scenes::getBlue()
+float renderQueue::Scenes::getGreen()
 {
 	return element(9);
 }
 
-float renderQueue::Scenes::getAlpha()
+float renderQueue::Scenes::getBlue()
 {
 	return element(10);
+}
+
+float renderQueue::Scenes::getAlpha()
+{
+	return element(11);
 }
 
 void renderQueue::Scenes::setIndex(int input)
@@ -94,7 +99,7 @@ void renderQueue::Scenes::setIndex(int input)
 	index = minimum(maximum(input));
 }
 
-void renderQueue::Scenes::setCamera(float input[7])
+void renderQueue::Scenes::setCamera(float input[8])
 {
 	try
 	{
@@ -130,7 +135,7 @@ void renderQueue::Scenes::cleanup()
 
 void renderQueue::Scenes::increment()
 {
-	count += 11;
+	count += 12;
 }
 
 void renderQueue::Scenes::swap(float* input)
@@ -143,7 +148,7 @@ float* renderQueue::Scenes::pushed()
 {
 	float* output = new float[count];
 
-	for (int i{ 0 }; i < count - 11; i++)
+	for (int i{ 0 }; i < count - 12; i++)
 	{
 		output[i] = data[i];
 	}
@@ -161,21 +166,22 @@ void renderQueue::Scenes::initialise()
 		0.0f,
 		0.0f,
 		90.0f,
+		1000.0f,
 		1.0f,
 		1.0f,
 		1.0f,
 		1.0f
 	};
 
-	for (int i{ 0 }; i < 11; i++)
+	for (int i{ 0 }; i < 12; i++)
 	{
-		data[i + (count - 11)] = scene[i];
+		data[i + (count - 12)] = scene[i];
 	}
 }
 
 void renderQueue::Scenes::decrement()
 {
-	count = minimum(count - 11);
+	count = minimum(count - 12);
 }
 
 float* renderQueue::Scenes::popped()
@@ -185,7 +191,7 @@ float* renderQueue::Scenes::popped()
 
 	for (int i{ 0 }; i < count; i++)
 	{
-		unpopped += (i == index * 11) * 11;
+		unpopped += (i == index * 12) * 12;
 		output[i] = data[unpopped];
 		unpopped++;
 	}
@@ -204,7 +210,7 @@ float renderQueue::Scenes::element(int input)
 		return 0.0f;
 	}
 
-	return data[input + (index * 11)];
+	return data[input + (index * 12)];
 }
 
 void renderQueue::Scenes::validate()
@@ -239,11 +245,11 @@ int renderQueue::Scenes::maximum(int input)
 	return 0;
 }
 
-void renderQueue::Scenes::camera(float input[7])
+void renderQueue::Scenes::camera(float input[8])
 {
-	for (int i{ 0 }; i < 7; i++)
+	for (int i{ 0 }; i < 8; i++)
 	{
-		data[i + (index * 11)] = input[i];
+		data[i + (index * 12)] = input[i];
 	}
 }
 
@@ -251,6 +257,6 @@ void renderQueue::Scenes::ambience(float input[4])
 {
 	for (int i{ 0 }; i < 4; i++)
 	{
-		data[i + 7 + (index * 11)] = input[i];
+		data[i + 8 + (index * 12)] = input[i];
 	}
 }

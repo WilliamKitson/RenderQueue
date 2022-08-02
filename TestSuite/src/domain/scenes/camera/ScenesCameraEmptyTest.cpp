@@ -68,5 +68,10 @@ bool ScenesCameraEmptyTest::success()
 		return false;
 	}
 
+	if (unit.getDrawDistance() != 0.0f)
+	{
+		return false;
+	}
+
 	return true;
 }
