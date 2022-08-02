@@ -26,7 +26,7 @@ void renderQueue::Scenes::pop()
 
 int renderQueue::Scenes::getCount()
 {
-	return count / 12;
+	return count / 13;
 }
 
 int renderQueue::Scenes::getIndex()
@@ -96,7 +96,7 @@ float renderQueue::Scenes::getAlpha()
 
 bool renderQueue::Scenes::getOverlap()
 {
-	return true;
+	return data[12 + (index * 13)];
 }
 
 void renderQueue::Scenes::setIndex(int input)
@@ -132,6 +132,16 @@ void renderQueue::Scenes::setAmbience(float input[4])
 	ambience(input);
 }
 
+void renderQueue::Scenes::setNoneoverlap()
+{
+	data[12 + (index * 13)] = 0.0f;
+}
+
+void renderQueue::Scenes::setOverlap()
+{
+	data[12 + (index * 13)] = 1.0f;
+}
+
 void renderQueue::Scenes::cleanup()
 {
 	delete[] data;
@@ -140,7 +150,7 @@ void renderQueue::Scenes::cleanup()
 
 void renderQueue::Scenes::increment()
 {
-	count += 12;
+	count += 13;
 }
 
 void renderQueue::Scenes::swap(float* input)
@@ -153,7 +163,7 @@ float* renderQueue::Scenes::pushed()
 {
 	float* output = new float[count];
 
-	for (int i{ 0 }; i < count - 12; i++)
+	for (int i{ 0 }; i < count - 13; i++)
 	{
 		output[i] = data[i];
 	}
@@ -175,18 +185,19 @@ void renderQueue::Scenes::initialise()
 		1.0f,
 		1.0f,
 		1.0f,
+		1.0f,
 		1.0f
 	};
 
-	for (int i{ 0 }; i < 12; i++)
+	for (int i{ 0 }; i < 13; i++)
 	{
-		data[i + (count - 12)] = scene[i];
+		data[i + (count - 13)] = scene[i];
 	}
 }
 
 void renderQueue::Scenes::decrement()
 {
-	count = minimum(count - 12);
+	count = minimum(count - 13);
 }
 
 float* renderQueue::Scenes::popped()
@@ -196,7 +207,7 @@ float* renderQueue::Scenes::popped()
 
 	for (int i{ 0 }; i < count; i++)
 	{
-		unpopped += (i == index * 12) * 12;
+		unpopped += (i == index * 13) * 13;
 		output[i] = data[unpopped];
 		unpopped++;
 	}
@@ -215,7 +226,7 @@ float renderQueue::Scenes::element(int input)
 		return 0.0f;
 	}
 
-	return data[input + (index * 12)];
+	return data[input + (index * 13)];
 }
 
 void renderQueue::Scenes::validate()
@@ -254,7 +265,7 @@ void renderQueue::Scenes::camera(float input[8])
 {
 	for (int i{ 0 }; i < 8; i++)
 	{
-		data[i + (index * 12)] = input[i];
+		data[i + (index * 13)] = input[i];
 	}
 }
 
@@ -262,6 +273,6 @@ void renderQueue::Scenes::ambience(float input[4])
 {
 	for (int i{ 0 }; i < 4; i++)
 	{
-		data[i + 8 + (index * 12)] = input[i];
+		data[i + 8 + (index * 13)] = input[i];
 	}
 }

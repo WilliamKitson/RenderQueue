@@ -1,7 +1,9 @@
 #pragma once
 
 #include <string>
+
 #include "ScenesOverlapDefaultTest.h"
+#include "ScenesOverlapPushTest.h"
 
 class ScenesOverlapTester
 {
@@ -13,4 +15,5 @@ public:
 
 private:
 	std::string testDefault();
+	std::string testPush();
 };

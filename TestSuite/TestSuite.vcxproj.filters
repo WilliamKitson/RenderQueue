@@ -243,6 +243,9 @@
     <ClCompile Include="src\domain\scenes\overlap\ScenesOverlapTester.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="src\domain\scenes\overlap\ScenesOverlapPushTest.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\MemoryTest.h">
@@ -468,6 +471,9 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="src\domain\scenes\overlap\ScenesOverlapTester.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\domain\scenes\overlap\ScenesOverlapPushTest.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

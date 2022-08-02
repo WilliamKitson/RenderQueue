@@ -28,6 +28,8 @@ namespace renderQueue
 		void setIndex(int);
 		void setCamera(float[8]);
 		void setAmbience(float[4]);
+		void setNoneoverlap();
+		void setOverlap();
 
 	private:
 		void cleanup();
