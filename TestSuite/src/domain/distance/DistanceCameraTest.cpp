@@ -44,16 +44,7 @@ int DistanceCameraTest::successes()
 
 float DistanceCameraTest::calculate(float input[3])
 {
-	float distanceX = input[0] - 0.0f;
-	distanceX *= distanceX;
-
-	float distanceY = input[1] - 0.0f;
-	distanceY *= distanceY;
-
-	float distanceZ = input[2] - 0.0f;
-	distanceZ *= distanceZ;
-
-	return root(distanceX + distanceY + distanceZ);
+	return root(unrooted(input));
 }
 
 float DistanceCameraTest::root(float input)
@@ -66,4 +57,18 @@ float DistanceCameraTest::root(float input)
 	}
 
 	return output;
+}
+
+float DistanceCameraTest::unrooted(float input[3])
+{
+	float distanceX = input[0] - 0.0f;
+	distanceX *= distanceX;
+
+	float distanceY = input[1] - 0.0f;
+	distanceY *= distanceY;
+
+	float distanceZ = input[2] - 0.0f;
+	distanceZ *= distanceZ;
+
+	return distanceX + distanceY + distanceZ;
 }
