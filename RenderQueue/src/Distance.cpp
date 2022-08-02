@@ -3,6 +3,10 @@
 renderQueue::Distance::Distance()
 	: distance{ 0.0f }, data()
 {
+	for (int i{ 0 }; i < 6; i++)
+	{
+		data[i] = 0.0f;
+	}
 }
 
 renderQueue::Distance::~Distance()

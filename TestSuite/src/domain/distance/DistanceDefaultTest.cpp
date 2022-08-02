@@ -10,7 +10,10 @@ DistanceDefaultTest::~DistanceDefaultTest()
 
 std::string DistanceDefaultTest::test()
 {
-	if (!renderQueue::Distance().getDistance())
+	renderQueue::Distance unit;
+	unit.calculate();
+
+	if (!unit.getDistance())
 	{
 		return std::string();
 	}
