@@ -58,14 +58,10 @@ float renderQueue::Distance::square(float input)
 
 float renderQueue::Distance::unsquared()
 {
-	float distanceX = data[0] - data[3];
-	distanceX *= distanceX;
+	return element(0) + element(1) + element(2);
+}
 
-	float distanceY = data[1] - data[4];
-	distanceY *= distanceY;
-
-	float distanceZ = data[2] - data[5];
-	distanceZ *= distanceZ;
-
-	return distanceX + distanceY + distanceZ;
+float renderQueue::Distance::element(int input)
+{
+	return (data[input] - data[3 + input]) * (data[input] - data[3 + input]);
 }
