@@ -149,7 +149,6 @@
   <ItemGroup>
     <ClCompile Include="src\application\ApplicationTester.cpp" />
     <ClCompile Include="src\application\implementation\ImplementationTester.cpp" />
-    <ClCompile Include="src\application\implementation\pop\ImplementationPopAmbienceTest.cpp" />
     <ClCompile Include="src\application\implementation\pop\ImplementationPopCameraTest.cpp" />
     <ClCompile Include="src\application\implementation\pop\ImplementationPopTester.cpp" />
     <ClCompile Include="src\application\implementation\push\ImplementationPushAmbienceTest.cpp" />
@@ -234,7 +233,6 @@
   <ItemGroup>
     <ClInclude Include="src\application\ApplicationTester.h" />
     <ClInclude Include="src\application\implementation\ImplementationTester.h" />
-    <ClInclude Include="src\application\implementation\pop\ImplementationPopAmbienceTest.h" />
     <ClInclude Include="src\application\implementation\pop\ImplementationPopCameraTest.h" />
     <ClInclude Include="src\application\implementation\pop\ImplementationPopTester.h" />
     <ClInclude Include="src\application\implementation\push\ImplementationPushAmbienceTest.h" />
