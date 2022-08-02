@@ -12,5 +12,6 @@ namespace renderQueue
 		const float yrot{ 0.0f };
 		const float zrot{ 0.0f };
 		const float frustum{ 0.0f };
+		const float drawDistance{ 0.0f };
 	};
 }

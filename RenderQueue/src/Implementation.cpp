@@ -39,7 +39,8 @@ renderQueue::Camera renderQueue::Implementation::getCamera()
 		scenes.getXrot(),
 		scenes.getYrot(),
 		scenes.getZrot(),
-		scenes.getFrustum()
+		scenes.getFrustum(),
+		scenes.getDrawDistance()
 	};
 
 	return output;
@@ -105,7 +106,8 @@ void renderQueue::Implementation::setCamera(Camera input)
 		input.xrot,
 		input.yrot,
 		input.zrot,
-		input.frustum
+		input.frustum,
+		input.drawDistance
 	};
 
 	scenes.setCamera(camera);

@@ -34,6 +34,7 @@ void ImplementationPushCameraTest::initialise()
 			(float)i,
 			(float)i,
 			(float)i,
+			(float)i,
 			(float)i
 		};
 
@@ -93,6 +94,11 @@ bool ImplementationPushCameraTest::success(renderQueue::Camera camera, float ind
 	}
 
 	if (camera.frustum != index)
+	{
+		return false;
+	}
+
+	if (camera.drawDistance != index)
 	{
 		return false;
 	}
