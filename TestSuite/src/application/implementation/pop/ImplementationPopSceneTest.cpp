@@ -1,17 +1,17 @@
-#include "ImplementationPopCameraTest.h"
+#include "ImplementationPopSceneTest.h"
 
-ImplementationPopCameraTest::ImplementationPopCameraTest()
+ImplementationPopSceneTest::ImplementationPopSceneTest()
 	: unit{ new renderQueue::Implementation }, itterations{ 4 }
 {
 }
 
-ImplementationPopCameraTest::~ImplementationPopCameraTest()
+ImplementationPopSceneTest::~ImplementationPopSceneTest()
 {
 	delete unit;
 	unit = nullptr;
 }
 
-std::string ImplementationPopCameraTest::test()
+std::string ImplementationPopSceneTest::test()
 {
 	initialise();
 
@@ -20,10 +20,10 @@ std::string ImplementationPopCameraTest::test()
 		return std::string();
 	}
 
-	return "implementation pop camera test failed\n";
+	return "implementation pop scene test failed\n";
 }
 
-void ImplementationPopCameraTest::initialise()
+void ImplementationPopSceneTest::initialise()
 {
 	for (int i{ 0 }; i < itterations; i++)
 	{
@@ -44,7 +44,7 @@ void ImplementationPopCameraTest::initialise()
 	}
 }
 
-int ImplementationPopCameraTest::successes()
+int ImplementationPopSceneTest::successes()
 {
 	int output = 0;
 
@@ -62,7 +62,7 @@ int ImplementationPopCameraTest::successes()
 	return output;
 }
 
-bool ImplementationPopCameraTest::success(renderQueue::Camera camera, float index)
+bool ImplementationPopSceneTest::success(renderQueue::Camera camera, float index)
 {
 	if (camera.xpos != index)
 	{

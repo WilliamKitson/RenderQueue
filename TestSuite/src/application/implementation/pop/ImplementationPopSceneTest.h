@@ -5,11 +5,11 @@
 #include "Facade.h"
 #include "Implementation.h"
 
-class ImplementationPopCameraTest
+class ImplementationPopSceneTest
 {
 public:
-	ImplementationPopCameraTest();
-	~ImplementationPopCameraTest();
+	ImplementationPopSceneTest();
+	~ImplementationPopSceneTest();
 
 	std::string test();
 

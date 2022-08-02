@@ -1,7 +1,7 @@
 #pragma once
 
 #include <string>
-#include "ImplementationPopCameraTest.h"
+#include "ImplementationPopSceneTest.h"
 
 class ImplementationPopTester
 {
@@ -12,5 +12,5 @@ public:
 	std::string test();
 
 private:
-	std::string testCamera();
+	std::string testScene();
 };

@@ -12,12 +12,12 @@ std::string ImplementationPopTester::test()
 {
 	std::string output{ "" };
 
-	output += testCamera();
+	output += testScene();
 
 	return output;
 }
 
-std::string ImplementationPopTester::testCamera()
+std::string ImplementationPopTester::testScene()
 {
-	return ImplementationPopCameraTest().test();
+	return ImplementationPopSceneTest().test();
 }
