@@ -94,6 +94,11 @@ float renderQueue::Scenes::getAlpha()
 	return element(11);
 }
 
+bool renderQueue::Scenes::getOverlap()
+{
+	return true;
+}
+
 void renderQueue::Scenes::setIndex(int input)
 {
 	index = minimum(maximum(input));

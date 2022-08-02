@@ -24,6 +24,7 @@ namespace renderQueue
 		float getGreen();
 		float getBlue();
 		float getAlpha();
+		bool getOverlap();
 		void setIndex(int);
 		void setCamera(float[8]);
 		void setAmbience(float[4]);
