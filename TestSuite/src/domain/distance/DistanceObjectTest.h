@@ -14,6 +14,8 @@ public:
 private:
 	int successes();
 	float calculate(float[3]);
+	float root(float);
+	float unrooted(float[3]);
 
 private:
 	int itterations;

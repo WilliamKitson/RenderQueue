@@ -44,22 +44,31 @@ int DistanceObjectTest::successes()
 
 float DistanceObjectTest::calculate(float input[3])
 {
-	float distanceX = 0.0f - input[0];
-	distanceX *= distanceX;
+	return root(unrooted(input));
+}
 
-	float distanceY = 0.0f - input[1];
-	distanceY *= distanceY;
+float DistanceObjectTest::root(float input)
+{
+	float output = input;
 
-	float distanceZ = 0.0f - input[2];
-	distanceZ *= distanceZ;
-
-	float distance = distanceX + distanceY + distanceZ;
-	float output = distance;
-
-	while ((output - distance / output) > 0.000001f)
+	while ((output - input / output) > 0.000001f)
 	{
-		output = (output + distance / output) / 2;
+		output = (output + input / output) / 2;
 	}
 
 	return output;
+}
+
+float DistanceObjectTest::unrooted(float input[3])
+{
+	float distanceX = input[0] - 0.0f;
+	distanceX *= distanceX;
+
+	float distanceY = input[1] - 0.0f;
+	distanceY *= distanceY;
+
+	float distanceZ = input[2] - 0.0f;
+	distanceZ *= distanceZ;
+
+	return distanceX + distanceY + distanceZ;
 }
