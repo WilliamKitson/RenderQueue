@@ -58,10 +58,15 @@ float renderQueue::Distance::root(float input)
 
 float renderQueue::Distance::unrooted()
 {
-	return element(0) + element(1) + element(2);
+	return square(element(0)) + square(element(1)) + square(element(2));
+}
+
+float renderQueue::Distance::square(float input)
+{
+	return input * input;
 }
 
 float renderQueue::Distance::element(int input)
 {
-	return (data[input] - data[3 + input]) * (data[input] - data[3 + input]);
+	return data[input] - data[3 + input];
 }
