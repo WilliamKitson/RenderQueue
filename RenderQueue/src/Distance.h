@@ -15,6 +15,7 @@ namespace renderQueue
 
 	private:
 		void initialise();
+		float square(float);
 
 	private:
 		float distance;

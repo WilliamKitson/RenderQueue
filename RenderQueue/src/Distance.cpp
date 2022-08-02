@@ -21,15 +21,7 @@ void renderQueue::Distance::calculate()
 	float distanceZ = data[2] - data[5];
 	distanceZ *= distanceZ;
 
-	float input = distanceX + distanceY + distanceZ;
-	float output = input;
-
-	while ((output - input / output) > 0.000001f)
-	{
-		output = (output + input / output) / 2;
-	}
-
-	distance = output;
+	distance = square(distanceX + distanceY + distanceZ);
 }
 
 float renderQueue::Distance::getDistance()
@@ -59,4 +51,16 @@ void renderQueue::Distance::initialise()
 	{
 		data[i] = 0.0f;
 	}
+}
+
+float renderQueue::Distance::square(float input)
+{
+	float output = input;
+
+	while ((output - input / output) > 0.000001f)
+	{
+		output = (output + input / output) / 2;
+	}
+
+	return output;
 }
