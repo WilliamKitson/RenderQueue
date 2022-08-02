@@ -172,6 +172,7 @@
     <ClCompile Include="src\domain\bindings\scene\BindingsScenePopTest.cpp" />
     <ClCompile Include="src\domain\bindings\scene\BindingsScenePushTest.cpp" />
     <ClCompile Include="src\domain\bindings\scene\BindingsSceneTester.cpp" />
+    <ClCompile Include="src\domain\distance\DistanceCameraTest.cpp" />
     <ClCompile Include="src\domain\distance\DistanceDefaultTest.cpp" />
     <ClCompile Include="src\domain\distance\DistanceTester.cpp" />
     <ClCompile Include="src\domain\DomainTester.cpp" />
@@ -246,6 +247,7 @@
     <ClInclude Include="src\domain\bindings\scene\BindingsScenePopTest.h" />
     <ClInclude Include="src\domain\bindings\scene\BindingsScenePushTest.h" />
     <ClInclude Include="src\domain\bindings\scene\BindingsSceneTester.h" />
+    <ClInclude Include="src\domain\distance\DistanceCameraTest.h" />
     <ClInclude Include="src\domain\distance\DistanceDefaultTest.h" />
     <ClInclude Include="src\domain\distance\DistanceTester.h" />
     <ClInclude Include="src\domain\DomainTester.h" />

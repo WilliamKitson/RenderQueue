@@ -8,6 +8,12 @@ namespace renderQueue
 		Distance();
 		~Distance();
 
+		void calculate();
 		float getDistance();
+		void setCamera(float[3]);
+
+	private:
+		float distance;
+		float data[6];
 	};
 }

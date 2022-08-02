@@ -13,6 +13,7 @@ std::string DistanceTester::test()
 	std::string output{ "" };
 
 	output += testDefault();
+	output += testCamera();
 
 	return output;
 }
@@ -20,4 +21,9 @@ std::string DistanceTester::test()
 std::string DistanceTester::testDefault()
 {
 	return DistanceDefaultTest().test();
+}
+
+std::string DistanceTester::testCamera()
+{
+	return DistanceCameraTest().test();
 }
