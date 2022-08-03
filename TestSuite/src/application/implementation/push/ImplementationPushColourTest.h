@@ -15,9 +15,9 @@ public:
 
 private:
 	void scenes();
-	void objects();
+	void objects(float);
 	int sSuccesses();
-	int oSuccesses();
+	int oSuccesses(float);
 	bool success(renderQueue::RGBA, float);
 
 private:

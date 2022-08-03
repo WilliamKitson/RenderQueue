@@ -205,14 +205,15 @@ int renderQueue::Implementation::count()
 
 int renderQueue::Implementation::index(int input)
 {
+	input++;
 	int output = 0;
-	int successes = 0;
 
-	for (output; successes != input; output++)
+	while(input)
 	{
 		bindings.setIndex(output);
-		successes += bindings.getScene() == scenes.getIndex();
+		input -= bindings.getScene() == scenes.getIndex();
+		output++;
 	}
 
-	return output;
+	return output - 1;
 }

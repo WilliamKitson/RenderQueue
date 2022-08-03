@@ -29,19 +29,19 @@ void ImplementationPushColourTest::scenes()
 	{
 		unit->pushScene();
 		unit->setScene(i);
-		objects();
+		objects((float)i);
 	}
 }
 
-void ImplementationPushColourTest::objects()
+void ImplementationPushColourTest::objects(float input)
 {
 	for (int i{ 0 }; i < itterations; i++)
 	{
 		renderQueue::RGBA colour{
-			(float)i,
-			(float)i,
-			(float)i,
-			(float)i
+			(float)i + input,
+			(float)i + input,
+			(float)i + input,
+			(float)i + input
 		};
 
 		unit->pushObject();
@@ -57,13 +57,13 @@ int ImplementationPushColourTest::sSuccesses()
 	for (int i{ 0 }; i < unit->getScenes(); i++)
 	{
 		unit->setScene(i);
-		output += oSuccesses();
+		output += oSuccesses((float)i);
 	}
 
 	return output;
 }
 
-int ImplementationPushColourTest::oSuccesses()
+int ImplementationPushColourTest::oSuccesses(float input)
 {
 	int output = 0;
 
@@ -73,7 +73,7 @@ int ImplementationPushColourTest::oSuccesses()
 
 		output += success(
 			unit->getColour(),
-			(float)i
+			(float)i + input
 		);
 	}
 

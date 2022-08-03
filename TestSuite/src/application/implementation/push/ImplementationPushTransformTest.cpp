@@ -29,24 +29,24 @@ void ImplementationPushTransformTest::scenes()
 	{
 		unit->pushScene();
 		unit->setScene(i);
-		objects();
+		objects((float)i);
 	}
 }
 
-void ImplementationPushTransformTest::objects()
+void ImplementationPushTransformTest::objects(float input)
 {
 	for (int i{ 0 }; i < itterations; i++)
 	{
 		renderQueue::Transform transform{
-			(float)i,
-			(float)i,
-			(float)i,
-			(float)i,
-			(float)i,
-			(float)i,
-			(float)i,
-			(float)i,
-			(float)i
+			(float)i + input,
+			(float)i + input,
+			(float)i + input,
+			(float)i + input,
+			(float)i + input,
+			(float)i + input,
+			(float)i + input,
+			(float)i + input,
+			(float)i + input
 		};
 
 		unit->pushObject();
@@ -62,13 +62,13 @@ int ImplementationPushTransformTest::sSuccesses()
 	for (int i{ 0 }; i < unit->getScenes(); i++)
 	{
 		unit->setScene(i);
-		output += oSuccesses();
+		output += oSuccesses(i);
 	}
 
 	return output;
 }
 
-int ImplementationPushTransformTest::oSuccesses()
+int ImplementationPushTransformTest::oSuccesses(float input)
 {
 	int output = 0;
 
@@ -78,7 +78,7 @@ int ImplementationPushTransformTest::oSuccesses()
 
 		output += success(
 			unit->getTransform(),
-			(float)i
+			(float)i + input
 		);
 	}
 
