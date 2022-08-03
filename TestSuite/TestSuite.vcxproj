@@ -147,21 +147,6 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="src\domain\bindings\BindingsTester.cpp" />
-    <ClCompile Include="src\domain\bindings\count\BindingsCountDefaultTest.cpp" />
-    <ClCompile Include="src\domain\bindings\count\BindingsCountMinimumTest.cpp" />
-    <ClCompile Include="src\domain\bindings\count\BindingsCountPopTest.cpp" />
-    <ClCompile Include="src\domain\bindings\count\BindingsCountPushTest.cpp" />
-    <ClCompile Include="src\domain\bindings\count\BindingsCountTester.cpp" />
-    <ClCompile Include="src\domain\bindings\index\BindingsIndexMaximumTest.cpp" />
-    <ClCompile Include="src\domain\bindings\index\BindingsIndexMinimumTest.cpp" />
-    <ClCompile Include="src\domain\bindings\index\BindingsIndexPopTest.cpp" />
-    <ClCompile Include="src\domain\bindings\index\BindingsIndexTester.cpp" />
-    <ClCompile Include="src\domain\bindings\scene\BindingsSceneEmptyTest.cpp" />
-    <ClCompile Include="src\domain\bindings\scene\BindingsSceneMinimumTest.cpp" />
-    <ClCompile Include="src\domain\bindings\scene\BindingsScenePopTest.cpp" />
-    <ClCompile Include="src\domain\bindings\scene\BindingsScenePushTest.cpp" />
-    <ClCompile Include="src\domain\bindings\scene\BindingsSceneTester.cpp" />
     <ClCompile Include="src\domain\distance\DistanceCameraTest.cpp" />
     <ClCompile Include="src\domain\distance\DistanceDefaultTest.cpp" />
     <ClCompile Include="src\domain\distance\DistanceObjectTest.cpp" />
@@ -218,21 +203,6 @@
     <ClCompile Include="src\SubordinateTester.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="src\domain\bindings\BindingsTester.h" />
-    <ClInclude Include="src\domain\bindings\count\BindingsCountDefaultTest.h" />
-    <ClInclude Include="src\domain\bindings\count\BindingsCountMinimumTest.h" />
-    <ClInclude Include="src\domain\bindings\count\BindingsCountPopTest.h" />
-    <ClInclude Include="src\domain\bindings\count\BindingsCountPushTest.h" />
-    <ClInclude Include="src\domain\bindings\count\BindingsCountTester.h" />
-    <ClInclude Include="src\domain\bindings\index\BindingsIndexMaximumTest.h" />
-    <ClInclude Include="src\domain\bindings\index\BindingsIndexMinimumTest.h" />
-    <ClInclude Include="src\domain\bindings\index\BindingsIndexPopTest.h" />
-    <ClInclude Include="src\domain\bindings\index\BindingsIndexTester.h" />
-    <ClInclude Include="src\domain\bindings\scene\BindingsSceneEmptyTest.h" />
-    <ClInclude Include="src\domain\bindings\scene\BindingsSceneMinimumTest.h" />
-    <ClInclude Include="src\domain\bindings\scene\BindingsScenePopTest.h" />
-    <ClInclude Include="src\domain\bindings\scene\BindingsScenePushTest.h" />
-    <ClInclude Include="src\domain\bindings\scene\BindingsSceneTester.h" />
     <ClInclude Include="src\domain\distance\DistanceCameraTest.h" />
     <ClInclude Include="src\domain\distance\DistanceDefaultTest.h" />
     <ClInclude Include="src\domain\distance\DistanceObjectTest.h" />

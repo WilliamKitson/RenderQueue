@@ -4,7 +4,6 @@
 
 #include "scenes/ScenesTester.h"
 #include "objects/ObjectsTester.h"
-#include "bindings/BindingsTester.h"
 #include "distance/DistanceTester.h"
 
 class DomainTester
@@ -18,6 +17,5 @@ public:
 private:
 	std::string testScenes();
 	std::string testObjects();
-	std::string testBindings();
 	std::string testDistance();
 };
