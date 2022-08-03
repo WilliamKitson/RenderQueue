@@ -62,7 +62,7 @@ int ImplementationPushTransformTest::sSuccesses()
 	for (int i{ 0 }; i < unit->getScenes(); i++)
 	{
 		unit->setScene(i);
-		output += oSuccesses(i);
+		output += oSuccesses((float)i);
 	}
 
 	return output;
