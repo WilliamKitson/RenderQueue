@@ -1,9 +1,7 @@
 #pragma once
 
 #include <string>
-
 #include "domain/DomainTester.h"
-#include "application/ApplicationTester.h"
 
 class SubordinateTester
 {
@@ -15,5 +13,4 @@ public:
 
 private:
 	std::string testDomain();
-	std::string testApplication();
 };

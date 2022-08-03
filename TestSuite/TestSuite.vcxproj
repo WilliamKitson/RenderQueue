@@ -147,19 +147,6 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="src\application\ApplicationTester.cpp" />
-    <ClCompile Include="src\application\implementation\ImplementationTester.cpp" />
-    <ClCompile Include="src\application\implementation\pop\ImplementationPopSceneTest.cpp" />
-    <ClCompile Include="src\application\implementation\pop\ImplementationPopTester.cpp" />
-    <ClCompile Include="src\application\implementation\push\ImplementationPushAmbienceTest.cpp" />
-    <ClCompile Include="src\application\implementation\push\ImplementationPushCameraTest.cpp" />
-    <ClCompile Include="src\application\implementation\push\ImplementationPushColourTest.cpp" />
-    <ClCompile Include="src\application\implementation\push\ImplementationPushInvalidTest.cpp" />
-    <ClCompile Include="src\application\implementation\push\ImplementationPushTester.cpp" />
-    <ClCompile Include="src\application\implementation\push\ImplementationPushTransformTest.cpp" />
-    <ClCompile Include="src\application\implementation\render\ImplementationRenderOutsideTest.cpp" />
-    <ClCompile Include="src\application\implementation\render\ImplementationRenderTester.cpp" />
-    <ClCompile Include="src\application\implementation\render\ImplementationRenderWithinTest.cpp" />
     <ClCompile Include="src\domain\bindings\BindingsTester.cpp" />
     <ClCompile Include="src\domain\bindings\count\BindingsCountDefaultTest.cpp" />
     <ClCompile Include="src\domain\bindings\count\BindingsCountMinimumTest.cpp" />
@@ -231,19 +218,6 @@
     <ClCompile Include="src\SubordinateTester.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="src\application\ApplicationTester.h" />
-    <ClInclude Include="src\application\implementation\ImplementationTester.h" />
-    <ClInclude Include="src\application\implementation\pop\ImplementationPopSceneTest.h" />
-    <ClInclude Include="src\application\implementation\pop\ImplementationPopTester.h" />
-    <ClInclude Include="src\application\implementation\push\ImplementationPushAmbienceTest.h" />
-    <ClInclude Include="src\application\implementation\push\ImplementationPushCameraTest.h" />
-    <ClInclude Include="src\application\implementation\push\ImplementationPushColourTest.h" />
-    <ClInclude Include="src\application\implementation\push\ImplementationPushInvalidTest.h" />
-    <ClInclude Include="src\application\implementation\push\ImplementationPushTester.h" />
-    <ClInclude Include="src\application\implementation\push\ImplementationPushTransformTest.h" />
-    <ClInclude Include="src\application\implementation\render\ImplementationRenderOutsideTest.h" />
-    <ClInclude Include="src\application\implementation\render\ImplementationRenderTester.h" />
-    <ClInclude Include="src\application\implementation\render\ImplementationRenderWithinTest.h" />
     <ClInclude Include="src\domain\bindings\BindingsTester.h" />
     <ClInclude Include="src\domain\bindings\count\BindingsCountDefaultTest.h" />
     <ClInclude Include="src\domain\bindings\count\BindingsCountMinimumTest.h" />

@@ -192,31 +192,7 @@
     <ClCompile Include="src\domain\scenes\ambience\ScenesAmbiencePopTest.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="src\application\implementation\push\ImplementationPushCameraTest.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="src\application\implementation\push\ImplementationPushTester.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="src\application\implementation\ImplementationTester.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="src\application\ApplicationTester.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="src\application\implementation\push\ImplementationPushAmbienceTest.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="src\domain\scenes\index\ScenesIndexGetTest.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="src\application\implementation\pop\ImplementationPopTester.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="src\application\implementation\push\ImplementationPushTransformTest.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="src\application\implementation\push\ImplementationPushColourTest.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="src\domain\distance\DistanceDefaultTest.cpp">
@@ -244,21 +220,6 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="src\domain\scenes\overlap\ScenesOverlapPopTest.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="src\application\implementation\render\ImplementationRenderWithinTest.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="src\application\implementation\render\ImplementationRenderTester.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="src\application\implementation\render\ImplementationRenderOutsideTest.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="src\application\implementation\push\ImplementationPushInvalidTest.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="src\application\implementation\pop\ImplementationPopSceneTest.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
@@ -437,31 +398,7 @@
     <ClInclude Include="src\domain\scenes\ambience\ScenesAmbiencePopTest.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="src\application\implementation\push\ImplementationPushCameraTest.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="src\application\implementation\push\ImplementationPushTester.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="src\application\implementation\ImplementationTester.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="src\application\ApplicationTester.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="src\application\implementation\push\ImplementationPushAmbienceTest.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="src\domain\scenes\index\ScenesIndexGetTest.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="src\application\implementation\pop\ImplementationPopTester.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="src\application\implementation\push\ImplementationPushTransformTest.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="src\application\implementation\push\ImplementationPushColourTest.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="src\domain\distance\DistanceDefaultTest.h">
@@ -489,21 +426,6 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="src\domain\scenes\overlap\ScenesOverlapPopTest.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="src\application\implementation\render\ImplementationRenderTester.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="src\application\implementation\render\ImplementationRenderWithinTest.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="src\application\implementation\render\ImplementationRenderOutsideTest.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="src\application\implementation\push\ImplementationPushInvalidTest.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="src\application\implementation\pop\ImplementationPopSceneTest.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
