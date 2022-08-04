@@ -32,6 +32,7 @@ namespace renderQueue
 		void cleanup();
 		void swap(Objects*);
 		Objects* pushed();
+		void validate();
 
 	private:
 		Scenes scenes;

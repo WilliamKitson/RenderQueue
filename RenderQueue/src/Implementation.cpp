@@ -18,6 +18,15 @@ void renderQueue::Implementation::pushScene()
 
 void renderQueue::Implementation::pushObject()
 {
+	try
+	{
+		validate();
+	}
+	catch (int)
+	{
+		return;
+	}
+
 	objects[scenes.getIndex()].push();
 }
 
@@ -56,6 +65,15 @@ renderQueue::RGBA renderQueue::Implementation::getAmbience()
 
 int renderQueue::Implementation::getObjects()
 {
+	try
+	{
+		validate();
+	}
+	catch (int)
+	{
+		return 0;
+	}
+
 	return objects[scenes.getIndex()].getCount();
 }
 
@@ -204,4 +222,14 @@ renderQueue::Objects* renderQueue::Implementation::pushed()
 	}
 
 	return output;
+}
+
+void renderQueue::Implementation::validate()
+{
+	if (scenes.getCount())
+	{
+		return;
+	}
+
+	throw int();
 }
