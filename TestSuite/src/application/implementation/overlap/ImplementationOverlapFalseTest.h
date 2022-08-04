@@ -14,7 +14,9 @@ public:
 	std::string test();
 
 private:
+	int successes();
+
+private:
 	renderQueue::Facade* unit;
 	int itterations;
-	int successes;
 };
