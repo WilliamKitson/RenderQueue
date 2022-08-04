@@ -16,6 +16,11 @@ void renderQueue::Implementation::pushScene()
 	swap(pushed());
 }
 
+void renderQueue::Implementation::popScene()
+{
+	scenes.pop();
+}
+
 void renderQueue::Implementation::pushObject()
 {
 	try

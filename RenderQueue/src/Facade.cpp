@@ -12,6 +12,10 @@ void renderQueue::Facade::pushScene()
 {
 }
 
+void renderQueue::Facade::popScene()
+{
+}
+
 void renderQueue::Facade::pushObject()
 {
 }
