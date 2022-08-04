@@ -35,6 +35,18 @@ renderQueue::Camera renderQueue::Implementation::getCamera()
 	return camera;
 }
 
+renderQueue::RGBA renderQueue::Implementation::getAmbience()
+{
+	RGBA ambience{
+		scenes.getRed(),
+		scenes.getGreen(),
+		scenes.getBlue(),
+		scenes.getAlpha()
+	};
+
+	return ambience;
+}
+
 void renderQueue::Implementation::setScene(int input)
 {
 	scenes.setIndex(input);
@@ -54,4 +66,16 @@ void renderQueue::Implementation::setCamera(Camera input)
 	};
 
 	scenes.setCamera(camera);
+}
+
+void renderQueue::Implementation::setAmbience(RGBA input)
+{
+	float ambience[] = {
+		input.red,
+		input.green,
+		input.blue,
+		input.alpha
+	};
+
+	scenes.setAmbience(ambience);
 }
