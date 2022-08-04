@@ -13,43 +13,9 @@ renderQueue::Implementation::~Implementation()
 void renderQueue::Implementation::pushScene()
 {
 	scenes.push();
-
-	Objects* pushed = new Objects[scenes.getCount()];
-
-	for (int i{ 0 }; i < scenes.getCount() - 1; i++)
-	{
-		for (int i2{ 0 }; i2 < objects[i].getCount(); i2++)
-		{
-			objects[i].setIndex(i2);
-
-			float transform[] = {
-				objects[i].getXpos(),
-				objects[i].getYpos(),
-				objects[i].getZpos(),
-				objects[i].getXrot(),
-				objects[i].getYrot(),
-				objects[i].getZrot(),
-				objects[i].getXscale(),
-				objects[i].getYscale(),
-				objects[i].getZscale()
-			};
-
-			float colour[] = {
-				objects[i].getRed(),
-				objects[i].getGreen(),
-				objects[i].getBlue(),
-				objects[i].getAlpha()
-			};
-
-			pushed[i].push();
-			pushed[i].setIndex(i2);
-			pushed[i].setTransform(transform);
-			pushed[i].setColour(colour);
-		}
-	}
-
+	Objects* temp = pushed();
 	cleanup();
-	objects = pushed;
+	objects = temp;
 }
 
 void renderQueue::Implementation::pushObject()
@@ -171,4 +137,43 @@ void renderQueue::Implementation::cleanup()
 {
 	delete[] objects;
 	objects = nullptr;
+}
+
+renderQueue::Objects* renderQueue::Implementation::pushed()
+{
+	Objects* output = new Objects[scenes.getCount()];
+
+	for (int i{ 0 }; i < scenes.getCount() - 1; i++)
+	{
+		for (int i2{ 0 }; i2 < objects[i].getCount(); i2++)
+		{
+			objects[i].setIndex(i2);
+
+			float transform[] = {
+				objects[i].getXpos(),
+				objects[i].getYpos(),
+				objects[i].getZpos(),
+				objects[i].getXrot(),
+				objects[i].getYrot(),
+				objects[i].getZrot(),
+				objects[i].getXscale(),
+				objects[i].getYscale(),
+				objects[i].getZscale()
+			};
+
+			float colour[] = {
+				objects[i].getRed(),
+				objects[i].getGreen(),
+				objects[i].getBlue(),
+				objects[i].getAlpha()
+			};
+
+			output[i].push();
+			output[i].setIndex(i2);
+			output[i].setTransform(transform);
+			output[i].setColour(colour);
+		}
+	}
+
+	return output;
 }

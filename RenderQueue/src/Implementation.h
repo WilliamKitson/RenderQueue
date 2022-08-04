@@ -28,6 +28,7 @@ namespace renderQueue
 
 	private:
 		void cleanup();
+		Objects* pushed();
 
 	private:
 		Scenes scenes;
