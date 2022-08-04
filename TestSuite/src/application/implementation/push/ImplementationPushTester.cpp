@@ -15,6 +15,7 @@ std::string ImplementationPushTester::test()
 	output += testCamera();
 	output += testAmbience();
 	output += testTransform();
+	output += testColour();
 
 	return output;
 }
@@ -32,4 +33,9 @@ std::string ImplementationPushTester::testAmbience()
 std::string ImplementationPushTester::testTransform()
 {
 	return ImplementationPushTransformTest().test();
+}
+
+std::string ImplementationPushTester::testColour()
+{
+	return ImplementationPushColourTest().test();
 }

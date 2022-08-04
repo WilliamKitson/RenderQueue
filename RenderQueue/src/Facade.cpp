@@ -41,6 +41,11 @@ renderQueue::Transform renderQueue::Facade::getTransform()
 	return Transform();
 }
 
+renderQueue::RGBA renderQueue::Facade::getColour()
+{
+	return RGBA();
+}
+
 void renderQueue::Facade::setScene(int)
 {
 }
@@ -58,5 +63,9 @@ void renderQueue::Facade::setObject(int)
 }
 
 void renderQueue::Facade::setTransform(Transform)
+{
+}
+
+void renderQueue::Facade::setColour(RGBA)
 {
 }

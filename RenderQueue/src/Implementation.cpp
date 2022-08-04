@@ -76,6 +76,18 @@ renderQueue::Transform renderQueue::Implementation::getTransform()
 	return output;
 }
 
+renderQueue::RGBA renderQueue::Implementation::getColour()
+{
+	RGBA output{
+		objects[scenes.getIndex()].getRed(),
+		objects[scenes.getIndex()].getGreen(),
+		objects[scenes.getIndex()].getBlue(),
+		objects[scenes.getIndex()].getAlpha()
+	};
+
+	return output;
+}
+
 void renderQueue::Implementation::setScene(int input)
 {
 	scenes.setIndex(input);
@@ -129,6 +141,18 @@ void renderQueue::Implementation::setTransform(Transform input)
 	};
 
 	objects[scenes.getIndex()].setTransform(transform);
+}
+
+void renderQueue::Implementation::setColour(RGBA input)
+{
+	float colour[] = {
+		input.red,
+		input.green,
+		input.blue,
+		input.alpha
+	};
+
+	objects[scenes.getIndex()].setColour(colour);
 }
 
 void renderQueue::Implementation::cleanup()
