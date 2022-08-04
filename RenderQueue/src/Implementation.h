@@ -28,6 +28,7 @@ namespace renderQueue
 
 	private:
 		void cleanup();
+		void swap(Objects*);
 		Objects* pushed();
 
 	private:

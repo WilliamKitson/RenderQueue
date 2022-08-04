@@ -13,9 +13,7 @@ renderQueue::Implementation::~Implementation()
 void renderQueue::Implementation::pushScene()
 {
 	scenes.push();
-	Objects* temp = pushed();
-	cleanup();
-	objects = temp;
+	swap(pushed());
 }
 
 void renderQueue::Implementation::pushObject()
@@ -137,6 +135,12 @@ void renderQueue::Implementation::cleanup()
 {
 	delete[] objects;
 	objects = nullptr;
+}
+
+void renderQueue::Implementation::swap(Objects* input)
+{
+	cleanup();
+	objects = input;
 }
 
 renderQueue::Objects* renderQueue::Implementation::pushed()
