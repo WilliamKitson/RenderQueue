@@ -20,6 +20,10 @@ void renderQueue::Facade::pushObject()
 {
 }
 
+void renderQueue::Facade::popObject()
+{
+}
+
 int renderQueue::Facade::getScenes()
 {
 	return 0;

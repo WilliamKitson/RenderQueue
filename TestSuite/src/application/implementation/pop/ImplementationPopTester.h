@@ -1,7 +1,9 @@
 #pragma once
 
 #include <string>
+
 #include "ImplementationPopSceneTest.h"
+#include "ImplementationPopObjectTest.h"
 
 class ImplementationPopTester
 {
@@ -13,4 +15,5 @@ public:
 
 private:
 	std::string testScene();
+	std::string testObject();
 };

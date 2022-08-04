@@ -35,6 +35,11 @@ void renderQueue::Implementation::pushObject()
 	objects[scenes.getIndex()].push();
 }
 
+void renderQueue::Implementation::popObject()
+{
+	objects[scenes.getIndex()].pop();
+}
+
 int renderQueue::Implementation::getScenes()
 {
 	return scenes.getCount();

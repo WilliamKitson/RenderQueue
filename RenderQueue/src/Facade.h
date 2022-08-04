@@ -15,6 +15,7 @@ namespace renderQueue
 		virtual void pushScene();
 		virtual void popScene();
 		virtual void pushObject();
+		virtual void popObject();
 		virtual int getScenes();
 		virtual Camera getCamera();
 		virtual RGBA getAmbience();
