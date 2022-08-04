@@ -147,6 +147,10 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="src\application\ApplicationTester.cpp" />
+    <ClCompile Include="src\application\implementation\ImplementationTester.cpp" />
+    <ClCompile Include="src\application\implementation\push\ImplementationPushCameraTest.cpp" />
+    <ClCompile Include="src\application\implementation\push\ImplementationPushTester.cpp" />
     <ClCompile Include="src\domain\distance\DistanceCameraTest.cpp" />
     <ClCompile Include="src\domain\distance\DistanceDefaultTest.cpp" />
     <ClCompile Include="src\domain\distance\DistanceObjectTest.cpp" />
@@ -203,6 +207,10 @@
     <ClCompile Include="src\SubordinateTester.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="src\application\ApplicationTester.h" />
+    <ClInclude Include="src\application\implementation\ImplementationTester.h" />
+    <ClInclude Include="src\application\implementation\push\ImplementationPushCameraTest.h" />
+    <ClInclude Include="src\application\implementation\push\ImplementationPushTester.h" />
     <ClInclude Include="src\domain\distance\DistanceCameraTest.h" />
     <ClInclude Include="src\domain\distance\DistanceDefaultTest.h" />
     <ClInclude Include="src\domain\distance\DistanceObjectTest.h" />
