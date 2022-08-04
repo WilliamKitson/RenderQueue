@@ -77,3 +77,8 @@ void renderQueue::Facade::setTransform(Transform)
 void renderQueue::Facade::setColour(RGBA)
 {
 }
+
+bool renderQueue::Facade::getRender()
+{
+	return false;
+}

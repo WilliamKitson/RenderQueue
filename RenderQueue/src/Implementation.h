@@ -1,6 +1,7 @@
 #pragma once
 
 #include "Facade.h"
+#include "Distance.h"
 #include "Scenes.h"
 #include "Objects.h"
 
@@ -29,6 +30,7 @@ namespace renderQueue
 		virtual void setObject(int);
 		virtual void setTransform(Transform);
 		virtual void setColour(RGBA);
+		virtual bool getRender();
 
 	private:
 		void cleanup();
@@ -37,6 +39,7 @@ namespace renderQueue
 		void validate();
 
 	private:
+		Distance distance;
 		Scenes scenes;
 		Objects* objects;
 	};

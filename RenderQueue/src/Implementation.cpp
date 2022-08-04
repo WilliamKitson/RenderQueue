@@ -1,7 +1,7 @@
 #include "Implementation.h"
 
 renderQueue::Implementation::Implementation()
-	: scenes(), objects{ nullptr }
+	: distance(), scenes(), objects{ nullptr }
 {
 }
 
@@ -181,6 +181,32 @@ void renderQueue::Implementation::setColour(RGBA input)
 	};
 
 	objects[scenes.getIndex()].setColour(colour);
+}
+
+bool renderQueue::Implementation::getRender()
+{
+	float camera[] = {
+		scenes.getXpos(),
+		scenes.getYpos(),
+		scenes.getZpos()
+	};
+
+	float object[] = {
+		objects[scenes.getIndex()].getXpos(),
+		objects[scenes.getIndex()].getYpos(),
+		objects[scenes.getIndex()].getZpos()
+	};
+
+	distance.setCamera(camera);
+	distance.setObject(object);
+	distance.calculate();
+
+	if (distance.getDistance() > scenes.getDrawDistance())
+	{
+		return false;
+	}
+
+	return true;
 }
 
 void renderQueue::Implementation::cleanup()

@@ -148,6 +148,8 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="src\application\ApplicationTester.cpp" />
+    <ClCompile Include="src\application\implementation\distance\ImplementationDistanceRenderedTest.cpp" />
+    <ClCompile Include="src\application\implementation\distance\ImplementationDistanceTester.cpp" />
     <ClCompile Include="src\application\implementation\ImplementationTester.cpp" />
     <ClCompile Include="src\application\implementation\pop\ImplementationPopObjectTest.cpp" />
     <ClCompile Include="src\application\implementation\pop\ImplementationPopSceneTest.cpp" />
@@ -215,6 +217,8 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\application\ApplicationTester.h" />
+    <ClInclude Include="src\application\implementation\distance\ImplementationDistanceRenderedTest.h" />
+    <ClInclude Include="src\application\implementation\distance\ImplementationDistanceTester.h" />
     <ClInclude Include="src\application\implementation\ImplementationTester.h" />
     <ClInclude Include="src\application\implementation\pop\ImplementationPopObjectTest.h" />
     <ClInclude Include="src\application\implementation\pop\ImplementationPopSceneTest.h" />

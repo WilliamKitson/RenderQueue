@@ -28,5 +28,6 @@ namespace renderQueue
 		virtual void setObject(int);
 		virtual void setTransform(Transform);
 		virtual void setColour(RGBA);
+		virtual bool getRender();
 	};
 }
