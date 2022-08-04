@@ -154,6 +154,7 @@
     <ClCompile Include="src\application\implementation\ImplementationTester.cpp" />
     <ClCompile Include="src\application\implementation\overlap\ImplementationOverlapFalseTest.cpp" />
     <ClCompile Include="src\application\implementation\overlap\ImplementationOverlapTester.cpp" />
+    <ClCompile Include="src\application\implementation\overlap\ImplementationOverlapTrueTest.cpp" />
     <ClCompile Include="src\application\implementation\pop\ImplementationPopObjectTest.cpp" />
     <ClCompile Include="src\application\implementation\pop\ImplementationPopSceneTest.cpp" />
     <ClCompile Include="src\application\implementation\pop\ImplementationPopTester.cpp" />
@@ -226,6 +227,7 @@
     <ClInclude Include="src\application\implementation\ImplementationTester.h" />
     <ClInclude Include="src\application\implementation\overlap\ImplementationOverlapFalseTest.h" />
     <ClInclude Include="src\application\implementation\overlap\ImplementationOverlapTester.h" />
+    <ClInclude Include="src\application\implementation\overlap\ImplementationOverlapTrueTest.h" />
     <ClInclude Include="src\application\implementation\pop\ImplementationPopObjectTest.h" />
     <ClInclude Include="src\application\implementation\pop\ImplementationPopSceneTest.h" />
     <ClInclude Include="src\application\implementation\pop\ImplementationPopTester.h" />

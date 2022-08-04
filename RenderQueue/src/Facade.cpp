@@ -80,6 +80,10 @@ void renderQueue::Facade::setNoneoverlap()
 {
 }
 
+void renderQueue::Facade::setOverlap()
+{
+}
+
 void renderQueue::Facade::setObject(int)
 {
 }

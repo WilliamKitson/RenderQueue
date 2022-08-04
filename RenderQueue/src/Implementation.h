@@ -30,6 +30,7 @@ namespace renderQueue
 		virtual void setCamera(Camera);
 		virtual void setAmbience(RGBA);
 		virtual void setNoneoverlap();
+		virtual void setOverlap();
 		virtual void setObject(int);
 		virtual void setTransform(Transform);
 		virtual void setColour(RGBA);

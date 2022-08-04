@@ -1,7 +1,9 @@
 #pragma once
 
 #include <string>
+
 #include "ImplementationOverlapFalseTest.h"
+#include "ImplementationOverlapTrueTest.h"
 
 class ImplementationOverlapTester
 {
@@ -13,4 +15,5 @@ public:
 
 private:
 	std::string testFalse();
+	std::string testTrue();
 };

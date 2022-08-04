@@ -75,7 +75,7 @@ renderQueue::RGBA renderQueue::Implementation::getAmbience()
 
 bool renderQueue::Implementation::getOverlap()
 {
-	return false;
+	return scenes.getOverlap();
 }
 
 int renderQueue::Implementation::getObjects()
@@ -182,6 +182,12 @@ void renderQueue::Implementation::setAmbience(RGBA input)
 
 void renderQueue::Implementation::setNoneoverlap()
 {
+	scenes.setNoneoverlap();
+}
+
+void renderQueue::Implementation::setOverlap()
+{
+	scenes.setOverlap();
 }
 
 void renderQueue::Implementation::setObject(int input)
