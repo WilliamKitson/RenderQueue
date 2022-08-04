@@ -76,57 +76,58 @@ int ImplementationPopObjectTest::oSuccesses(float input)
 	{
 		unit->setObject(0);
 		unit->popObject();
-
-		renderQueue::Transform transform = unit->getTransform();
-		bool success = true;
-
-		if (transform.xpos != input + i)
-		{
-			success = false;
-		}
-
-		if (transform.ypos != input + i)
-		{
-			success = false;
-		}
-
-		if (transform.zpos != input + i)
-		{
-			success = false;
-		}
-
-		if (transform.xrot != input + i)
-		{
-			success = false;
-		}
-
-		if (transform.yrot != input + i)
-		{
-			success = false;
-		}
-
-		if (transform.zrot != input + i)
-		{
-			success = false;
-		}
-
-		if (transform.xscale != input + i)
-		{
-			success = false;
-		}
-
-		if (transform.yscale != input + i)
-		{
-			success = false;
-		}
-
-		if (transform.zscale != input + i)
-		{
-			success = false;
-		}
-
-		output += success;
+		output += success(input + (float)i);
 	}
 
 	return output;
+}
+
+bool ImplementationPopObjectTest::success(float input)
+{
+	if (unit->getTransform().xpos != input)
+	{
+		return false;
+	}
+
+	if (unit->getTransform().ypos != input)
+	{
+		return false;
+	}
+
+	if (unit->getTransform().zpos != input)
+	{
+		return false;
+	}
+
+	if (unit->getTransform().xrot != input)
+	{
+		return false;
+	}
+
+	if (unit->getTransform().yrot != input)
+	{
+		return false;
+	}
+
+	if (unit->getTransform().zrot != input)
+	{
+		return false;
+	}
+
+	if (unit->getTransform().xscale != input)
+	{
+		return false;
+	}
+
+	if (unit->getTransform().yscale != input)
+	{
+		return false;
+	}
+
+	if (unit->getTransform().zscale != input)
+	{
+		return false;
+	}
+
+	return true;
 }

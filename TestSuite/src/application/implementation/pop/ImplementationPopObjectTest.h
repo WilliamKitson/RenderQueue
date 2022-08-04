@@ -18,6 +18,7 @@ private:
 	void oInitialise(float);
 	int sSuccesses();
 	int oSuccesses(float);
+	bool success(float);
 
 private:
 	renderQueue::Facade* unit;
