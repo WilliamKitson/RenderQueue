@@ -15,6 +15,7 @@ public:
 
 private:
 	void sInitialise();
+	void oInitialise(float);
 
 private:
 	renderQueue::Facade* unit;

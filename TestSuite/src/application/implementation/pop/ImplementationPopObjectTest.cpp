@@ -92,24 +92,28 @@ void ImplementationPopObjectTest::sInitialise()
 	{
 		unit->pushScene();
 		unit->setScene(i);
+		oInitialise((float)i);
+	}
+}
 
-		for (int i2{ 0 }; i2 < itterations; i2++)
-		{
-			renderQueue::Transform transform{
-				(float)i + i2,
-				(float)i + i2,
-				(float)i + i2,
-				(float)i + i2,
-				(float)i + i2,
-				(float)i + i2,
-				(float)i + i2,
-				(float)i + i2,
-				(float)i + i2
-			};
+void ImplementationPopObjectTest::oInitialise(float input)
+{
+	for (int i{ 0 }; i < itterations; i++)
+	{
+		renderQueue::Transform transform{
+			(float)i + input,
+			(float)i + input,
+			(float)i + input,
+			(float)i + input,
+			(float)i + input,
+			(float)i + input,
+			(float)i + input,
+			(float)i + input,
+			(float)i + input
+		};
 
-			unit->pushObject();
-			unit->setObject(i2);
-			unit->setTransform(transform);
-		}
+		unit->pushObject();
+		unit->setObject(i);
+		unit->setTransform(transform);
 	}
 }
