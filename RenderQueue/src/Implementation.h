@@ -27,6 +27,9 @@ namespace renderQueue
 		virtual void setTransform(Transform);
 
 	private:
+		void cleanup();
+
+	private:
 		Scenes scenes;
 		Objects* objects;
 	};

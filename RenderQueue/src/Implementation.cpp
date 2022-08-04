@@ -7,8 +7,7 @@ renderQueue::Implementation::Implementation()
 
 renderQueue::Implementation::~Implementation()
 {
-	delete[] objects;
-	objects = nullptr;
+	cleanup();
 }
 
 void renderQueue::Implementation::pushScene()
@@ -49,8 +48,7 @@ void renderQueue::Implementation::pushScene()
 		}
 	}
 
-	delete[] objects;
-	objects = nullptr;
+	cleanup();
 	objects = pushed;
 }
 
@@ -167,4 +165,10 @@ void renderQueue::Implementation::setTransform(Transform input)
 	};
 
 	objects[scenes.getIndex()].setTransform(transform);
+}
+
+void renderQueue::Implementation::cleanup()
+{
+	delete[] objects;
+	objects = nullptr;
 }
