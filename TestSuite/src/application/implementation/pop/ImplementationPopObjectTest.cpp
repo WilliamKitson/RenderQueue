@@ -15,7 +15,49 @@ std::string ImplementationPopObjectTest::test()
 {
 	sInitialise();
 
-	int successes = 0;
+	if (sSuccesses() == (itterations - 1) * itterations)
+	{
+		return std::string();
+	}
+
+	return "implementation pop object test failed\n";
+}
+
+void ImplementationPopObjectTest::sInitialise()
+{
+	for (int i{ 0 }; i < itterations; i++)
+	{
+		unit->pushScene();
+		unit->setScene(i);
+		oInitialise((float)i);
+	}
+}
+
+void ImplementationPopObjectTest::oInitialise(float input)
+{
+	for (int i{ 0 }; i < itterations; i++)
+	{
+		renderQueue::Transform transform{
+			(float)i + input,
+			(float)i + input,
+			(float)i + input,
+			(float)i + input,
+			(float)i + input,
+			(float)i + input,
+			(float)i + input,
+			(float)i + input,
+			(float)i + input
+		};
+
+		unit->pushObject();
+		unit->setObject(i);
+		unit->setTransform(transform);
+	}
+}
+
+int ImplementationPopObjectTest::sSuccesses()
+{
+	int output = 0;
 
 	for (int i{ 0 }; i < itterations; i++)
 	{
@@ -74,46 +116,9 @@ std::string ImplementationPopObjectTest::test()
 				success = false;
 			}
 
-			successes += success;
+			output += success;
 		}
 	}
 
-	if (successes == (itterations - 1) * itterations)
-	{
-		return std::string();
-	}
-
-	return "implementation pop object test failed\n";
-}
-
-void ImplementationPopObjectTest::sInitialise()
-{
-	for (int i{ 0 }; i < itterations; i++)
-	{
-		unit->pushScene();
-		unit->setScene(i);
-		oInitialise((float)i);
-	}
-}
-
-void ImplementationPopObjectTest::oInitialise(float input)
-{
-	for (int i{ 0 }; i < itterations; i++)
-	{
-		renderQueue::Transform transform{
-			(float)i + input,
-			(float)i + input,
-			(float)i + input,
-			(float)i + input,
-			(float)i + input,
-			(float)i + input,
-			(float)i + input,
-			(float)i + input,
-			(float)i + input
-		};
-
-		unit->pushObject();
-		unit->setObject(i);
-		unit->setTransform(transform);
-	}
+	return output;
 }

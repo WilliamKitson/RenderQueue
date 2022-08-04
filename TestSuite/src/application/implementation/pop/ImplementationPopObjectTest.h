@@ -16,6 +16,7 @@ public:
 private:
 	void sInitialise();
 	void oInitialise(float);
+	int sSuccesses();
 
 private:
 	renderQueue::Facade* unit;
