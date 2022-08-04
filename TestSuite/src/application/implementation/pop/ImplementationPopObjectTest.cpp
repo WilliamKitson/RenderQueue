@@ -1,7 +1,7 @@
 #include "ImplementationPopObjectTest.h"
 
 ImplementationPopObjectTest::ImplementationPopObjectTest()
-	: unit{ new renderQueue::Implementation }
+	: unit{ new renderQueue::Implementation }, itterations{ 4 }
 {
 }
 
@@ -13,32 +13,7 @@ ImplementationPopObjectTest::~ImplementationPopObjectTest()
 
 std::string ImplementationPopObjectTest::test()
 {
-	int itterations = 4;
-
-	for (int i{ 0 }; i < itterations; i++)
-	{
-		unit->pushScene();
-		unit->setScene(i);
-
-		for (int i2{ 0 }; i2 < itterations; i2++)
-		{
-			renderQueue::Transform transform{
-				(float)i + i2,
-				(float)i + i2,
-				(float)i + i2,
-				(float)i + i2,
-				(float)i + i2,
-				(float)i + i2,
-				(float)i + i2,
-				(float)i + i2,
-				(float)i + i2
-			};
-
-			unit->pushObject();
-			unit->setObject(i2);
-			unit->setTransform(transform);
-		}
-	}
+	sInitialise();
 
 	int successes = 0;
 
@@ -109,4 +84,32 @@ std::string ImplementationPopObjectTest::test()
 	}
 
 	return "implementation pop object test failed\n";
+}
+
+void ImplementationPopObjectTest::sInitialise()
+{
+	for (int i{ 0 }; i < itterations; i++)
+	{
+		unit->pushScene();
+		unit->setScene(i);
+
+		for (int i2{ 0 }; i2 < itterations; i2++)
+		{
+			renderQueue::Transform transform{
+				(float)i + i2,
+				(float)i + i2,
+				(float)i + i2,
+				(float)i + i2,
+				(float)i + i2,
+				(float)i + i2,
+				(float)i + i2,
+				(float)i + i2,
+				(float)i + i2
+			};
+
+			unit->pushObject();
+			unit->setObject(i2);
+			unit->setTransform(transform);
+		}
+	}
 }
