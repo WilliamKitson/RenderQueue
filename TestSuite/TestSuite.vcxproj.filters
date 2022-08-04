@@ -216,6 +216,9 @@
     <ClCompile Include="src\application\implementation\distance\ImplementationDistanceTester.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="src\application\implementation\distance\ImplementationDistanceUnrenderedTest.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\MemoryTest.h">
@@ -414,6 +417,9 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="src\application\implementation\distance\ImplementationDistanceTester.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\application\implementation\distance\ImplementationDistanceUnrenderedTest.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
