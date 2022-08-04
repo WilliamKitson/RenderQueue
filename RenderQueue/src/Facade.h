@@ -2,6 +2,7 @@
 
 #include "Camera.h"
 #include "RGBA.h"
+#include "Transform.h"
 
 namespace renderQueue
 {
@@ -12,11 +13,16 @@ namespace renderQueue
 		virtual ~Facade();
 
 		virtual void pushScene();
+		virtual void pushObject();
 		virtual int getScenes();
 		virtual Camera getCamera();
 		virtual RGBA getAmbience();
+		virtual int getObjects();
+		virtual Transform getTransform();
 		virtual void setScene(int);
 		virtual void setCamera(Camera);
 		virtual void setAmbience(RGBA);
+		virtual void setObject(int);
+		virtual void setTransform(Transform);
 	};
 }

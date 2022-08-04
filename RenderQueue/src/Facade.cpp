@@ -12,6 +12,10 @@ void renderQueue::Facade::pushScene()
 {
 }
 
+void renderQueue::Facade::pushObject()
+{
+}
+
 int renderQueue::Facade::getScenes()
 {
 	return 0;
@@ -27,6 +31,16 @@ renderQueue::RGBA renderQueue::Facade::getAmbience()
 	return RGBA();
 }
 
+int renderQueue::Facade::getObjects()
+{
+	return 0;
+}
+
+renderQueue::Transform renderQueue::Facade::getTransform()
+{
+	return Transform();
+}
+
 void renderQueue::Facade::setScene(int)
 {
 }
@@ -36,5 +50,13 @@ void renderQueue::Facade::setCamera(Camera)
 }
 
 void renderQueue::Facade::setAmbience(RGBA)
+{
+}
+
+void renderQueue::Facade::setObject(int)
+{
+}
+
+void renderQueue::Facade::setTransform(Transform)
 {
 }
