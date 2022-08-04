@@ -15,6 +15,7 @@ std::string ImplementationTester::test()
 	output += testPush();
 	output += testPop();
 	output += testDistance();
+	output += testOverlap();
 
 	return output;
 }
@@ -32,4 +33,9 @@ std::string ImplementationTester::testPop()
 std::string ImplementationTester::testDistance()
 {
 	return ImplementationDistanceTester().test();
+}
+
+std::string ImplementationTester::testOverlap()
+{
+	return ImplementationOverlapFalseTest().test();
 }

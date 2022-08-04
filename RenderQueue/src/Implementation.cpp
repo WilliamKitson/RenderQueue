@@ -73,6 +73,11 @@ renderQueue::RGBA renderQueue::Implementation::getAmbience()
 	return output;
 }
 
+bool renderQueue::Implementation::getOverlap()
+{
+	return false;
+}
+
 int renderQueue::Implementation::getObjects()
 {
 	try
@@ -116,6 +121,32 @@ renderQueue::RGBA renderQueue::Implementation::getColour()
 	return output;
 }
 
+bool renderQueue::Implementation::getRender()
+{
+	float camera[] = {
+		scenes.getXpos(),
+		scenes.getYpos(),
+		scenes.getZpos()
+	};
+
+	float object[] = {
+		objects[scenes.getIndex()].getXpos(),
+		objects[scenes.getIndex()].getYpos(),
+		objects[scenes.getIndex()].getZpos()
+	};
+
+	distance.setCamera(camera);
+	distance.setObject(object);
+	distance.calculate();
+
+	if (distance.getDistance() > scenes.getDrawDistance())
+	{
+		return false;
+	}
+
+	return true;
+}
+
 void renderQueue::Implementation::setScene(int input)
 {
 	scenes.setIndex(input);
@@ -147,6 +178,10 @@ void renderQueue::Implementation::setAmbience(RGBA input)
 	};
 
 	scenes.setAmbience(ambience);
+}
+
+void renderQueue::Implementation::setNoneoverlap()
+{
 }
 
 void renderQueue::Implementation::setObject(int input)
@@ -181,32 +216,6 @@ void renderQueue::Implementation::setColour(RGBA input)
 	};
 
 	objects[scenes.getIndex()].setColour(colour);
-}
-
-bool renderQueue::Implementation::getRender()
-{
-	float camera[] = {
-		scenes.getXpos(),
-		scenes.getYpos(),
-		scenes.getZpos()
-	};
-
-	float object[] = {
-		objects[scenes.getIndex()].getXpos(),
-		objects[scenes.getIndex()].getYpos(),
-		objects[scenes.getIndex()].getZpos()
-	};
-
-	distance.setCamera(camera);
-	distance.setObject(object);
-	distance.calculate();
-
-	if (distance.getDistance() > scenes.getDrawDistance())
-	{
-		return false;
-	}
-
-	return true;
 }
 
 void renderQueue::Implementation::cleanup()

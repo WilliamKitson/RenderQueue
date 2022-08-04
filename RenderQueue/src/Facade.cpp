@@ -39,6 +39,11 @@ renderQueue::RGBA renderQueue::Facade::getAmbience()
 	return RGBA();
 }
 
+bool renderQueue::Facade::getOverlap()
+{
+	return false;
+}
+
 int renderQueue::Facade::getObjects()
 {
 	return 0;
@@ -54,6 +59,11 @@ renderQueue::RGBA renderQueue::Facade::getColour()
 	return RGBA();
 }
 
+bool renderQueue::Facade::getRender()
+{
+	return false;
+}
+
 void renderQueue::Facade::setScene(int)
 {
 }
@@ -63,6 +73,10 @@ void renderQueue::Facade::setCamera(Camera)
 }
 
 void renderQueue::Facade::setAmbience(RGBA)
+{
+}
+
+void renderQueue::Facade::setNoneoverlap()
 {
 }
 
@@ -76,9 +90,4 @@ void renderQueue::Facade::setTransform(Transform)
 
 void renderQueue::Facade::setColour(RGBA)
 {
-}
-
-bool renderQueue::Facade::getRender()
-{
-	return false;
 }
