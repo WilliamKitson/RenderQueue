@@ -81,15 +81,7 @@ bool renderQueue::Implementation::getOverlap()
 
 int renderQueue::Implementation::getObjects()
 {
-	int output = 0;
-
-	for (int i{ 0 }; i < objects.getCount(); i++)
-	{
-		bindings.setIndex(i);
-		output += bindings.getScene() == scenes.getIndex();
-	}
-
-	return output;
+	return count();
 }
 
 renderQueue::Transform renderQueue::Implementation::getTransform()
@@ -192,18 +184,9 @@ void renderQueue::Implementation::setOverlap()
 
 void renderQueue::Implementation::setObject(int input)
 {
-	input++;
-	int index = 0;
-
-	while (input)
-	{
-		bindings.setIndex(index);
-		input -= bindings.getScene() == scenes.getIndex();
-		index++;
-	}
-
-	objects.setIndex(index - 1);
-	bindings.setIndex(index - 1);
+	input = index(input);
+	objects.setIndex(input);
+	bindings.setIndex(input);
 }
 
 void renderQueue::Implementation::setTransform(Transform input)
@@ -257,4 +240,32 @@ void renderQueue::Implementation::reset()
 			return;
 		}
 	}
+}
+
+int renderQueue::Implementation::count()
+{
+	int output = 0;
+
+	for (int i{ 0 }; i < objects.getCount(); i++)
+	{
+		bindings.setIndex(i);
+		output += bindings.getScene() == scenes.getIndex();
+	}
+
+	return output;
+}
+
+int renderQueue::Implementation::index(int input)
+{
+	input++;
+	int output = 0;
+
+	while (input)
+	{
+		bindings.setIndex(output);
+		input -= bindings.getScene() == scenes.getIndex();
+		output++;
+	}
+
+	return output - 1;
 }
