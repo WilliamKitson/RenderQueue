@@ -81,7 +81,15 @@ bool renderQueue::Implementation::getOverlap()
 
 int renderQueue::Implementation::getObjects()
 {
-	return count();
+	int output = 0;
+
+	for (int i{ 0 }; i < objects.getCount(); i++)
+	{
+		bindings.setIndex(i);
+		output += bindings.getScene() == scenes.getIndex();
+	}
+
+	return output;
 }
 
 renderQueue::Transform renderQueue::Implementation::getTransform()
@@ -226,19 +234,6 @@ void renderQueue::Implementation::validate()
 	}
 
 	throw int();
-}
-
-int renderQueue::Implementation::count()
-{
-	int output = 0;
-
-	for (int i{ 0 }; i < objects.getCount(); i++)
-	{
-		bindings.setIndex(i);
-		output += bindings.getScene() == scenes.getIndex();
-	}
-
-	return output;
 }
 
 int renderQueue::Implementation::index(int input)
