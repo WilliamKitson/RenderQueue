@@ -38,6 +38,7 @@ namespace renderQueue
 
 	private:
 		void validate();
+		void reset();
 
 	private:
 		Scenes scenes;
