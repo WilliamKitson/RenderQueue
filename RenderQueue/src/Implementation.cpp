@@ -38,7 +38,7 @@ void renderQueue::Implementation::popObject()
 {
 	objects.pop();
 	bindings.pop();
-	reset();
+	setObject(0);
 }
 
 int renderQueue::Implementation::getScenes()
@@ -226,20 +226,6 @@ void renderQueue::Implementation::validate()
 	}
 
 	throw int();
-}
-
-void renderQueue::Implementation::reset()
-{
-	for (int i{ 0 }; i < bindings.getCount(); i++)
-	{
-		bindings.setIndex(i);
-
-		if (bindings.getScene() == scenes.getIndex())
-		{
-			objects.setIndex(i);
-			return;
-		}
-	}
 }
 
 int renderQueue::Implementation::count()

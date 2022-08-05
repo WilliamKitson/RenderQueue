@@ -38,7 +38,6 @@ namespace renderQueue
 
 	private:
 		void validate();
-		void reset();
 		int count();
 		int index(int);
 
