@@ -1,9 +1,10 @@
 #pragma once
 
 #include "Facade.h"
-#include "Distance.h"
 #include "Scenes.h"
 #include "Objects.h"
+#include "Bindings.h"
+#include "Distance.h"
 
 namespace renderQueue
 {
@@ -36,14 +37,12 @@ namespace renderQueue
 		virtual void setColour(RGBA);
 
 	private:
-		void cleanup();
-		void swap(Objects*);
-		Objects* pushed();
 		void validate();
 
 	private:
-		Distance distance;
 		Scenes scenes;
-		Objects* objects;
+		Objects objects;
+		Bindings bindings;
+		Distance distance;
 	};
 }

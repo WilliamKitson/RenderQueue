@@ -1,19 +1,17 @@
 #include "Implementation.h"
 
 renderQueue::Implementation::Implementation()
-	: distance(), scenes(), objects{ nullptr }
+	: scenes(), objects(), bindings(), distance()
 {
 }
 
 renderQueue::Implementation::~Implementation()
 {
-	cleanup();
 }
 
 void renderQueue::Implementation::pushScene()
 {
 	scenes.push();
-	swap(pushed());
 }
 
 void renderQueue::Implementation::popScene()
@@ -32,12 +30,25 @@ void renderQueue::Implementation::pushObject()
 		return;
 	}
 
-	objects[scenes.getIndex()].push();
+	objects.push();
+	bindings.push(scenes.getIndex());
 }
 
 void renderQueue::Implementation::popObject()
 {
-	objects[scenes.getIndex()].pop();
+	objects.pop();
+	bindings.pop();
+
+	for (int i{ 0 }; i < bindings.getCount(); i++)
+	{
+		bindings.setIndex(i);
+
+		if (bindings.getScene() == scenes.getIndex())
+		{
+			objects.setIndex(i);
+			return;
+		}
+	}
 }
 
 int renderQueue::Implementation::getScenes()
@@ -80,30 +91,29 @@ bool renderQueue::Implementation::getOverlap()
 
 int renderQueue::Implementation::getObjects()
 {
-	try
+	int output = 0;
+
+	for (int i{ 0 }; i < objects.getCount(); i++)
 	{
-		validate();
-	}
-	catch (int)
-	{
-		return 0;
+		bindings.setIndex(i);
+		output += bindings.getScene() == scenes.getIndex();
 	}
 
-	return objects[scenes.getIndex()].getCount();
+	return output;
 }
 
 renderQueue::Transform renderQueue::Implementation::getTransform()
 {
 	Transform output{
-		objects[scenes.getIndex()].getXpos(),
-		objects[scenes.getIndex()].getYpos(),
-		objects[scenes.getIndex()].getZpos(),
-		objects[scenes.getIndex()].getXrot(),
-		objects[scenes.getIndex()].getYrot(),
-		objects[scenes.getIndex()].getZrot(),
-		objects[scenes.getIndex()].getXscale(),
-		objects[scenes.getIndex()].getYscale(),
-		objects[scenes.getIndex()].getZscale()
+		objects.getXpos(),
+		objects.getYpos(),
+		objects.getZpos(),
+		objects.getXrot(),
+		objects.getYrot(),
+		objects.getZrot(),
+		objects.getXscale(),
+		objects.getYscale(),
+		objects.getZscale(),
 	};
 
 	return output;
@@ -112,10 +122,10 @@ renderQueue::Transform renderQueue::Implementation::getTransform()
 renderQueue::RGBA renderQueue::Implementation::getColour()
 {
 	RGBA output{
-		objects[scenes.getIndex()].getRed(),
-		objects[scenes.getIndex()].getGreen(),
-		objects[scenes.getIndex()].getBlue(),
-		objects[scenes.getIndex()].getAlpha()
+		objects.getRed(),
+		objects.getGreen(),
+		objects.getBlue(),
+		objects.getAlpha(),
 	};
 
 	return output;
@@ -130,9 +140,9 @@ bool renderQueue::Implementation::getRender()
 	};
 
 	float object[] = {
-		objects[scenes.getIndex()].getXpos(),
-		objects[scenes.getIndex()].getYpos(),
-		objects[scenes.getIndex()].getZpos()
+		objects.getXpos(),
+		objects.getYpos(),
+		objects.getZpos()
 	};
 
 	distance.setCamera(camera);
@@ -192,7 +202,18 @@ void renderQueue::Implementation::setOverlap()
 
 void renderQueue::Implementation::setObject(int input)
 {
-	objects[scenes.getIndex()].setIndex(input);
+	input++;
+	int index = 0;
+
+	while (input)
+	{
+		bindings.setIndex(index);
+		input -= bindings.getScene() == scenes.getIndex();
+		index++;
+	}
+
+	objects.setIndex(index - 1);
+	bindings.setIndex(index - 1);
 }
 
 void renderQueue::Implementation::setTransform(Transform input)
@@ -209,7 +230,7 @@ void renderQueue::Implementation::setTransform(Transform input)
 		input.zscale
 	};
 
-	objects[scenes.getIndex()].setTransform(transform);
+	objects.setTransform(transform);
 }
 
 void renderQueue::Implementation::setColour(RGBA input)
@@ -221,58 +242,7 @@ void renderQueue::Implementation::setColour(RGBA input)
 		input.alpha
 	};
 
-	objects[scenes.getIndex()].setColour(colour);
-}
-
-void renderQueue::Implementation::cleanup()
-{
-	delete[] objects;
-	objects = nullptr;
-}
-
-void renderQueue::Implementation::swap(Objects* input)
-{
-	cleanup();
-	objects = input;
-}
-
-renderQueue::Objects* renderQueue::Implementation::pushed()
-{
-	Objects* output = new Objects[scenes.getCount()];
-
-	for (int i{ 0 }; i < scenes.getCount() - 1; i++)
-	{
-		for (int i2{ 0 }; i2 < objects[i].getCount(); i2++)
-		{
-			objects[i].setIndex(i2);
-
-			float transform[] = {
-				objects[i].getXpos(),
-				objects[i].getYpos(),
-				objects[i].getZpos(),
-				objects[i].getXrot(),
-				objects[i].getYrot(),
-				objects[i].getZrot(),
-				objects[i].getXscale(),
-				objects[i].getYscale(),
-				objects[i].getZscale()
-			};
-
-			float colour[] = {
-				objects[i].getRed(),
-				objects[i].getGreen(),
-				objects[i].getBlue(),
-				objects[i].getAlpha()
-			};
-
-			output[i].push();
-			output[i].setIndex(i2);
-			output[i].setTransform(transform);
-			output[i].setColour(colour);
-		}
-	}
-
-	return output;
+	objects.setColour(colour);
 }
 
 void renderQueue::Implementation::validate()
