@@ -59,17 +59,7 @@ int ObjectsTransformPopTest::successes()
 
 bool ObjectsTransformPopTest::success(float input)
 {
-	if (unit.getXpos() != input)
-	{
-		return false;
-	}
-
-	if (unit.getYpos() != input)
-	{
-		return false;
-	}
-
-	if (unit.getZpos() != input)
+	if (!position(input))
 	{
 		return false;
 	}
@@ -100,6 +90,26 @@ bool ObjectsTransformPopTest::success(float input)
 	}
 
 	if (unit.getZscale() != input)
+	{
+		return false;
+	}
+
+	return true;
+}
+
+bool ObjectsTransformPopTest::position(float input)
+{
+	if (unit.getXpos() != input)
+	{
+		return false;
+	}
+
+	if (unit.getYpos() != input)
+	{
+		return false;
+	}
+
+	if (unit.getZpos() != input)
 	{
 		return false;
 	}
