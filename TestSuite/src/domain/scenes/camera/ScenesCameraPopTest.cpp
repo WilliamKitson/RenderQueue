@@ -68,12 +68,7 @@ bool ScenesCameraPopTest::success(float input)
 		return false;
 	}
 
-	if (unit.getFrustum() != input)
-	{
-		return false;
-	}
-
-	if (unit.getDrawDistance() != input)
+	if (!settings(input))
 	{
 		return false;
 	}
@@ -114,6 +109,21 @@ bool ScenesCameraPopTest::rotation(float input)
 	}
 
 	if (unit.getZrot() != input)
+	{
+		return false;
+	}
+
+	return true;
+}
+
+bool ScenesCameraPopTest::settings(float input)
+{
+	if (unit.getFrustum() != input)
+	{
+		return false;
+	}
+
+	if (unit.getDrawDistance() != input)
 	{
 		return false;
 	}
