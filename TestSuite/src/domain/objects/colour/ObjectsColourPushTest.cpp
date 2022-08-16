@@ -44,30 +44,33 @@ int ObjectsColourPushTest::successes()
 	for (int i{ 0 }; i < itterations; i++)
 	{
 		unit.setIndex(i);
-		bool success = true;
-
-		if (unit.getRed() != (float)i)
-		{
-			success = false;
-		}
-
-		if (unit.getGreen() != (float)i)
-		{
-			success = false;
-		}
-
-		if (unit.getBlue() != (float)i)
-		{
-			success = false;
-		}
-
-		if (unit.getAlpha() != (float)i)
-		{
-			success = false;
-		}
-
-		output += success;
+		output += success((float)i);
 	}
 
 	return output;
+}
+
+bool ObjectsColourPushTest::success(float input)
+{
+	if (unit.getRed() != input)
+	{
+		return false;
+	}
+
+	if (unit.getGreen() != input)
+	{
+		return false;
+	}
+
+	if (unit.getBlue() != input)
+	{
+		return false;
+	}
+
+	if (unit.getAlpha() != input)
+	{
+		return false;
+	}
+
+	return true;
 }
