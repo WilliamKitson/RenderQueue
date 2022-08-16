@@ -28,17 +28,7 @@ bool ObjectsTransformDefaultTest::success()
 		return false;
 	}
 
-	if (unit.getXrot())
-	{
-		return false;
-	}
-
-	if (unit.getYrot())
-	{
-		return false;
-	}
-
-	if (unit.getZrot())
+	if (!rotation())
 	{
 		return false;
 	}
@@ -74,6 +64,26 @@ bool ObjectsTransformDefaultTest::position()
 	}
 
 	if (unit.getZpos())
+	{
+		return false;
+	}
+
+	return true;
+}
+
+bool ObjectsTransformDefaultTest::rotation()
+{
+	if (unit.getXrot())
+	{
+		return false;
+	}
+
+	if (unit.getYrot())
+	{
+		return false;
+	}
+
+	if (unit.getZrot())
 	{
 		return false;
 	}
