@@ -3,6 +3,7 @@
 ScenesIndexPopTest::ScenesIndexPopTest()
 	: unit()
 {
+	initialise();
 }
 
 ScenesIndexPopTest::~ScenesIndexPopTest()
@@ -11,8 +12,6 @@ ScenesIndexPopTest::~ScenesIndexPopTest()
 
 std::string ScenesIndexPopTest::test()
 {
-	initialise();
-
 	unit.setIndex(3);
 	unit.pop();
 
@@ -30,10 +29,7 @@ void ScenesIndexPopTest::initialise()
 	{
 		unit.push();
 
-		float camera[] = {
-			(float)i,
-			(float)i,
-			(float)i,
+		float ambience[] = {
 			(float)i,
 			(float)i,
 			(float)i,
@@ -41,43 +37,28 @@ void ScenesIndexPopTest::initialise()
 		};
 
 		unit.setIndex(i);
-		unit.setCamera(camera);
+		unit.setAmbience(ambience);
 	}
 }
 
 bool ScenesIndexPopTest::success()
 {
-	if (unit.getXpos() != 0.0f)
+	if (unit.getRed())
 	{
 		return false;
 	}
 
-	if (unit.getYpos() != 0.0f)
+	if (unit.getGreen())
 	{
 		return false;
 	}
 
-	if (unit.getZpos() != 0.0f)
+	if (unit.getBlue())
 	{
 		return false;
 	}
 
-	if (unit.getXrot() != 0.0f)
-	{
-		return false;
-	}
-
-	if (unit.getYrot() != 0.0f)
-	{
-		return false;
-	}
-
-	if (unit.getZrot() != 0.0f)
-	{
-		return false;
-	}
-
-	if (unit.getFrustum() != 0.0f)
+	if (unit.getAlpha())
 	{
 		return false;
 	}
