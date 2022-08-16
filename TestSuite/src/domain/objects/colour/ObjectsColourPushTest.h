@@ -13,6 +13,7 @@ public:
 
 private:
 	void initialise();
+	int successes();
 
 private:
 	renderQueue::Objects unit;

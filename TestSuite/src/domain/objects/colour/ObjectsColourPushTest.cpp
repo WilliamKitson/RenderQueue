@@ -12,7 +12,34 @@ ObjectsColourPushTest::~ObjectsColourPushTest()
 
 std::string ObjectsColourPushTest::test()
 {
-	int successes = 0;
+	if (successes() == itterations)
+	{
+		return std::string();
+	}
+
+	return "objects colour push test failed\n";
+}
+
+void ObjectsColourPushTest::initialise()
+{
+	for (int i{ 0 }; i < itterations; i++)
+	{
+		float colour[] = {
+			(float)i,
+			(float)i,
+			(float)i,
+			(float)i
+		};
+
+		unit.push();
+		unit.setIndex(i);
+		unit.setColour(colour);
+	}
+}
+
+int ObjectsColourPushTest::successes()
+{
+	int output = 0;
 
 	for (int i{ 0 }; i < itterations; i++)
 	{
@@ -39,30 +66,8 @@ std::string ObjectsColourPushTest::test()
 			success = false;
 		}
 
-		successes += success;
+		output += success;
 	}
 
-	if (successes == itterations)
-	{
-		return std::string();
-	}
-
-	return "objects colour push test failed\n";
-}
-
-void ObjectsColourPushTest::initialise()
-{
-	for (int i{ 0 }; i < itterations; i++)
-	{
-		float colour[] = {
-			(float)i,
-			(float)i,
-			(float)i,
-			(float)i
-		};
-
-		unit.push();
-		unit.setIndex(i);
-		unit.setColour(colour);
-	}
+	return output;
 }
