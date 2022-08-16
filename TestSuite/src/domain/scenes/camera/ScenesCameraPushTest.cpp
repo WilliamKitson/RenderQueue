@@ -57,6 +57,26 @@ int ScenesCameraPushTest::successes()
 
 bool ScenesCameraPushTest::success(float input)
 {
+	if (!position(input))
+	{
+		return false;
+	}
+
+	if (!rotation(input))
+	{
+		return false;
+	}
+
+	if (!settings(input))
+	{
+		return false;
+	}
+
+	return true;
+}
+
+bool ScenesCameraPushTest::position(float input)
+{
 	if (unit.getXpos() != input)
 	{
 		return false;
@@ -72,6 +92,11 @@ bool ScenesCameraPushTest::success(float input)
 		return false;
 	}
 
+	return true;
+}
+
+bool ScenesCameraPushTest::rotation(float input)
+{
 	if (unit.getXrot() != input)
 	{
 		return false;
@@ -87,6 +112,11 @@ bool ScenesCameraPushTest::success(float input)
 		return false;
 	}
 
+	return true;
+}
+
+bool ScenesCameraPushTest::settings(float input)
+{
 	if (unit.getFrustum() != input)
 	{
 		return false;
