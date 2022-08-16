@@ -23,32 +23,22 @@ std::string ObjectsTransformDefaultTest::test()
 
 bool ObjectsTransformDefaultTest::success()
 {
-	if (unit.getXpos() != 0.0f)
+	if (!position())
 	{
 		return false;
 	}
 
-	if (unit.getYpos() != 0.0f)
+	if (unit.getXrot())
 	{
 		return false;
 	}
 
-	if (unit.getZpos() != 0.0f)
+	if (unit.getYrot())
 	{
 		return false;
 	}
 
-	if (unit.getXrot() != 0.0f)
-	{
-		return false;
-	}
-
-	if (unit.getYrot() != 0.0f)
-	{
-		return false;
-	}
-
-	if (unit.getZrot() != 0.0f)
+	if (unit.getZrot())
 	{
 		return false;
 	}
@@ -64,6 +54,26 @@ bool ObjectsTransformDefaultTest::success()
 	}
 
 	if (unit.getZscale() != 1.0f)
+	{
+		return false;
+	}
+
+	return true;
+}
+
+bool ObjectsTransformDefaultTest::position()
+{
+	if (unit.getXpos())
+	{
+		return false;
+	}
+
+	if (unit.getYpos())
+	{
+		return false;
+	}
+
+	if (unit.getZpos())
 	{
 		return false;
 	}
