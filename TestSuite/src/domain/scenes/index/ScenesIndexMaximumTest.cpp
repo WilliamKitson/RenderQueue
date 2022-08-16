@@ -24,37 +24,22 @@ std::string ScenesIndexMaximumTest::test()
 
 bool ScenesIndexMaximumTest::success()
 {
-	if (unit.getXpos() != 0.0f)
+	if (unit.getRed() != 1.0f)
 	{
 		return false;
 	}
 
-	if (unit.getYpos() != 0.0f)
+	if (unit.getGreen() != 1.0f)
 	{
 		return false;
 	}
 
-	if (unit.getZpos() != 0.0f)
+	if (unit.getBlue() != 1.0f)
 	{
 		return false;
 	}
 
-	if (unit.getXrot() != 0.0f)
-	{
-		return false;
-	}
-
-	if (unit.getYrot() != 0.0f)
-	{
-		return false;
-	}
-
-	if (unit.getZrot() != 0.0f)
-	{
-		return false;
-	}
-
-	if (unit.getFrustum() != 90.0f)
+	if (unit.getAlpha() != 1.0f)
 	{
 		return false;
 	}
