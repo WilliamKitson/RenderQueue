@@ -28,17 +28,7 @@ bool ScenesCameraDefaultTest::success()
 		return false;
 	}
 
-	if (unit.getXrot() != 0.0f)
-	{
-		return false;
-	}
-
-	if (unit.getYrot() != 0.0f)
-	{
-		return false;
-	}
-
-	if (unit.getZrot() != 0.0f)
+	if (!rotation())
 	{
 		return false;
 	}
@@ -69,6 +59,26 @@ bool ScenesCameraDefaultTest::position()
 	}
 
 	if (unit.getZpos())
+	{
+		return false;
+	}
+
+	return true;
+}
+
+bool ScenesCameraDefaultTest::rotation()
+{
+	if (unit.getXrot())
+	{
+		return false;
+	}
+
+	if (unit.getYrot())
+	{
+		return false;
+	}
+
+	if (unit.getZrot())
 	{
 		return false;
 	}

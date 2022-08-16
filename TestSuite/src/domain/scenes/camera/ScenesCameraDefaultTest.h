@@ -14,6 +14,7 @@ public:
 private:
 	bool success();
 	bool position();
+	bool rotation();
 
 private:
 	renderQueue::Scenes unit;
