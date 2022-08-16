@@ -64,17 +64,7 @@ bool ObjectsTransformPopTest::success(float input)
 		return false;
 	}
 
-	if (unit.getXrot() != input)
-	{
-		return false;
-	}
-
-	if (unit.getYrot() != input)
-	{
-		return false;
-	}
-
-	if (unit.getZrot() != input)
+	if (!rotation(input))
 	{
 		return false;
 	}
@@ -110,6 +100,26 @@ bool ObjectsTransformPopTest::position(float input)
 	}
 
 	if (unit.getZpos() != input)
+	{
+		return false;
+	}
+
+	return true;
+}
+
+bool ObjectsTransformPopTest::rotation(float input)
+{
+	if (unit.getXrot() != input)
+	{
+		return false;
+	}
+
+	if (unit.getYrot() != input)
+	{
+		return false;
+	}
+
+	if (unit.getZrot() != input)
 	{
 		return false;
 	}

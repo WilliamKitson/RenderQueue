@@ -16,6 +16,7 @@ private:
 	int successes();
 	bool success(float);
 	bool position(float);
+	bool rotation(float);
 
 private:
 	renderQueue::Objects unit;
