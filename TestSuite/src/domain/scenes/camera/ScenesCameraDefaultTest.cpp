@@ -33,12 +33,7 @@ bool ScenesCameraDefaultTest::success()
 		return false;
 	}
 
-	if (unit.getFrustum() != 90.0f)
-	{
-		return false;
-	}
-
-	if (unit.getDrawDistance() != 1000.0f)
+	if (!settings())
 	{
 		return false;
 	}
@@ -79,6 +74,21 @@ bool ScenesCameraDefaultTest::rotation()
 	}
 
 	if (unit.getZrot())
+	{
+		return false;
+	}
+
+	return true;
+}
+
+bool ScenesCameraDefaultTest::settings()
+{
+	if (unit.getFrustum() != 90.0f)
+	{
+		return false;
+	}
+
+	if (unit.getDrawDistance() != 1000.0f)
 	{
 		return false;
 	}
