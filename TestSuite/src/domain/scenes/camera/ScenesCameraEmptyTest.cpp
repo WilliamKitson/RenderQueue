@@ -33,42 +33,72 @@ std::string ScenesCameraEmptyTest::test()
 
 bool ScenesCameraEmptyTest::success()
 {
-	if (unit.getXpos() != 0.0f)
+	if (!position())
 	{
 		return false;
 	}
 
-	if (unit.getYpos() != 0.0f)
+	if (!rotation())
 	{
 		return false;
 	}
 
-	if (unit.getZpos() != 0.0f)
+	if (!settings())
 	{
 		return false;
 	}
 
-	if (unit.getXrot() != 0.0f)
+	return true;
+}
+
+bool ScenesCameraEmptyTest::position()
+{
+	if (unit.getXpos())
 	{
 		return false;
 	}
 
-	if (unit.getYrot() != 0.0f)
+	if (unit.getYpos())
 	{
 		return false;
 	}
 
-	if (unit.getZrot() != 0.0f)
+	if (unit.getZpos())
 	{
 		return false;
 	}
 
-	if (unit.getFrustum() != 0.0f)
+	return true;
+}
+
+bool ScenesCameraEmptyTest::rotation()
+{
+	if (unit.getXrot())
 	{
 		return false;
 	}
 
-	if (unit.getDrawDistance() != 0.0f)
+	if (unit.getYrot())
+	{
+		return false;
+	}
+
+	if (unit.getZrot())
+	{
+		return false;
+	}
+
+	return true;
+}
+
+bool ScenesCameraEmptyTest::settings()
+{
+	if (unit.getFrustum())
+	{
+		return false;
+	}
+
+	if (unit.getDrawDistance())
 	{
 		return false;
 	}
