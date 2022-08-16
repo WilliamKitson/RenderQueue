@@ -33,17 +33,7 @@ bool ObjectsTransformDefaultTest::success()
 		return false;
 	}
 
-	if (unit.getXscale() != 1.0f)
-	{
-		return false;
-	}
-
-	if (unit.getYscale() != 1.0f)
-	{
-		return false;
-	}
-
-	if (unit.getZscale() != 1.0f)
+	if (!scale())
 	{
 		return false;
 	}
@@ -84,6 +74,26 @@ bool ObjectsTransformDefaultTest::rotation()
 	}
 
 	if (unit.getZrot())
+	{
+		return false;
+	}
+
+	return true;
+}
+
+bool ObjectsTransformDefaultTest::scale()
+{
+	if (unit.getXscale() != 1.0f)
+	{
+		return false;
+	}
+
+	if (unit.getYscale() != 1.0f)
+	{
+		return false;
+	}
+
+	if (unit.getZscale() != 1.0f)
 	{
 		return false;
 	}
