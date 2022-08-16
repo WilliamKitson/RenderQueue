@@ -69,17 +69,7 @@ bool ObjectsTransformPopTest::success(float input)
 		return false;
 	}
 
-	if (unit.getXscale() != input)
-	{
-		return false;
-	}
-
-	if (unit.getYscale() != input)
-	{
-		return false;
-	}
-
-	if (unit.getZscale() != input)
+	if (!scale(input))
 	{
 		return false;
 	}
@@ -120,6 +110,26 @@ bool ObjectsTransformPopTest::rotation(float input)
 	}
 
 	if (unit.getZrot() != input)
+	{
+		return false;
+	}
+
+	return true;
+}
+
+bool ObjectsTransformPopTest::scale(float input)
+{
+	if (unit.getXscale() != input)
+	{
+		return false;
+	}
+
+	if (unit.getYscale() != input)
+	{
+		return false;
+	}
+
+	if (unit.getZscale() != input)
 	{
 		return false;
 	}
