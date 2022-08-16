@@ -63,17 +63,7 @@ bool ScenesCameraPopTest::success(float input)
 		return false;
 	}
 
-	if (unit.getXrot() != input)
-	{
-		return false;
-	}
-
-	if (unit.getYrot() != input)
-	{
-		return false;
-	}
-
-	if (unit.getZrot() != input)
+	if (!rotation(input))
 	{
 		return false;
 	}
@@ -104,6 +94,26 @@ bool ScenesCameraPopTest::position(float input)
 	}
 
 	if (unit.getZpos() != input)
+	{
+		return false;
+	}
+
+	return true;
+}
+
+bool ScenesCameraPopTest::rotation(float input)
+{
+	if (unit.getXrot() != input)
+	{
+		return false;
+	}
+
+	if (unit.getYrot() != input)
+	{
+		return false;
+	}
+
+	if (unit.getZrot() != input)
 	{
 		return false;
 	}
