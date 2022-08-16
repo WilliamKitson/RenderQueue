@@ -33,49 +33,80 @@ std::string ObjectsTransformEmptyTest::test()
 	return "objects transform empty test failed\n";
 }
 
+
 bool ObjectsTransformEmptyTest::success()
 {
-	if (unit.getXpos() != 0.0f)
+	if (!position())
 	{
 		return false;
 	}
 
-	if (unit.getYpos() != 0.0f)
+	if (!rotation())
 	{
 		return false;
 	}
 
-	if (unit.getZpos() != 0.0f)
+	if (!scale())
 	{
 		return false;
 	}
 
-	if (unit.getXrot() != 0.0f)
+	return true;
+}
+
+bool ObjectsTransformEmptyTest::position()
+{
+	if (unit.getXpos())
 	{
 		return false;
 	}
 
-	if (unit.getYrot() != 0.0f)
+	if (unit.getYpos())
 	{
 		return false;
 	}
 
-	if (unit.getZrot() != 0.0f)
+	if (unit.getZpos())
 	{
 		return false;
 	}
 
-	if (unit.getXscale() != 0.0f)
+	return true;
+}
+
+bool ObjectsTransformEmptyTest::rotation()
+{
+	if (unit.getXrot())
 	{
 		return false;
 	}
 
-	if (unit.getYscale() != 0.0f)
+	if (unit.getYrot())
 	{
 		return false;
 	}
 
-	if (unit.getZscale() != 0.0f)
+	if (unit.getZrot())
+	{
+		return false;
+	}
+
+	return true;
+}
+
+bool ObjectsTransformEmptyTest::scale()
+{
+	if (unit.getXscale())
+	{
+		return false;
+	}
+
+	if (unit.getYscale())
+	{
+		return false;
+	}
+
+	if (unit.getZscale())
 	{
 		return false;
 	}

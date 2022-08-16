@@ -13,6 +13,9 @@ public:
 
 private:
 	bool success();
+	bool position();
+	bool rotation();
+	bool scale();
 
 private:
 	renderQueue::Objects unit;
