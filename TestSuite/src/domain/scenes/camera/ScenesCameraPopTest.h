@@ -15,6 +15,7 @@ private:
 	void initialise();
 	int successes();
 	bool success(float);
+	bool position(float);
 
 private:
 	renderQueue::Scenes unit;

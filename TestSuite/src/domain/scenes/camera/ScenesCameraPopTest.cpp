@@ -58,17 +58,7 @@ int ScenesCameraPopTest::successes()
 
 bool ScenesCameraPopTest::success(float input)
 {
-	if (unit.getXpos() != input)
-	{
-		return false;
-	}
-
-	if (unit.getYpos() != input)
-	{
-		return false;
-	}
-
-	if (unit.getZpos() != input)
+	if (!position(input))
 	{
 		return false;
 	}
@@ -94,6 +84,26 @@ bool ScenesCameraPopTest::success(float input)
 	}
 
 	if (unit.getDrawDistance() != input)
+	{
+		return false;
+	}
+
+	return true;
+}
+
+bool ScenesCameraPopTest::position(float input)
+{
+	if (unit.getXpos() != input)
+	{
+		return false;
+	}
+
+	if (unit.getYpos() != input)
+	{
+		return false;
+	}
+
+	if (unit.getZpos() != input)
 	{
 		return false;
 	}
