@@ -58,6 +58,26 @@ int ObjectsTransformPushTest::successes()
 
 bool ObjectsTransformPushTest::success(float input)
 {
+	if (!position(input))
+	{
+		return false;
+	}
+
+	if (!rotation(input))
+	{
+		return false;
+	}
+
+	if (!scale(input))
+	{
+		return false;
+	}
+
+	return true;
+}
+
+bool ObjectsTransformPushTest::position(float input)
+{
 	if (unit.getXpos() != input)
 	{
 		return false;
@@ -73,6 +93,11 @@ bool ObjectsTransformPushTest::success(float input)
 		return false;
 	}
 
+	return true;
+}
+
+bool ObjectsTransformPushTest::rotation(float input)
+{
 	if (unit.getXrot() != input)
 	{
 		return false;
@@ -88,6 +113,11 @@ bool ObjectsTransformPushTest::success(float input)
 		return false;
 	}
 
+	return true;
+}
+
+bool ObjectsTransformPushTest::scale(float input)
+{
 	if (unit.getXscale() != input)
 	{
 		return false;
