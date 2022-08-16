@@ -23,17 +23,7 @@ std::string ScenesCameraDefaultTest::test()
 
 bool ScenesCameraDefaultTest::success()
 {
-	if (unit.getXpos() != 0.0f)
-	{
-		return false;
-	}
-
-	if (unit.getYpos() != 0.0f)
-	{
-		return false;
-	}
-
-	if (unit.getZpos() != 0.0f)
+	if (!position())
 	{
 		return false;
 	}
@@ -59,6 +49,26 @@ bool ScenesCameraDefaultTest::success()
 	}
 
 	if (unit.getDrawDistance() != 1000.0f)
+	{
+		return false;
+	}
+
+	return true;
+}
+
+bool ScenesCameraDefaultTest::position()
+{
+	if (unit.getXpos())
+	{
+		return false;
+	}
+
+	if (unit.getYpos())
+	{
+		return false;
+	}
+
+	if (unit.getZpos())
 	{
 		return false;
 	}

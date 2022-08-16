@@ -13,6 +13,7 @@ public:
 
 private:
 	bool success();
+	bool position();
 
 private:
 	renderQueue::Scenes unit;
