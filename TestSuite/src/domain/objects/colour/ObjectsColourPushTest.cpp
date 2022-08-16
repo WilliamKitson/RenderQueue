@@ -1,8 +1,9 @@
 #include "ObjectsColourPushTest.h"
 
 ObjectsColourPushTest::ObjectsColourPushTest()
-	: itterations{ 4 }
+	: unit(), itterations{ 4 }
 {
+	initialise();
 }
 
 ObjectsColourPushTest::~ObjectsColourPushTest()
@@ -11,28 +12,11 @@ ObjectsColourPushTest::~ObjectsColourPushTest()
 
 std::string ObjectsColourPushTest::test()
 {
-	renderQueue::Objects unit;
-
-	for (int i{ 0 }; i < itterations; i++)
-	{
-		float colour[] = {
-			(float)i,
-			(float)i,
-			(float)i,
-			(float)i
-		};
-
-		unit.push();
-		unit.setIndex(i);
-		unit.setColour(colour);
-	}
-
 	int successes = 0;
 
 	for (int i{ 0 }; i < itterations; i++)
 	{
 		unit.setIndex(i);
-
 		bool success = true;
 
 		if (unit.getRed() != (float)i)
@@ -64,4 +48,21 @@ std::string ObjectsColourPushTest::test()
 	}
 
 	return "objects colour push test failed\n";
+}
+
+void ObjectsColourPushTest::initialise()
+{
+	for (int i{ 0 }; i < itterations; i++)
+	{
+		float colour[] = {
+			(float)i,
+			(float)i,
+			(float)i,
+			(float)i
+		};
+
+		unit.push();
+		unit.setIndex(i);
+		unit.setColour(colour);
+	}
 }

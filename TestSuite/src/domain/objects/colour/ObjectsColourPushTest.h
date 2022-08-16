@@ -12,5 +12,9 @@ public:
 	std::string test();
 
 private:
+	void initialise();
+
+private:
+	renderQueue::Objects unit;
 	int itterations;
 };
