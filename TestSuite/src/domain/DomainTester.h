@@ -2,7 +2,6 @@
 
 #include <string>
 
-#include "elements/ElementsTester.h"
 #include "scenes/ScenesTester.h"
 #include "objects/ObjectsTester.h"
 #include "bindings/BindingsTester.h"
@@ -17,7 +16,6 @@ public:
 	std::string test();
 
 private:
-	std::string testElements();
 	std::string testScenes();
 	std::string testObjects();
 	std::string testBindings();
